@@ -90,6 +90,115 @@
       <input type="submit" value="Submit" class="mt-2 bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 cursor-pointer">
     </div>
 
+    <!-- DATE -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">9. Date Input</h2>
+      <p class="mb-2 text-gray-700">Provides a date picker for selecting dates.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="date"&gt;</code>
+      <input type="date" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- TIME -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">10. Time Input</h2>
+      <p class="mb-2 text-gray-700">Allows users to select a time (hours and minutes).</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="time"&gt;</code>
+      <input type="time" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- DATETIME-LOCAL -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">11. DateTime Local Input</h2>
+      <p class="mb-2 text-gray-700">Combines date and time selection in one input.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="datetime-local"&gt;</code>
+      <input type="datetime-local" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- RANGE -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">12. Range Slider</h2>
+      <p class="mb-2 text-gray-700">A slider control for selecting a value within a range.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="range" min="0" max="100" value="50"&gt;</code>
+      <input type="range" min="0" max="100" value="50" class="w-full">
+    </div>
+
+    <!-- COLOR -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">13. Color Picker</h2>
+      <p class="mb-2 text-gray-700">Opens a color picker for selecting colors.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="color" value="#ff6600"&gt;</code>
+      <input type="color" value="#ff6600" class="w-16 h-10 border border-gray-300 rounded cursor-pointer">
+    </div>
+
+    <!-- FILE -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">14. File Upload</h2>
+      <p class="mb-2 text-gray-700">Allows users to select and upload files from their device.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="file"&gt;</code>
+      <input type="file" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- URL -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">15. URL Input</h2>
+      <p class="mb-2 text-gray-700">Validates that the input is a valid URL format.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="url" placeholder="https://example.com"&gt;</code>
+      <input type="url" placeholder="https://example.com" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- TEL -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">16. Telephone Input</h2>
+      <p class="mb-2 text-gray-700">Optimized for phone number input, especially on mobile devices.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="tel" placeholder="123-456-7890"&gt;</code>
+      <input type="tel" placeholder="123-456-7890" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- SEARCH -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">17. Search Input</h2>
+      <p class="mb-2 text-gray-700">Provides search functionality with a clear button on some browsers.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="search" placeholder="Search..."&gt;</code>
+      <input type="search" placeholder="Search..." class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- SELECT -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">18. Select Dropdown</h2>
+      <p class="mb-2 text-gray-700">Creates a dropdown menu with multiple options to choose from.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">
+        &lt;select&gt;
+          &lt;option&gt;Choose option&lt;/option&gt;
+          &lt;option&gt;Option 1&lt;/option&gt;
+          &lt;option&gt;Option 2&lt;/option&gt;
+        &lt;/select&gt;
+      </code>
+      <select class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <option>Choose an option</option>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+        <option>React</option>
+      </select>
+    </div>
+
+    <!-- HIDDEN -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">19. Hidden Input</h2>
+      <p class="mb-2 text-gray-700">Stores data that is not visible to users but sent with form submission.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="hidden" name="user-id" value="12345"&gt;</code>
+      <p class="text-gray-600 italic">Hidden inputs are not visible (this is just for demonstration)</p>
+      <input type="hidden" name="user-id" value="12345">
+    </div>
+
+    <!-- RESET -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">20. Reset Button</h2>
+      <p class="mb-2 text-gray-700">Clears all form fields and resets them to their default values.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="reset" value="Reset"&gt;</code>
+      <input type="reset" value="Reset" class="mt-2 bg-gray-600 text-white px-5 py-2 rounded hover:bg-gray-700 cursor-pointer">
+    </div>
+
   </div>
 </body>
 </html>

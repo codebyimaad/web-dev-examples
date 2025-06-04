@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Lists & Tables - CodeWithImaad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .code-block { background: #1e293b; color: #e2e8f0; }
+    .demo-table { border-collapse: collapse; width: 100%; }
+    .demo-table th, .demo-table td { border: 1px solid #d1d5db; padding: 8px; text-align: left; }
+    .demo-table th { background-color: #f3f4f6; font-weight: bold; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">5</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">HTML Lists & Tables</h1>
+            <p class="text-sm text-gray-500">Lesson 5 of HTML Tutorial Series</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="links-images.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            ← Previous Lesson
+          </a>
+          <a href="input.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors duration-200 font-medium">
+            Next Lesson →
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Lesson Content -->
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML Lists & Tables</h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+          <span>📚 Intermediate Level</span>
+          <span>⏱️ 20 minutes</span>
+          <span>🎯 Master data organization</span>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction to Lists and Tables</h2>
+        <p class="mb-6">
+          Lists and tables are essential HTML elements for organizing and presenting data. Lists help structure 
+          related items in a logical order, while tables display data in rows and columns. Both elements are 
+          crucial for creating well-organized, accessible web content.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Lists</h2>
+        <p class="mb-4">
+          HTML provides three types of lists: unordered lists, ordered lists, and description lists.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Unordered Lists (Bullet Points)</h3>
+        <p class="mb-4">
+          Use <code>&lt;ul&gt;</code> for lists where order doesn't matter:
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;ul&gt;
+  &lt;li&gt;HTML - Structure&lt;/li&gt;
+  &lt;li&gt;CSS - Styling&lt;/li&gt;
+  &lt;li&gt;JavaScript - Interactivity&lt;/li&gt;
+  &lt;li&gt;React - Framework&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Result:</h3>
+          <ul class="list-disc list-inside space-y-1">
+            <li>HTML - Structure</li>
+            <li>CSS - Styling</li>
+            <li>JavaScript - Interactivity</li>
+            <li>React - Framework</li>
+          </ul>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Ordered Lists (Numbered)</h3>
+        <p class="mb-4">
+          Use <code>&lt;ol&gt;</code> for lists where order matters:
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;ol&gt;
+  &lt;li&gt;Learn HTML basics&lt;/li&gt;
+  &lt;li&gt;Master CSS styling&lt;/li&gt;
+  &lt;li&gt;Add JavaScript functionality&lt;/li&gt;
+  &lt;li&gt;Build complete projects&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Custom starting number --&gt;
+&lt;ol start="5"&gt;
+  &lt;li&gt;Deploy your website&lt;/li&gt;
+  &lt;li&gt;Maintain and update&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Result:</h3>
+          <ol class="list-decimal list-inside space-y-1 mb-4">
+            <li>Learn HTML basics</li>
+            <li>Master CSS styling</li>
+            <li>Add JavaScript functionality</li>
+            <li>Build complete projects</li>
+          </ol>
+          <ol class="list-decimal list-inside space-y-1" start="5">
+            <li>Deploy your website</li>
+            <li>Maintain and update</li>
+          </ol>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Nested Lists</h3>
+        <p class="mb-4">
+          Lists can be nested inside other lists for hierarchical organization:
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;ul&gt;
+  &lt;li&gt;Frontend Development
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+      &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Backend Development
+    &lt;ul&gt;
+      &lt;li&gt;Node.js&lt;/li&gt;
+      &lt;li&gt;Python&lt;/li&gt;
+      &lt;li&gt;PHP&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Description Lists</h3>
+        <p class="mb-4">
+          Use <code>&lt;dl&gt;</code> for term-definition pairs:
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language - structures web content&lt;/dd&gt;
+  
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets - styles web content&lt;/dd&gt;
+  
+  &lt;dt&gt;JavaScript&lt;/dt&gt;
+  &lt;dd&gt;Programming language for web interactivity&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Tables</h2>
+        <p class="mb-4">
+          Tables display data in rows and columns. They should only be used for tabular data, not for layout.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Basic Table Structure</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+    &lt;th&gt;City&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John Doe&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+    &lt;td&gt;New York&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jane Smith&lt;/td&gt;
+    &lt;td&gt;30&lt;/td&gt;
+    &lt;td&gt;London&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Result:</h3>
+          <table class="demo-table">
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>City</th>
+            </tr>
+            <tr>
+              <td>John Doe</td>
+              <td>25</td>
+              <td>New York</td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>30</td>
+              <td>London</td>
+            </tr>
+          </table>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Table Elements Explained</h3>
+        <div class="space-y-4 mb-6">
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">&lt;table&gt;</h4>
+            <p>Container for the entire table</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">&lt;tr&gt;</h4>
+            <p>Table row - contains cells</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">&lt;th&gt;</h4>
+            <p>Table header cell - bold and centered by default</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">&lt;td&gt;</h4>
+            <p>Table data cell - contains the actual data</p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Advanced Table Structure</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;table&gt;
+  &lt;caption&gt;Student Grades Report&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Student&lt;/th&gt;
+      &lt;th&gt;Math&lt;/th&gt;
+      &lt;th&gt;Science&lt;/th&gt;
+      &lt;th&gt;Average&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alice&lt;/td&gt;
+      &lt;td&gt;95&lt;/td&gt;
+      &lt;td&gt;87&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bob&lt;/td&gt;
+      &lt;td&gt;78&lt;/td&gt;
+      &lt;td&gt;92&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Class Average&lt;/td&gt;
+      &lt;td&gt;86.5&lt;/td&gt;
+      &lt;td&gt;89.5&lt;/td&gt;
+      &lt;td&gt;88&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Table Attributes</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Spanning columns --&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th colspan="2"&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;First&lt;/td&gt;
+    &lt;td&gt;Last&lt;/td&gt;
+    &lt;td&gt;Years&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;!-- Spanning rows --&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;Contact&lt;/td&gt;
+    &lt;td&gt;Email&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Phone&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Accessibility Best Practices</h2>
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-yellow-800 mb-2">♿ Accessibility Tips:</h3>
+          <ul class="list-disc list-inside text-yellow-700 space-y-2">
+            <li>Use <code>&lt;caption&gt;</code> to describe table content</li>
+            <li>Use <code>&lt;th&gt;</code> for headers with <code>scope</code> attribute</li>
+            <li>Keep table structure simple and logical</li>
+            <li>Use <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code> for structure</li>
+            <li>Provide alternative text for complex tables</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself</h2>
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Exercise:</h3>
+          <p class="text-blue-700 mb-4">
+            Create a course catalog page:
+          </p>
+          <ol class="list-decimal list-inside text-blue-700 space-y-2">
+            <li>Create a nested list of programming courses by category</li>
+            <li>Add a table showing course details (name, duration, difficulty)</li>
+            <li>Include table headers and proper structure</li>
+            <li>Add a caption to describe the table</li>
+            <li>Use colspan or rowspan for complex data</li>
+            <li>Style the table with basic CSS</li>
+          </ol>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Complete Example</h2>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">Course Catalog Page:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;h1&gt;Programming Courses&lt;/h1&gt;
+
+&lt;h2&gt;Course Categories&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Web Development
+    &lt;ol&gt;
+      &lt;li&gt;HTML Fundamentals&lt;/li&gt;
+      &lt;li&gt;CSS Styling&lt;/li&gt;
+      &lt;li&gt;JavaScript Programming&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Backend Development
+    &lt;ol&gt;
+      &lt;li&gt;Node.js Basics&lt;/li&gt;
+      &lt;li&gt;Database Design&lt;/li&gt;
+      &lt;li&gt;API Development&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Course Details&lt;/h2&gt;
+&lt;table&gt;
+  &lt;caption&gt;Available Programming Courses&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Course Name&lt;/th&gt;
+      &lt;th scope="col"&gt;Duration&lt;/th&gt;
+      &lt;th scope="col"&gt;Level&lt;/th&gt;
+      &lt;th scope="col"&gt;Price&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;HTML Fundamentals&lt;/td&gt;
+      &lt;td&gt;4 weeks&lt;/td&gt;
+      &lt;td&gt;Beginner&lt;/td&gt;
+      &lt;td&gt;$99&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;JavaScript Programming&lt;/td&gt;
+      &lt;td&gt;8 weeks&lt;/td&gt;
+      &lt;td&gt;Intermediate&lt;/td&gt;
+      &lt;td&gt;$199&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaways</h2>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li>Use &lt;ul&gt; for unordered lists, &lt;ol&gt; for ordered lists</li>
+          <li>Lists can be nested for hierarchical organization</li>
+          <li>&lt;dl&gt; is perfect for term-definition pairs</li>
+          <li>Tables should only be used for tabular data</li>
+          <li>Always include table headers (&lt;th&gt;) for accessibility</li>
+          <li>Use semantic table elements: thead, tbody, tfoot</li>
+          <li>Add captions to describe table content</li>
+          <li>colspan and rowspan help create complex table layouts</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-8">
+      <a href="links-images.html" class="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Previous: Links & Images
+      </a>
+      
+      <a href="input.html" class="flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors duration-200">
+        Next: HTML Forms
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">© <span id="current-year"></span> CodeWithImaad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

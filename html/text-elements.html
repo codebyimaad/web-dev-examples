@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Text Elements - CodeWithImaad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .code-block { background: #1e293b; color: #e2e8f0; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">3</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">HTML Text Elements</h1>
+            <p class="text-sm text-gray-500">Lesson 3 of HTML Tutorial Series</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="structure.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            ← Previous Lesson
+          </a>
+          <a href="links-images.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors duration-200 font-medium">
+            Next Lesson →
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Lesson Content -->
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML Text Elements</h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+          <span>📚 Beginner Level</span>
+          <span>⏱️ 12 minutes</span>
+          <span>🎯 Master text formatting</span>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction to Text Elements</h2>
+        <p class="mb-6">
+          Text is the foundation of web content. HTML provides various elements to structure and format text, 
+          from headings and paragraphs to emphasis and special formatting. Understanding these elements is 
+          crucial for creating well-structured, accessible web pages.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Headings</h2>
+        <p class="mb-4">
+          HTML provides six levels of headings, from <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code> (least important):
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;h1&gt;Main Heading (Most Important)&lt;/h1&gt;
+&lt;h2&gt;Section Heading&lt;/h2&gt;
+&lt;h3&gt;Subsection Heading&lt;/h3&gt;
+&lt;h4&gt;Sub-subsection Heading&lt;/h4&gt;
+&lt;h5&gt;Minor Heading&lt;/h5&gt;
+&lt;h6&gt;Smallest Heading&lt;/h6&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Result:</h3>
+          <div class="space-y-2">
+            <h1 class="text-3xl font-bold">Main Heading (Most Important)</h1>
+            <h2 class="text-2xl font-bold">Section Heading</h2>
+            <h3 class="text-xl font-bold">Subsection Heading</h3>
+            <h4 class="text-lg font-bold">Sub-subsection Heading</h4>
+            <h5 class="text-base font-bold">Minor Heading</h5>
+            <h6 class="text-sm font-bold">Smallest Heading</h6>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+          <h3 class="font-bold text-yellow-800 mb-2">💡 Best Practices:</h3>
+          <ul class="list-disc list-inside text-yellow-700 space-y-1">
+            <li>Use only one <code>&lt;h1&gt;</code> per page (for SEO)</li>
+            <li>Don't skip heading levels (h1 → h2 → h3, not h1 → h3)</li>
+            <li>Use headings for structure, not just styling</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Paragraphs and Line Breaks</h2>
+        <p class="mb-4">
+          The <code>&lt;p&gt;</code> element defines paragraphs, while <code>&lt;br&gt;</code> creates line breaks:
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;p&gt;This is the first paragraph. It contains multiple sentences 
+that form a complete thought or idea.&lt;/p&gt;
+
+&lt;p&gt;This is the second paragraph. Notice how paragraphs 
+are separated by space.&lt;/p&gt;
+
+&lt;p&gt;Line breaks can be used&lt;br&gt;
+to break text within&lt;br&gt;
+the same paragraph.&lt;/p&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Text Formatting Elements</h2>
+        <p class="mb-4">HTML provides several elements for formatting text:</p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Bold and Strong --&gt;
+&lt;b&gt;Bold text (visual only)&lt;/b&gt;
+&lt;strong&gt;Strong text (important)&lt;/strong&gt;
+
+&lt;!-- Italic and Emphasis --&gt;
+&lt;i&gt;Italic text (visual only)&lt;/i&gt;
+&lt;em&gt;Emphasized text (stressed)&lt;/em&gt;
+
+&lt;!-- Other formatting --&gt;
+&lt;u&gt;Underlined text&lt;/u&gt;
+&lt;s&gt;Strikethrough text&lt;/s&gt;
+&lt;mark&gt;Highlighted text&lt;/mark&gt;
+&lt;small&gt;Small text&lt;/small&gt;
+&lt;sub&gt;Subscript&lt;/sub&gt; and &lt;sup&gt;Superscript&lt;/sup&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Result:</h3>
+          <div class="space-y-2">
+            <p><b>Bold text (visual only)</b></p>
+            <p><strong>Strong text (important)</strong></p>
+            <p><i>Italic text (visual only)</i></p>
+            <p><em>Emphasized text (stressed)</em></p>
+            <p><u>Underlined text</u></p>
+            <p><s>Strikethrough text</s></p>
+            <p><mark class="bg-yellow-200">Highlighted text</mark></p>
+            <p><small>Small text</small></p>
+            <p>H<sub>2</sub>O and E=mc<sup>2</sup></p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Semantic vs Visual Elements</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="border border-green-200 rounded-lg p-4 bg-green-50">
+            <h3 class="font-bold text-green-800 mb-2">✅ Semantic (Recommended)</h3>
+            <ul class="text-green-700 space-y-1">
+              <li><code>&lt;strong&gt;</code> - Important text</li>
+              <li><code>&lt;em&gt;</code> - Emphasized text</li>
+              <li><code>&lt;mark&gt;</code> - Highlighted text</li>
+              <li><code>&lt;cite&gt;</code> - Citations</li>
+              <li><code>&lt;code&gt;</code> - Code snippets</li>
+            </ul>
+          </div>
+          <div class="border border-orange-200 rounded-lg p-4 bg-orange-50">
+            <h3 class="font-bold text-orange-800 mb-2">⚠️ Visual (Use with caution)</h3>
+            <ul class="text-orange-700 space-y-1">
+              <li><code>&lt;b&gt;</code> - Bold appearance</li>
+              <li><code>&lt;i&gt;</code> - Italic appearance</li>
+              <li><code>&lt;u&gt;</code> - Underlined text</li>
+              <li><code>&lt;s&gt;</code> - Strikethrough</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Special Text Elements</h2>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Quotations --&gt;
+&lt;blockquote&gt;
+  This is a long quotation that stands alone as a block.
+&lt;/blockquote&gt;
+&lt;q&gt;This is a short inline quotation.&lt;/q&gt;
+
+&lt;!-- Code and preformatted text --&gt;
+&lt;code&gt;console.log("Hello World");&lt;/code&gt;
+&lt;pre&gt;
+  This text preserves
+    spaces and line breaks
+      exactly as written.
+&lt;/pre&gt;
+
+&lt;!-- Abbreviations and definitions --&gt;
+&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;
+&lt;dfn&gt;HTML&lt;/dfn&gt; is the standard markup language.</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself</h2>
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Exercise:</h3>
+          <p class="text-blue-700 mb-4">
+            Create a simple article using various text elements:
+          </p>
+          <ol class="list-decimal list-inside text-blue-700 space-y-2">
+            <li>Create an article with an h1 main heading</li>
+            <li>Add two sections with h2 headings</li>
+            <li>Include paragraphs with different text formatting</li>
+            <li>Use both semantic and visual elements</li>
+            <li>Add a blockquote and some inline code</li>
+            <li>Include an abbreviation with a title attribute</li>
+          </ol>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Complete Example</h2>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Article Example:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;article&gt;
+  &lt;h1&gt;Introduction to Web Development&lt;/h1&gt;
+  
+  &lt;h2&gt;What is Web Development?&lt;/h2&gt;
+  &lt;p&gt;Web development is the process of creating websites and web applications. 
+  It involves both &lt;strong&gt;front-end&lt;/strong&gt; and &lt;em&gt;back-end&lt;/em&gt; development.&lt;/p&gt;
+  
+  &lt;h2&gt;Key Technologies&lt;/h2&gt;
+  &lt;p&gt;The foundation of web development includes:&lt;/p&gt;
+  &lt;p&gt;&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; for structure,&lt;br&gt;
+  &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; for styling,&lt;br&gt;
+  and &lt;code&gt;JavaScript&lt;/code&gt; for interactivity.&lt;/p&gt;
+  
+  &lt;blockquote&gt;
+    "The best way to learn web development is by building projects."
+  &lt;/blockquote&gt;
+&lt;/article&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaways</h2>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li>Use headings (h1-h6) to create document structure</li>
+          <li>Paragraphs (&lt;p&gt;) group related sentences</li>
+          <li>Choose semantic elements over visual ones when possible</li>
+          <li>&lt;strong&gt; and &lt;em&gt; convey meaning, not just appearance</li>
+          <li>Use &lt;code&gt; for inline code and &lt;pre&gt; for code blocks</li>
+          <li>Blockquotes are for longer quotations, &lt;q&gt; for inline quotes</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-8">
+      <a href="structure.html" class="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Previous: HTML Structure
+      </a>
+      
+      <a href="links-images.html" class="flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors duration-200">
+        Next: Links & Images
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">© <span id="current-year"></span> CodeWithImaad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

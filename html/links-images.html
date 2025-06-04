@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Links & Images - CodeWithImaad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .code-block { background: #1e293b; color: #e2e8f0; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">4</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">HTML Links & Images</h1>
+            <p class="text-sm text-gray-500">Lesson 4 of HTML Tutorial Series</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="text-elements.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            ← Previous Lesson
+          </a>
+          <a href="lists-tables.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors duration-200 font-medium">
+            Next Lesson →
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Lesson Content -->
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML Links & Images</h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+          <span>📚 Intermediate Level</span>
+          <span>⏱️ 18 minutes</span>
+          <span>🎯 Master media elements</span>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction to Links and Images</h2>
+        <p class="mb-6">
+          Links and images are fundamental elements that make the web interactive and visually appealing. 
+          Links connect pages together, creating the "web" of interconnected content, while images enhance 
+          user experience and convey information visually.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Links (Anchor Tags)</h2>
+        <p class="mb-4">
+          The <code>&lt;a&gt;</code> (anchor) element creates hyperlinks. The <code>href</code> attribute specifies the destination:
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">Basic Link Syntax:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;a href="destination"&gt;Link Text&lt;/a&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Types of Links</h3>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- External Links --&gt;
+&lt;a href="https://www.google.com"&gt;Visit Google&lt;/a&gt;
+&lt;a href="https://www.youtube.com" target="_blank"&gt;YouTube (New Tab)&lt;/a&gt;
+
+&lt;!-- Internal Links (same website) --&gt;
+&lt;a href="about.html"&gt;About Page&lt;/a&gt;
+&lt;a href="../index.html"&gt;Home Page&lt;/a&gt;
+
+&lt;!-- Anchor Links (same page) --&gt;
+&lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;
+&lt;a href="#top"&gt;Back to Top&lt;/a&gt;
+
+&lt;!-- Email Links --&gt;
+&lt;a href="mailto:contact@example.com"&gt;Send Email&lt;/a&gt;
+&lt;a href="mailto:info@example.com?subject=Hello"&gt;Email with Subject&lt;/a&gt;
+
+&lt;!-- Phone Links --&gt;
+&lt;a href="tel:+1234567890"&gt;Call Us&lt;/a&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Result:</h3>
+          <div class="space-y-2">
+            <p><a href="https://www.google.com" class="text-blue-600 underline hover:text-blue-800">Visit Google</a></p>
+            <p><a href="https://www.youtube.com" target="_blank" class="text-blue-600 underline hover:text-blue-800">YouTube (New Tab)</a></p>
+            <p><a href="about.html" class="text-blue-600 underline hover:text-blue-800">About Page</a></p>
+            <p><a href="mailto:contact@example.com" class="text-blue-600 underline hover:text-blue-800">Send Email</a></p>
+            <p><a href="tel:+1234567890" class="text-blue-600 underline hover:text-blue-800">Call Us</a></p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Link Attributes</h3>
+        <div class="space-y-4 mb-6">
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">target="_blank"</h4>
+            <p>Opens link in a new tab/window</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">title="Description"</h4>
+            <p>Shows tooltip on hover</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">rel="noopener"</h4>
+            <p>Security attribute for external links</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Images</h2>
+        <p class="mb-4">
+          The <code>&lt;img&gt;</code> element embeds images in web pages. It's a self-closing tag with required attributes:
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">Basic Image Syntax:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;img src="image-path" alt="description"&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Image Examples</h3>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Basic Image --&gt;
+&lt;img src="logo.png" alt="Company Logo"&gt;
+
+&lt;!-- Image with Size --&gt;
+&lt;img src="photo.jpg" alt="Beautiful sunset" width="300" height="200"&gt;
+
+&lt;!-- Responsive Image --&gt;
+&lt;img src="banner.jpg" alt="Website banner" style="max-width: 100%; height: auto;"&gt;
+
+&lt;!-- Image with Title --&gt;
+&lt;img src="icon.png" alt="Settings icon" title="Click to open settings"&gt;
+
+&lt;!-- Placeholder Image --&gt;
+&lt;img src="https://placehold.co/300x200/orange/white?text=Sample+Image" 
+     alt="Sample placeholder image"&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Result:</h3>
+          <div class="space-y-4">
+            <img src="https://placehold.co/300x200/orange/white?text=Sample+Image" 
+                 alt="Sample placeholder image" 
+                 class="border rounded-lg">
+            <p class="text-sm text-blue-700">Sample image with orange background</p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Image Attributes</h3>
+        <div class="space-y-4 mb-6">
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">src (required)</h4>
+            <p>Path to the image file</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">alt (required)</h4>
+            <p>Alternative text for accessibility and SEO</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">width & height</h4>
+            <p>Dimensions in pixels (use CSS instead when possible)</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">title</h4>
+            <p>Tooltip text that appears on hover</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Combining Links and Images</h2>
+        <p class="mb-4">You can make images clickable by wrapping them in anchor tags:</p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Clickable Image --&gt;
+&lt;a href="https://www.example.com"&gt;
+  &lt;img src="button.png" alt="Click here to visit our website"&gt;
+&lt;/a&gt;
+
+&lt;!-- Image Link with Caption --&gt;
+&lt;figure&gt;
+  &lt;a href="gallery.html"&gt;
+    &lt;img src="thumbnail.jpg" alt="Photo gallery thumbnail"&gt;
+  &lt;/a&gt;
+  &lt;figcaption&gt;Click to view full gallery&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">File Paths and Organization</h2>
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-yellow-800 mb-2">📁 File Path Types:</h3>
+          <div class="text-yellow-700 space-y-2">
+            <p><strong>Relative paths:</strong></p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+              <li><code>image.jpg</code> - Same folder</li>
+              <li><code>images/photo.jpg</code> - Subfolder</li>
+              <li><code>../images/logo.png</code> - Parent folder</li>
+            </ul>
+            <p><strong>Absolute paths:</strong></p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+              <li><code>https://example.com/image.jpg</code> - External URL</li>
+              <li><code>/images/banner.jpg</code> - Root-relative</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Best Practices</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="border border-green-200 rounded-lg p-4 bg-green-50">
+            <h3 class="font-bold text-green-800 mb-2">✅ Do</h3>
+            <ul class="text-green-700 space-y-1 text-sm">
+              <li>Always include alt text for images</li>
+              <li>Use descriptive link text</li>
+              <li>Optimize image file sizes</li>
+              <li>Use appropriate image formats</li>
+              <li>Test all links regularly</li>
+              <li>Use rel="noopener" for external links</li>
+            </ul>
+          </div>
+          <div class="border border-red-200 rounded-lg p-4 bg-red-50">
+            <h3 class="font-bold text-red-800 mb-2">❌ Don't</h3>
+            <ul class="text-red-700 space-y-1 text-sm">
+              <li>Use "click here" as link text</li>
+              <li>Leave alt attributes empty</li>
+              <li>Use images for text content</li>
+              <li>Link to broken or missing pages</li>
+              <li>Use huge unoptimized images</li>
+              <li>Forget to test mobile responsiveness</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself</h2>
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Exercise:</h3>
+          <p class="text-blue-700 mb-4">
+            Create a simple photo gallery page:
+          </p>
+          <ol class="list-decimal list-inside text-blue-700 space-y-2">
+            <li>Create a page with a main heading</li>
+            <li>Add 3-4 placeholder images using placehold.co</li>
+            <li>Make each image clickable (link to a larger version)</li>
+            <li>Add proper alt text for accessibility</li>
+            <li>Include navigation links to other pages</li>
+            <li>Add your email contact link</li>
+          </ol>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Complete Example</h2>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">Photo Gallery Page:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;My Photo Gallery&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;nav&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt; |
+    &lt;a href="about.html"&gt;About&lt;/a&gt; |
+    &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+  
+  &lt;h1&gt;My Photo Gallery&lt;/h1&gt;
+  
+  &lt;div class="gallery"&gt;
+    &lt;figure&gt;
+      &lt;a href="images/sunset-large.jpg"&gt;
+        &lt;img src="images/sunset-thumb.jpg" 
+             alt="Beautiful sunset over the ocean"&gt;
+      &lt;/a&gt;
+      &lt;figcaption&gt;Sunset at the beach&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    
+    &lt;figure&gt;
+      &lt;a href="images/mountain-large.jpg"&gt;
+        &lt;img src="images/mountain-thumb.jpg" 
+             alt="Snow-capped mountain peak"&gt;
+      &lt;/a&gt;
+      &lt;figcaption&gt;Mountain adventure&lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+  
+  &lt;footer&gt;
+    &lt;p&gt;Contact me: &lt;a href="mailto:photographer@example.com"&gt;
+       photographer@example.com&lt;/a&gt;&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaways</h2>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li>Use &lt;a&gt; tags with href attribute to create links</li>
+          <li>target="_blank" opens links in new tabs</li>
+          <li>&lt;img&gt; tags require src and alt attributes</li>
+          <li>Alt text is crucial for accessibility and SEO</li>
+          <li>Images can be made clickable by wrapping in &lt;a&gt; tags</li>
+          <li>Use relative paths for internal resources</li>
+          <li>Always test links and optimize image sizes</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-8">
+      <a href="text-elements.html" class="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Previous: Text Elements
+      </a>
+      
+      <a href="lists-tables.html" class="flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors duration-200">
+        Next: Lists & Tables
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">© <span id="current-year"></span> CodeWithImaad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

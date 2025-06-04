@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Forms & Input Types - CodeWithImaad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .code-block { background: #1e293b; color: #e2e8f0; }
+    .form-demo { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 0.5rem; }
+    .form-demo input, .form-demo select, .form-demo textarea { 
+      margin: 0.25rem 0; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 0.25rem; 
+    }
+    .form-demo label { display: block; margin-top: 1rem; font-weight: bold; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">6</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">HTML Forms & Input Types</h1>
+            <p class="text-sm text-gray-500">Lesson 6 of HTML Tutorial Series</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="lists-tables.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            ← Previous Lesson
+          </a>
+          <a href="index.html" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium">
+            ✅ Complete Series
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Lesson Content -->
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML Forms & Input Types</h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+          <span>📚 Intermediate Level</span>
+          <span>⏱️ 25 minutes</span>
+          <span>🎯 Master user interaction</span>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction to HTML Forms</h2>
+        <p class="mb-6">
+          HTML forms are essential for collecting user input on websites. They allow users to enter data, 
+          make selections, and interact with your web application. Understanding forms and input types 
+          is crucial for creating interactive, user-friendly websites.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Basic Form Structure</h2>
+        <p class="mb-4">
+          Every form starts with the <code>&lt;form&gt;</code> element and contains various input elements:
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">Basic Form Syntax:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;form action="/submit" method="POST"&gt;
+  &lt;label for="username"&gt;Username:&lt;/label&gt;
+  &lt;input type="text" id="username" name="username" required&gt;
+  
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Text Input Types</h2>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-4">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Basic text input --&gt;
+&lt;label for="name"&gt;Full Name:&lt;/label&gt;
+&lt;input type="text" id="name" name="name" placeholder="Enter your name"&gt;
+
+&lt;!-- Email input with validation --&gt;
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required&gt;
+
+&lt;!-- Password input --&gt;
+&lt;label for="password"&gt;Password:&lt;/label&gt;
+&lt;input type="password" id="password" name="password" minlength="8"&gt;
+
+&lt;!-- Search input --&gt;
+&lt;label for="search"&gt;Search:&lt;/label&gt;
+&lt;input type="search" id="search" name="search" placeholder="Search..."&gt;
+
+&lt;!-- URL input --&gt;
+&lt;label for="website"&gt;Website:&lt;/label&gt;
+&lt;input type="url" id="website" name="website" placeholder="https://"&gt;</code></pre>
+        </div>
+
+        <div class="form-demo mb-6">
+          <h3 class="font-bold mb-2">Try it out:</h3>
+          <label for="demo-name">Full Name:</label>
+          <input type="text" id="demo-name" placeholder="Enter your name">
+          
+          <label for="demo-email">Email:</label>
+          <input type="email" id="demo-email" placeholder="your@email.com">
+          
+          <label for="demo-password">Password:</label>
+          <input type="password" id="demo-password" placeholder="Enter password">
+          
+          <label for="demo-search">Search:</label>
+          <input type="search" id="demo-search" placeholder="Search...">
+          
+          <label for="demo-url">Website:</label>
+          <input type="url" id="demo-url" placeholder="https://example.com">
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Number and Date Inputs</h2>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-4">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Number input --&gt;
+&lt;label for="age"&gt;Age:&lt;/label&gt;
+&lt;input type="number" id="age" name="age" min="1" max="120" step="1"&gt;
+
+&lt;!-- Range slider --&gt;
+&lt;label for="volume"&gt;Volume:&lt;/label&gt;
+&lt;input type="range" id="volume" name="volume" min="0" max="100" value="50"&gt;
+
+&lt;!-- Date input --&gt;
+&lt;label for="birthday"&gt;Birthday:&lt;/label&gt;
+&lt;input type="date" id="birthday" name="birthday"&gt;
+
+&lt;!-- Time input --&gt;
+&lt;label for="meeting"&gt;Meeting Time:&lt;/label&gt;
+&lt;input type="time" id="meeting" name="meeting"&gt;
+
+&lt;!-- DateTime local --&gt;
+&lt;label for="appointment"&gt;Appointment:&lt;/label&gt;
+&lt;input type="datetime-local" id="appointment" name="appointment"&gt;</code></pre>
+        </div>
+
+        <div class="form-demo mb-6">
+          <h3 class="font-bold mb-2">Try it out:</h3>
+          <label for="demo-age">Age:</label>
+          <input type="number" id="demo-age" min="1" max="120" placeholder="25">
+          
+          <label for="demo-volume">Volume: <span id="volume-value">50</span></label>
+          <input type="range" id="demo-volume" min="0" max="100" value="50" oninput="document.getElementById('volume-value').textContent = this.value">
+          
+          <label for="demo-date">Birthday:</label>
+          <input type="date" id="demo-date">
+          
+          <label for="demo-time">Meeting Time:</label>
+          <input type="time" id="demo-time">
+          
+          <label for="demo-datetime">Appointment:</label>
+          <input type="datetime-local" id="demo-datetime">
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Selection Inputs</h2>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-4">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Radio buttons (single selection) --&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt;Choose your favorite language:&lt;/legend&gt;
+  &lt;input type="radio" id="html" name="language" value="html"&gt;
+  &lt;label for="html"&gt;HTML&lt;/label&gt;
+  
+  &lt;input type="radio" id="css" name="language" value="css"&gt;
+  &lt;label for="css"&gt;CSS&lt;/label&gt;
+  
+  &lt;input type="radio" id="js" name="language" value="javascript"&gt;
+  &lt;label for="js"&gt;JavaScript&lt;/label&gt;
+&lt;/fieldset&gt;
+
+&lt;!-- Checkboxes (multiple selection) --&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt;Skills (select all that apply):&lt;/legend&gt;
+  &lt;input type="checkbox" id="frontend" name="skills" value="frontend"&gt;
+  &lt;label for="frontend"&gt;Frontend Development&lt;/label&gt;
+  
+  &lt;input type="checkbox" id="backend" name="skills" value="backend"&gt;
+  &lt;label for="backend"&gt;Backend Development&lt;/label&gt;
+  
+  &lt;input type="checkbox" id="design" name="skills" value="design"&gt;
+  &lt;label for="design"&gt;UI/UX Design&lt;/label&gt;
+&lt;/fieldset&gt;
+
+&lt;!-- Select dropdown --&gt;
+&lt;label for="country"&gt;Country:&lt;/label&gt;
+&lt;select id="country" name="country"&gt;
+  &lt;option value=""&gt;Select a country&lt;/option&gt;
+  &lt;option value="us"&gt;United States&lt;/option&gt;
+  &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+  &lt;option value="ca"&gt;Canada&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        </div>
+
+        <div class="form-demo mb-6">
+          <h3 class="font-bold mb-2">Try it out:</h3>
+          <fieldset style="border: 1px solid #d1d5db; padding: 1rem; margin: 1rem 0;">
+            <legend>Choose your favorite language:</legend>
+            <div>
+              <input type="radio" id="demo-html" name="demo-language" value="html">
+              <label for="demo-html">HTML</label>
+            </div>
+            <div>
+              <input type="radio" id="demo-css" name="demo-language" value="css">
+              <label for="demo-css">CSS</label>
+            </div>
+            <div>
+              <input type="radio" id="demo-js" name="demo-language" value="javascript">
+              <label for="demo-js">JavaScript</label>
+            </div>
+          </fieldset>
+          
+          <fieldset style="border: 1px solid #d1d5db; padding: 1rem; margin: 1rem 0;">
+            <legend>Skills (select all that apply):</legend>
+            <div>
+              <input type="checkbox" id="demo-frontend" name="demo-skills" value="frontend">
+              <label for="demo-frontend">Frontend Development</label>
+            </div>
+            <div>
+              <input type="checkbox" id="demo-backend" name="demo-skills" value="backend">
+              <label for="demo-backend">Backend Development</label>
+            </div>
+            <div>
+              <input type="checkbox" id="demo-design" name="demo-skills" value="design">
+              <label for="demo-design">UI/UX Design</label>
+            </div>
+          </fieldset>
+          
+          <label for="demo-country">Country:</label>
+          <select id="demo-country" name="demo-country">
+            <option value="">Select a country</option>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Canada</option>
+          </select>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">File and Other Inputs</h2>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-4">
+          <h3 class="font-bold mb-2">HTML Code:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- File upload --&gt;
+&lt;label for="avatar"&gt;Profile Picture:&lt;/label&gt;
+&lt;input type="file" id="avatar" name="avatar" accept="image/*"&gt;
+
+&lt;!-- Color picker --&gt;
+&lt;label for="theme-color"&gt;Theme Color:&lt;/label&gt;
+&lt;input type="color" id="theme-color" name="theme-color" value="#ff6600"&gt;
+
+&lt;!-- Textarea for long text --&gt;
+&lt;label for="message"&gt;Message:&lt;/label&gt;
+&lt;textarea id="message" name="message" rows="4" cols="50" 
+          placeholder="Enter your message here..."&gt;&lt;/textarea&gt;
+
+&lt;!-- Hidden input --&gt;
+&lt;input type="hidden" name="user-id" value="12345"&gt;</code></pre>
+        </div>
+
+        <div class="form-demo mb-6">
+          <h3 class="font-bold mb-2">Try it out:</h3>
+          <label for="demo-file">Profile Picture:</label>
+          <input type="file" id="demo-file" accept="image/*">
+          
+          <label for="demo-color">Theme Color:</label>
+          <input type="color" id="demo-color" value="#ff6600">
+          
+          <label for="demo-message">Message:</label>
+          <textarea id="demo-message" rows="4" placeholder="Enter your message here..."></textarea>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Form Validation</h2>
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-yellow-800 mb-2">🔍 Validation Attributes:</h3>
+          <ul class="list-disc list-inside text-yellow-700 space-y-2">
+            <li><code>required</code> - Field must be filled out</li>
+            <li><code>minlength</code> / <code>maxlength</code> - Text length limits</li>
+            <li><code>min</code> / <code>max</code> - Number range limits</li>
+            <li><code>pattern</code> - Regular expression validation</li>
+            <li><code>step</code> - Increment value for numbers</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Complete Form Example</h2>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h3 class="font-bold mb-2">Registration Form:</h3>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;form action="/register" method="POST" enctype="multipart/form-data"&gt;
+  &lt;h2&gt;User Registration&lt;/h2&gt;
+  
+  &lt;!-- Personal Information --&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Personal Information&lt;/legend&gt;
+    
+    &lt;label for="fullname"&gt;Full Name:&lt;/label&gt;
+    &lt;input type="text" id="fullname" name="fullname" required&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;label for="phone"&gt;Phone:&lt;/label&gt;
+    &lt;input type="tel" id="phone" name="phone" 
+           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+           placeholder="123-456-7890"&gt;
+    
+    &lt;label for="birthdate"&gt;Birth Date:&lt;/label&gt;
+    &lt;input type="date" id="birthdate" name="birthdate"&gt;
+  &lt;/fieldset&gt;
+  
+  &lt;!-- Account Details --&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Account Details&lt;/legend&gt;
+    
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username" 
+           minlength="3" maxlength="20" required&gt;
+    
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password" 
+           minlength="8" required&gt;
+    
+    &lt;label for="confirm-password"&gt;Confirm Password:&lt;/label&gt;
+    &lt;input type="password" id="confirm-password" name="confirm-password" 
+           minlength="8" required&gt;
+  &lt;/fieldset&gt;
+  
+  &lt;!-- Preferences --&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Preferences&lt;/legend&gt;
+    
+    &lt;label for="newsletter"&gt;
+      &lt;input type="checkbox" id="newsletter" name="newsletter" value="yes"&gt;
+      Subscribe to newsletter
+    &lt;/label&gt;
+    
+    &lt;label for="notifications"&gt;
+      &lt;input type="checkbox" id="notifications" name="notifications" value="yes"&gt;
+      Enable notifications
+    &lt;/label&gt;
+  &lt;/fieldset&gt;
+  
+  &lt;button type="submit"&gt;Register&lt;/button&gt;
+  &lt;button type="reset"&gt;Clear Form&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+        
+        <div class="mt-6 p-4 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="font-bold text-green-800 mb-1">📋 HTML Input Examples</h3>
+              <p class="text-green-600 text-sm">View comprehensive examples of all HTML input types with code snippets</p>
+            </div>
+            <a href="utils/inputs.html" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all duration-200 font-medium flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <span>� View Input Examples</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself</h2>
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Exercise:</h3>
+          <p class="text-blue-700 mb-4">
+            Create a contact form with the following elements:
+          </p>
+          <ol class="list-decimal list-inside text-blue-700 space-y-2">
+            <li>Name field (required text input)</li>
+            <li>Email field (required email input)</li>
+            <li>Phone number (tel input with pattern)</li>
+            <li>Subject dropdown with options</li>
+            <li>Message textarea (required, min 10 characters)</li>
+            <li>Priority radio buttons (Low, Medium, High)</li>
+            <li>Newsletter subscription checkbox</li>
+            <li>Submit and Reset buttons</li>
+          </ol>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaways</h2>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li>Forms collect user input using various input types</li>
+          <li>Always use labels for accessibility and usability</li>
+          <li>Choose the right input type for better user experience</li>
+          <li>Use validation attributes to ensure data quality</li>
+          <li>Group related fields with fieldset and legend</li>
+          <li>Test forms on different devices and browsers</li>
+          <li>Consider user experience when designing forms</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-8">
+      <a href="lists-tables.html" class="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Previous: Lists & Tables
+      </a>
+      
+      <a href="index.html" class="flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-200">
+        🎉 Series Complete!
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">© <span id="current-year"></span> CodeWithImaad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

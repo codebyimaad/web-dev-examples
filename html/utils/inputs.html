@@ -199,6 +199,141 @@
       <input type="reset" value="Reset" class="mt-2 bg-gray-600 text-white px-5 py-2 rounded hover:bg-gray-700 cursor-pointer">
     </div>
 
+    <!-- BUTTON -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">21. Button Element</h2>
+      <p class="mb-2 text-gray-700">A clickable button that can trigger JavaScript functions or form actions.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;button type="button"&gt;Click Me&lt;/button&gt;</code>
+      <button type="button" class="mt-2 bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 cursor-pointer">Click Me</button>
+    </div>
+
+    <!-- WEEK -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">22. Week Input</h2>
+      <p class="mb-2 text-gray-700">Allows users to select a week and year.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="week"&gt;</code>
+      <input type="week" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- MONTH -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">23. Month Input</h2>
+      <p class="mb-2 text-gray-700">Allows users to select a month and year.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="month"&gt;</code>
+      <input type="month" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- IMAGE -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">24. Image Button</h2>
+      <p class="mb-2 text-gray-700">Creates a clickable image that acts as a submit button.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="image" src="button.png" alt="Submit" width="100" height="30"&gt;</code>
+      <input type="image" src="https://placehold.co/100x30/4F46E5/FFFFFF?text=Submit" alt="Submit" class="border border-gray-300 rounded cursor-pointer">
+    </div>
+
+    <!-- FIELDSET -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">25. Fieldset with Legend</h2>
+      <p class="mb-2 text-gray-700">Groups related form elements together with a descriptive legend.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">
+        &lt;fieldset&gt;
+          &lt;legend&gt;Personal Information&lt;/legend&gt;
+          &lt;input type="text" placeholder="Name"&gt;
+        &lt;/fieldset&gt;
+      </code>
+      <fieldset class="border border-gray-300 rounded p-4">
+        <legend class="px-2 font-semibold">Personal Information</legend>
+        <input type="text" placeholder="Enter your name" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      </fieldset>
+    </div>
+
+    <!-- DATALIST -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">26. Datalist (Autocomplete)</h2>
+      <p class="mb-2 text-gray-700">Provides autocomplete suggestions for an input field.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">
+        &lt;input list="browsers" placeholder="Choose browser"&gt;
+        &lt;datalist id="browsers"&gt;
+          &lt;option value="Chrome"&gt;
+          &lt;option value="Firefox"&gt;
+          &lt;option value="Safari"&gt;
+        &lt;/datalist&gt;
+      </code>
+      <input list="browsers" placeholder="Choose a browser" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Safari">
+        <option value="Edge">
+        <option value="Opera">
+      </datalist>
+    </div>
+
+    <!-- OUTPUT -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">27. Output Element</h2>
+      <p class="mb-2 text-gray-700">Displays the result of a calculation or user action.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">
+        &lt;input type="range" id="slider" value="50"&gt;
+        &lt;output for="slider"&gt;50&lt;/output&gt;
+      </code>
+      <div class="flex items-center space-x-4">
+        <input type="range" id="demo-slider" value="50" min="0" max="100" class="flex-1" oninput="document.getElementById('demo-output').value = this.value">
+        <output id="demo-output" class="border border-gray-300 rounded p-2 bg-gray-50 min-w-[50px] text-center">50</output>
+      </div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">28. Progress Bar</h2>
+      <p class="mb-2 text-gray-700">Shows the completion progress of a task.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;progress value="70" max="100"&gt;70%&lt;/progress&gt;</code>
+      <progress value="70" max="100" class="w-full h-4">70%</progress>
+      <p class="text-sm text-gray-600 mt-1">70% Complete</p>
+    </div>
+
+    <!-- METER -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">29. Meter Element</h2>
+      <p class="mb-2 text-gray-700">Displays a scalar measurement within a known range (gauge).</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;meter value="6" min="0" max="10"&gt;6 out of 10&lt;/meter&gt;</code>
+      <meter value="6" min="0" max="10" class="w-full h-4">6 out of 10</meter>
+      <p class="text-sm text-gray-600 mt-1">Score: 6 out of 10</p>
+    </div>
+
+    <!-- OPTGROUP -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">30. Option Groups in Select</h2>
+      <p class="mb-2 text-gray-700">Groups related options in a select dropdown for better organization.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">
+        &lt;select&gt;
+          &lt;optgroup label="Frontend"&gt;
+            &lt;option&gt;HTML&lt;/option&gt;
+            &lt;option&gt;CSS&lt;/option&gt;
+          &lt;/optgroup&gt;
+          &lt;optgroup label="Backend"&gt;
+            &lt;option&gt;Node.js&lt;/option&gt;
+            &lt;option&gt;Python&lt;/option&gt;
+          &lt;/optgroup&gt;
+        &lt;/select&gt;
+      </code>
+      <select class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <option>Choose a technology</option>
+        <optgroup label="Frontend Technologies">
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>JavaScript</option>
+          <option>React</option>
+        </optgroup>
+        <optgroup label="Backend Technologies">
+          <option>Node.js</option>
+          <option>Python</option>
+          <option>PHP</option>
+          <option>Java</option>
+        </optgroup>
+      </select>
+    </div>
+
   </div>
 </body>
 </html>

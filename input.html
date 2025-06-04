@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Input Types Explained</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans p-6">
+
+  <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+    <h1 class="text-3xl font-bold text-center mb-6">HTML Input Types Explained</h1>
+    <p class="text-center text-gray-600 mb-10">Explore the most common HTML input types and how they work.</p>
+
+    <!-- TEXT -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">1. Text Input</h2>
+      <p class="mb-2 text-gray-700">Used for short, single-line text input. Commonly used for names or usernames.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="text" placeholder="Enter your name"&gt;</code>
+      <input type="text" placeholder="Enter your name" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- EMAIL -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">2. Email Input</h2>
+      <p class="mb-2 text-gray-700">Validates that the input is in email format (e.g. name@example.com).</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="email" placeholder="you@example.com"&gt;</code>
+      <input type="email" placeholder="you@example.com" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- PASSWORD -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">3. Password Input</h2>
+      <p class="mb-2 text-gray-700">Masks the input for sensitive data like passwords.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="password" placeholder="Enter password"&gt;</code>
+      <input type="password" placeholder="Enter password" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- NUMBER -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">4. Number Input</h2>
+      <p class="mb-2 text-gray-700">Only accepts numerical input. You can set min and max values.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="number" min="0" max="100"&gt;</code>
+      <input type="number" min="0" max="100" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- TEXTAREA -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">5. Textarea</h2>
+      <p class="mb-2 text-gray-700">A multi-line text box, good for messages or descriptions.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;textarea rows="4"&gt;&lt;/textarea&gt;</code>
+      <textarea rows="4" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your message here..."></textarea>
+    </div>
+
+    <!-- CHECKBOX -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">6. Checkbox</h2>
+      <p class="mb-2 text-gray-700">Lets the user select one or more options (on/off values).</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="checkbox"&gt; Subscribe</code>
+      <label class="flex items-center space-x-2">
+        <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+        <span>Subscribe to newsletter</span>
+      </label>
+    </div>
+
+    <!-- RADIO -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">7. Radio Buttons</h2>
+      <p class="mb-2 text-gray-700">Choose one option from a set.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">
+        &lt;input type="radio" name="gender" value="male"&gt; Male  
+        &lt;input type="radio" name="gender" value="female"&gt; Female
+      </code>
+      <div class="flex items-center space-x-6">
+        <label class="flex items-center space-x-2">
+          <input type="radio" name="gender" value="male" class="w-4 h-4 text-blue-600">
+          <span>Male</span>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input type="radio" name="gender" value="female" class="w-4 h-4 text-blue-600">
+          <span>Female</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">8. Submit Button</h2>
+      <p class="mb-2 text-gray-700">Sends form data to the server or triggers JavaScript.</p>
+      <code class="block bg-gray-100 text-sm p-2 rounded mb-3">&lt;input type="submit" value="Submit"&gt;</code>
+      <input type="submit" value="Submit" class="mt-2 bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 cursor-pointer">
+    </div>
+
+  </div>
+</body>
+</html>

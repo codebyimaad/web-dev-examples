@@ -44,7 +44,7 @@
         <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML Document Structure</h1>
         <div class="flex items-center space-x-4 text-sm text-gray-500">
           <span>📚 Beginner Level</span>
-          <span>⏱️ 15 minutes</span>
+          <span>⏱️ 22 minutes</span>
           <span>🎯 Master HTML structure</span>
         </div>
       </header>
@@ -143,51 +143,320 @@
 &lt;meta name="author" content="CodeWithImaad"&gt;</code></pre>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Comments</h2>
-        <p class="mb-4">Comments help you document your code and are not displayed in the browser:</p>
-        
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Comments & Documentation</h2>
+        <p class="mb-6">
+          HTML comments are essential for documenting your code, making it easier to understand and maintain.
+          Comments are not displayed in the browser but are visible in the source code.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Basic Comment Syntax</h3>
         <div class="bg-gray-100 p-4 rounded-lg mb-6">
-          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- This is a comment --&gt;
-&lt;!-- 
-    Multi-line comment
-    can span several lines
+          <h4 class="font-bold mb-2">HTML Code:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- This is a single-line comment --&gt;
+
+&lt;!--
+    This is a multi-line comment
+    that can span several lines
+    and include detailed explanations
+--&gt;
+
+&lt;h1&gt;Welcome to My Website&lt;/h1&gt; &lt;!-- Inline comment --&gt;
+
+&lt;!-- TODO: Add navigation menu here --&gt;
+&lt;!-- FIXME: Fix responsive layout on mobile --&gt;
+&lt;!-- NOTE: This section needs review --&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h4 class="font-bold text-blue-800 mb-2">Result:</h4>
+          <p class="text-blue-700">Comments are not visible in the browser output, but you can see them in the page source (View Source).</p>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Documentation Best Practices</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="border border-green-200 rounded-lg p-4 bg-green-50">
+            <h4 class="font-bold text-green-800 mb-3">✅ Good Commenting Practices</h4>
+            <ul class="text-green-700 space-y-1 text-sm">
+              <li>• Explain complex or non-obvious code</li>
+              <li>• Document the purpose of sections</li>
+              <li>• Include author and date information</li>
+              <li>• Use TODO/FIXME for future work</li>
+              <li>• Keep comments up-to-date</li>
+              <li>• Use consistent formatting</li>
+            </ul>
+          </div>
+
+          <div class="border border-red-200 rounded-lg p-4 bg-red-50">
+            <h4 class="font-bold text-red-800 mb-3">❌ Avoid These Mistakes</h4>
+            <ul class="text-red-700 space-y-1 text-sm">
+              <li>• Don't state the obvious</li>
+              <li>• Avoid outdated comments</li>
+              <li>• Don't include sensitive information</li>
+              <li>• Avoid excessive commenting</li>
+              <li>• Don't use comments to hide code</li>
+              <li>• Avoid unprofessional language</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Professional Documentation Techniques</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">HTML Code with Professional Documentation:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Portfolio Website&lt;/title&gt;
+
+    &lt;!--
+        Author: CodeByImaad
+        Created: January 2024
+        Description: Personal portfolio website showcasing web development projects
+        Last Modified: January 15, 2024
+    --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- ========================================
+         HEADER SECTION
+         Contains site navigation and logo
+         ======================================== --&gt;
+    &lt;header&gt;
+        &lt;!-- Site logo --&gt;
+        &lt;div class="logo"&gt;
+            &lt;h1&gt;CodeByImaad&lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main navigation menu --&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#projects"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;!-- ========================================
+         MAIN CONTENT AREA
+         ======================================== --&gt;
+    &lt;main&gt;
+        &lt;!-- Hero section with introduction --&gt;
+        &lt;section id="home" class="hero"&gt;
+            &lt;h2&gt;Welcome to My Portfolio&lt;/h2&gt;
+            &lt;p&gt;I'm a passionate web developer...&lt;/p&gt;
+
+            &lt;!-- TODO: Add call-to-action button --&gt;
+        &lt;/section&gt;
+
+        &lt;!-- About section --&gt;
+        &lt;section id="about"&gt;
+            &lt;h2&gt;About Me&lt;/h2&gt;
+            &lt;!-- FIXME: Update bio content --&gt;
+            &lt;p&gt;Bio content goes here...&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;!-- Projects showcase --&gt;
+        &lt;section id="projects"&gt;
+            &lt;h2&gt;My Projects&lt;/h2&gt;
+
+            &lt;!-- Project grid container --&gt;
+            &lt;div class="project-grid"&gt;
+                &lt;!-- Individual project cards will be added here --&gt;
+                &lt;!-- NOTE: Each project should include title, description, and link --&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;!-- ========================================
+         FOOTER SECTION
+         Contains copyright and social links
+         ======================================== --&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2024 CodeByImaad. All rights reserved.&lt;/p&gt;
+
+        &lt;!-- Social media links --&gt;
+        &lt;div class="social-links"&gt;
+            &lt;!-- Links will be added when social accounts are ready --&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;!--
+        Scripts section
+        Add JavaScript files before closing body tag for better performance
+    --&gt;
+    &lt;!-- &lt;script src="js/main.js"&gt;&lt;/script&gt; --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Comment Types & Use Cases</h3>
+        <div class="space-y-4 mb-6">
+          <div class="border border-gray-200 rounded-lg p-4">
+            <h4 class="font-bold text-orange-600 mb-2">Section Dividers</h4>
+            <div class="bg-gray-50 p-3 rounded">
+              <code class="text-sm">
+                &lt;!-- ========================================<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HEADER SECTION<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;======================================== --&gt;
+              </code>
+            </div>
+            <p class="text-sm text-gray-600 mt-2">Use for major page sections</p>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg p-4">
+            <h4 class="font-bold text-orange-600 mb-2">TODO Comments</h4>
+            <div class="bg-gray-50 p-3 rounded">
+              <code class="text-sm">
+                &lt;!-- TODO: Add search functionality --&gt;<br>
+                &lt;!-- TODO: Implement user authentication --&gt;<br>
+                &lt;!-- TODO: Add responsive images --&gt;
+              </code>
+            </div>
+            <p class="text-sm text-gray-600 mt-2">Mark future improvements or features</p>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg p-4">
+            <h4 class="font-bold text-orange-600 mb-2">FIXME Comments</h4>
+            <div class="bg-gray-50 p-3 rounded">
+              <code class="text-sm">
+                &lt;!-- FIXME: Button alignment on mobile --&gt;<br>
+                &lt;!-- FIXME: Form validation not working --&gt;<br>
+                &lt;!-- FIXME: Image loading performance --&gt;
+              </code>
+            </div>
+            <p class="text-sm text-gray-600 mt-2">Identify known issues that need fixing</p>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg p-4">
+            <h4 class="font-bold text-orange-600 mb-2">Explanatory Comments</h4>
+            <div class="bg-gray-50 p-3 rounded">
+              <code class="text-sm">
+                &lt;!-- Using semantic HTML for better accessibility --&gt;<br>
+                &lt;!-- This form uses POST method for security --&gt;<br>
+                &lt;!-- Lazy loading implemented for performance --&gt;
+              </code>
+            </div>
+            <p class="text-sm text-gray-600 mt-2">Explain why something is done a certain way</p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Conditional Comments (Legacy)</h3>
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+          <h4 class="font-bold text-yellow-800 mb-2">📚 Historical Note:</h4>
+          <p class="text-yellow-700 mb-3">
+            Conditional comments were used for Internet Explorer compatibility but are now obsolete:
+          </p>
+          <div class="bg-gray-100 p-3 rounded">
+            <code class="text-sm">
+              &lt;!--[if IE]&gt;<br>
+              &nbsp;&nbsp;&lt;p&gt;You are using Internet Explorer.&lt;/p&gt;<br>
+              &lt;![endif]--&gt;
+            </code>
+          </div>
+          <p class="text-yellow-700 text-sm mt-2">
+            <strong>Note:</strong> Modern web development uses feature detection instead.
+          </p>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Documentation Templates</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">File Header Template:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!--
+    ================================================
+    PROJECT: Portfolio Website
+    FILE: index.html
+    AUTHOR: CodeByImaad
+    CREATED: January 15, 2024
+    MODIFIED: January 20, 2024
+    DESCRIPTION: Main landing page for personal portfolio
+    VERSION: 1.2.0
+    ================================================
 --&gt;</code></pre>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Section Template:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!--
+    ========================================
+    SECTION: Navigation Menu
+    PURPOSE: Main site navigation
+    DEPENDENCIES: None
+    NOTES: Mobile-responsive design
+    LAST UPDATED: January 20, 2024
+    ========================================
+--&gt;</code></pre>
+        </div>
+
+        <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+          <h4 class="font-bold text-green-800 mb-2">💡 Pro Tips for HTML Documentation:</h4>
+          <ul class="list-disc list-inside text-green-700 space-y-1 text-sm">
+            <li><strong>Be consistent:</strong> Use the same comment style throughout your project</li>
+            <li><strong>Update regularly:</strong> Keep comments current with code changes</li>
+            <li><strong>Use meaningful descriptions:</strong> Explain the "why," not just the "what"</li>
+            <li><strong>Include contact info:</strong> Add author information for team projects</li>
+            <li><strong>Document complex logic:</strong> Explain non-obvious HTML structures</li>
+            <li><strong>Use version control:</strong> Comments complement but don't replace Git history</li>
+            <li><strong>Consider your audience:</strong> Write for future developers (including yourself)</li>
+          </ul>
         </div>
 
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself</h2>
         <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
           <h3 class="font-bold text-blue-800 mb-2">Exercise:</h3>
           <p class="text-blue-700 mb-4">
-            Create a complete HTML document with proper structure and metadata:
+            Create a complete HTML document with proper structure, metadata, and professional documentation:
           </p>
           <ol class="list-decimal list-inside text-blue-700 space-y-2">
             <li>Start with the HTML5 DOCTYPE</li>
             <li>Add the html element with language attribute</li>
             <li>Include all essential meta tags in the head</li>
-            <li>Add a meaningful title</li>
-            <li>Create a simple body with a heading and paragraph</li>
-            <li>Add some comments to document your code</li>
+            <li>Add a meaningful title and description</li>
+            <li>Create a file header comment with project information</li>
+            <li>Add section divider comments for major page areas</li>
+            <li>Include explanatory comments for complex elements</li>
+            <li>Add TODO comments for future improvements</li>
+            <li>Create a simple body with semantic structure</li>
+            <li>Document your code choices with appropriate comments</li>
           </ol>
         </div>
 
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Common Mistakes to Avoid</h2>
         <div class="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
-          <ul class="list-disc list-inside text-red-700 space-y-2">
+          <h4 class="font-bold text-red-800 mb-3">Structure & Syntax Mistakes:</h4>
+          <ul class="list-disc list-inside text-red-700 space-y-1 mb-4">
             <li>Forgetting the DOCTYPE declaration</li>
             <li>Not including the charset meta tag</li>
             <li>Missing the viewport meta tag (important for mobile)</li>
             <li>Putting visible content in the head section</li>
             <li>Not closing tags properly</li>
           </ul>
+
+          <h4 class="font-bold text-red-800 mb-3">Documentation Mistakes:</h4>
+          <ul class="list-disc list-inside text-red-700 space-y-1">
+            <li>Including sensitive information in comments (passwords, API keys)</li>
+            <li>Writing comments that state the obvious</li>
+            <li>Leaving outdated or incorrect comments</li>
+            <li>Using comments to hide broken code instead of fixing it</li>
+            <li>Inconsistent comment formatting throughout the project</li>
+            <li>Not updating comments when code changes</li>
+          </ul>
         </div>
 
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaways</h2>
         <ul class="list-disc list-inside mb-6 space-y-2">
-          <li>Every HTML document needs a proper structure</li>
+          <li>Every HTML document needs a proper structure with DOCTYPE, html, head, and body</li>
           <li>DOCTYPE tells the browser which HTML version to use</li>
           <li>The head contains metadata, the body contains visible content</li>
-          <li>Meta tags provide important information about your page</li>
-          <li>Comments help document your code</li>
+          <li>Meta tags provide important information about your page for browsers and search engines</li>
+          <li>HTML comments use &lt;!-- comment --&gt; syntax and are invisible to users</li>
+          <li>Good documentation makes code maintainable and team-friendly</li>
+          <li>Use consistent comment styles and keep them updated with code changes</li>
+          <li>Comments should explain the "why," not just the "what"</li>
+          <li>Professional documentation includes file headers, section dividers, and explanatory notes</li>
+          <li>Never include sensitive information in HTML comments</li>
         </ul>
       </div>
     </article>

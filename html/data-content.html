@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Templates - CodeByImaad</title>
+  <meta name="description" content="Learn HTML template elements for creating reusable content patterns and dynamic web applications.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .code-block { background: #1e293b; color: #e2e8f0; }
+    .microdata-demo { border: 2px dashed #059669; background: #f0fdf4; }
+    .template-demo { border: 2px dashed #dc2626; background: #fef2f2; }
+    .output-demo { border: 2px dashed #7c3aed; background: #faf5ff; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">10</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">HTML Templates</h1>
+            <p class="text-sm text-gray-500">Lesson 10 of HTML Tutorial Series</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            ← Back to HTML Tutorials
+          </a>
+          <a href="interactive-elements.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            Previous: Interactive Elements
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Lesson Content -->
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML Templates</h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+          <span>📚 Advanced Level</span>
+          <span>⏱️ 15 minutes</span>
+          <span>🎯 Reusable Content Patterns</span>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <!-- Table of Contents -->
+        <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-6 mb-8">
+          <h2 class="text-xl font-bold text-indigo-800 mb-4">📋 What You'll Learn</h2>
+          <div class="text-indigo-700">
+            <div class="grid md:grid-cols-3 gap-6">
+              <div>
+                <h3 class="font-bold mb-2">Template Basics</h3>
+                <ul class="text-sm space-y-1">
+                  <li>• Template element usage</li>
+                  <li>• Hidden content patterns</li>
+                  <li>• Cloning and activation</li>
+                  <li>• Browser support</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold mb-2">Practical Examples</h3>
+                <ul class="text-sm space-y-1">
+                  <li>• User card templates</li>
+                  <li>• Product card layouts</li>
+                  <li>• Dynamic content generation</li>
+                  <li>• Reusable components</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold mb-2">Template Features</h3>
+                <ul class="text-sm space-y-1">
+                  <li>• Hidden by default</li>
+                  <li>• Semantic HTML structure</li>
+                  <li>• Accessibility considerations</li>
+                  <li>• Browser support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+          <h3 class="font-bold text-blue-800 mb-2">💡 HTML Templates</h3>
+          <p class="text-blue-700">
+            HTML templates provide a way to define reusable content patterns that are hidden by default.
+            They serve as blueprints for content structure and can be used to create consistent layouts
+            throughout your website.
+          </p>
+        </div>
+
+        <!-- HTML Templates -->
+        <section id="html-templates">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">HTML Template Element</h2>
+
+          <p class="mb-6">
+            The HTML <code>&lt;template&gt;</code> element holds content that is not rendered when the page loads.
+            It serves as a blueprint for content structure and helps maintain consistency across your website.
+          </p>
+
+
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Basic Template Usage</h3>
+
+          <div class="template-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-red-800 mb-3">Simple Template Example</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Template definition (not visible on page) --&gt;
+&lt;template id="user-card-template"&gt;
+  &lt;div class="user-card"&gt;
+    &lt;img class="user-avatar" src="" alt="User Avatar"&gt;
+    &lt;h3 class="user-name"&gt;&lt;/h3&gt;
+    &lt;p class="user-email"&gt;&lt;/p&gt;
+    &lt;p class="user-role"&gt;&lt;/p&gt;
+    &lt;button class="contact-btn"&gt;Contact&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;!-- Container where template instances will be added --&gt;
+&lt;div id="users-container"&gt;
+  &lt;!-- Template instances will be inserted here via JavaScript --&gt;
+&lt;/div&gt;
+
+&lt;!-- Button to add new user cards --&gt;
+&lt;button onclick="addUserCard()"&gt;Add User Card&lt;/button&gt;</code></pre>
+            </div>
+
+            <div class="output-demo p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-purple-800">Live Output:</h5>
+
+              <!-- Template definition -->
+              <template id="demo-user-template">
+                <div class="user-card border border-gray-300 rounded p-4 mb-3 bg-white">
+                  <div class="flex items-center space-x-3">
+                    <div class="user-avatar w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                      U
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="user-name font-bold text-lg"></h3>
+                      <p class="user-email text-gray-600 text-sm"></p>
+                      <p class="user-role text-blue-600 text-sm font-medium"></p>
+                    </div>
+                    <button class="contact-btn bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
+                      Contact
+                    </button>
+                  </div>
+                </div>
+              </template>
+
+              <!-- Container for template instances -->
+              <div id="demo-users-container" class="mb-4">
+                <!-- Sample user card to show what template creates -->
+                <div class="user-card border border-gray-300 rounded p-4 mb-3 bg-white">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                      J
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="font-bold text-lg">John Doe</h3>
+                      <p class="text-gray-600 text-sm">john.doe@example.com</p>
+                      <p class="text-blue-600 text-sm font-medium">Frontend Developer</p>
+                    </div>
+                    <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
+                      Contact
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <button onclick="addDemoUser()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+                Add User Card (Demo)
+              </button>
+
+              <p class="text-purple-700 text-sm mt-2">Template content is hidden by default and serves as a blueprint for content structure.</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Product Card Template</h3>
+
+          <div class="template-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-red-800 mb-3">E-commerce Product Template</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;template id="product-card-template"&gt;
+  &lt;div class="product-card"&gt;
+    &lt;div class="product-image"&gt;
+      &lt;img src="" alt="" class="product-img"&gt;
+      &lt;span class="product-badge"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class="product-info"&gt;
+      &lt;h3 class="product-name"&gt;&lt;/h3&gt;
+      &lt;p class="product-description"&gt;&lt;/p&gt;
+
+      &lt;div class="product-rating"&gt;
+        &lt;span class="stars"&gt;&lt;/span&gt;
+        &lt;span class="review-count"&gt;&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class="product-price"&gt;
+        &lt;span class="current-price"&gt;&lt;/span&gt;
+        &lt;span class="original-price"&gt;&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class="product-actions"&gt;
+        &lt;button class="add-to-cart-btn"&gt;Add to Cart&lt;/button&gt;
+        &lt;button class="wishlist-btn"&gt;♡&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;div id="products-grid"&gt;
+  &lt;!-- Product cards will be generated here --&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="output-demo p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-purple-800">Live Output:</h5>
+
+              <!-- Sample product card showing template result -->
+              <div class="product-card border border-gray-300 rounded-lg overflow-hidden bg-white max-w-sm">
+                <div class="product-image relative">
+                  <div class="w-full h-48 bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center text-white font-bold">
+                    Product Image
+                  </div>
+                  <span class="product-badge absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-xs">
+                    Sale
+                  </span>
+                </div>
+
+                <div class="product-info p-4">
+                  <h3 class="product-name font-bold text-lg mb-2">Wireless Earbuds</h3>
+                  <p class="product-description text-gray-600 text-sm mb-3">
+                    Premium wireless earbuds with noise cancellation
+                  </p>
+
+                  <div class="product-rating flex items-center mb-3">
+                    <span class="stars text-yellow-500">★★★★☆</span>
+                    <span class="review-count text-gray-500 text-sm ml-2">(124 reviews)</span>
+                  </div>
+
+                  <div class="product-price mb-4">
+                    <span class="current-price text-xl font-bold text-green-600">$79.99</span>
+                    <span class="original-price text-gray-500 line-through ml-2">$99.99</span>
+                  </div>
+
+                  <div class="product-actions flex space-x-2">
+                    <button class="add-to-cart-btn flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+                      Add to Cart
+                    </button>
+                    <button class="wishlist-btn w-10 h-10 border border-gray-300 rounded flex items-center justify-center hover:bg-gray-100">
+                      ♡
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <p class="text-purple-700 text-sm mt-2">Template creates consistent product cards with dynamic content.</p>
+            </div>
+          </div>
+
+          <div class="bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
+            <h4 class="font-bold text-red-800 mb-2">💡 Template Element Features:</h4>
+            <ul class="text-red-700 space-y-1 text-sm">
+              <li>• <strong>Hidden by default:</strong> Content is not visible on the page</li>
+              <li>• <strong>Semantic structure:</strong> Maintains proper HTML hierarchy</li>
+              <li>• <strong>Reusable patterns:</strong> Define content structure once</li>
+              <li>• <strong>Performance:</strong> No rendering overhead for hidden content</li>
+              <li>• <strong>Flexible:</strong> Can contain any valid HTML content</li>
+              <li>• <strong>Accessible:</strong> Follows HTML accessibility standards</li>
+            </ul>
+          </div>
+        </section>
+
+
+
+        <!-- Best Practices and Summary -->
+        <section id="best-practices">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Template Best Practices</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="border border-red-200 rounded-lg p-4 bg-red-50">
+              <h3 class="font-bold text-red-800 mb-3">📋 Template Design</h3>
+              <ul class="text-red-700 space-y-1 text-sm">
+                <li>• Use meaningful IDs for templates</li>
+                <li>• Keep templates simple and focused</li>
+                <li>• Include placeholder content for testing</li>
+                <li>• Use semantic HTML within templates</li>
+                <li>• Consider accessibility in template design</li>
+                <li>• Document template structure and usage</li>
+              </ul>
+            </div>
+
+            <div class="border border-blue-200 rounded-lg p-4 bg-blue-50">
+              <h3 class="font-bold text-blue-800 mb-3">🔧 HTML Structure Tips</h3>
+              <ul class="text-blue-700 space-y-1 text-sm">
+                <li>• Use proper semantic HTML within templates</li>
+                <li>• Include appropriate ARIA labels for accessibility</li>
+                <li>• Structure content logically and hierarchically</li>
+                <li>• Use meaningful class names for styling hooks</li>
+                <li>• Test template markup validation</li>
+                <li>• Consider mobile-responsive structure</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself</h2>
+          <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-6 mb-6">
+            <h3 class="font-bold text-indigo-800 mb-2">Exercise:</h3>
+            <p class="text-indigo-700 mb-4">
+              Practice creating HTML template structures:
+            </p>
+            <ol class="list-decimal list-inside text-indigo-700 space-y-2">
+              <li>Create a template for blog post cards with semantic HTML structure</li>
+              <li>Build a template for testimonial components with proper quote markup</li>
+              <li>Design a template for product listings with accessible image and text</li>
+              <li>Create a template for team member profiles with contact information</li>
+              <li>Structure a template for news articles with headline and metadata</li>
+              <li>Build a template for event listings with date, time, and location</li>
+              <li>Design a template for FAQ items with question and answer structure</li>
+            </ol>
+          </div>
+
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaways</h2>
+          <ul class="list-disc list-inside mb-6 space-y-2">
+            <li>HTML templates define reusable content structure patterns</li>
+            <li>Templates are hidden by default and don't render on page load</li>
+            <li>Use semantic HTML elements within templates for better accessibility</li>
+            <li>Templates improve content organization and consistency</li>
+            <li>They provide a foundation for structured, maintainable HTML</li>
+            <li>Templates help separate content structure from presentation</li>
+            <li>Always use proper HTML hierarchy and semantic elements</li>
+            <li>Templates work well with CSS for styling and future enhancement</li>
+          </ul>
+
+          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
+            <h3 class="font-bold text-yellow-800 mb-2">🎯 What's Next?</h3>
+            <p class="text-yellow-700">
+              You've now learned how to create reusable content patterns with HTML templates!
+              This knowledge provides a solid foundation for understanding structured content
+              and will be valuable when you move on to CSS for styling and later JavaScript for dynamic behavior.
+            </p>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-8">
+      <a href="interactive-elements.html" class="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Previous: Interactive Elements
+      </a>
+
+      <a href="advanced-elements.html" class="flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors duration-200">
+        Next: Advanced Elements
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">© <span id="current-year"></span> CodeByImaad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Demo function for template example
+    function addDemoUser() {
+      const users = [
+        { name: 'Alice Johnson', email: 'alice@example.com', role: 'UX Designer', initial: 'A' },
+        { name: 'Bob Wilson', email: 'bob@example.com', role: 'Backend Developer', initial: 'B' },
+        { name: 'Carol Davis', email: 'carol@example.com', role: 'Product Manager', initial: 'C' }
+      ];
+
+      const randomUser = users[Math.floor(Math.random() * users.length)];
+      const container = document.getElementById('demo-users-container');
+
+      // Create new user card
+      const userCard = document.createElement('div');
+      userCard.className = 'user-card border border-gray-300 rounded p-4 mb-3 bg-white';
+      userCard.innerHTML = `
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+            ${randomUser.initial}
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold text-lg">${randomUser.name}</h3>
+            <p class="text-gray-600 text-sm">${randomUser.email}</p>
+            <p class="text-blue-600 text-sm font-medium">${randomUser.role}</p>
+          </div>
+          <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
+            Contact
+          </button>
+        </div>
+      `;
+
+      container.appendChild(userCard);
+    }
+  </script>
+</body>
+</html>

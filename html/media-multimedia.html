@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Media & Multimedia - CodeByImaad</title>
+  <meta name="description" content="Learn HTML audio, video, and SVG elements. Master multimedia content with pure HTML - no CSS or JavaScript required.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .code-block { background: #1e293b; color: #e2e8f0; }
+    .media-demo { border: 2px dashed #3b82f6; background: #eff6ff; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">9</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">HTML Media & Multimedia</h1>
+            <p class="text-sm text-gray-500">Lesson 9 of HTML Tutorial Series</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            ← Back to HTML Tutorials
+          </a>
+          <a href="div-vs-semantic.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            Previous: Div vs Semantic
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Lesson Content -->
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML Media & Multimedia</h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+          <span>📚 Advanced Level</span>
+          <span>⏱️ 25 minutes</span>
+          <span>🎯 Audio, Video & Graphics</span>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction to HTML Media</h2>
+        <p class="mb-6">
+          HTML5 introduced powerful multimedia elements that allow you to embed audio, video, and graphics directly
+          into your web pages without plugins. This tutorial covers the main multimedia elements:
+          <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>, and <code>&lt;svg&gt;</code>.
+        </p>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">📝 Pure HTML Focus</h3>
+          <p class="text-blue-700">
+            This tutorial focuses exclusively on HTML elements and attributes. We won't cover CSS styling or 
+            JavaScript interactions - those will be covered in separate CSS and JavaScript tutorials.
+          </p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Audio Element</h2>
+        <p class="mb-4">
+          The <code>&lt;audio&gt;</code> element embeds sound content in documents. It can contain multiple audio sources 
+          for different formats to ensure browser compatibility.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Basic Audio Syntax</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Simple Audio Element:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;audio src="audio-file.mp3"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Audio with Controls</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Audio with Player Controls:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;audio controls&gt;
+  &lt;source src="song.mp3" type="audio/mpeg"&gt;
+  &lt;source src="song.ogg" type="audio/ogg"&gt;
+  &lt;source src="song.wav" type="audio/wav"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;</code></pre>
+        </div>
+
+        <div class="media-demo p-4 rounded-lg mb-6">
+          <h4 class="font-bold text-blue-800 mb-2">Live Example:</h4>
+          <audio controls>
+            <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+          <p class="text-sm text-blue-700 mt-2">Sample audio with controls (if available)</p>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Audio Attributes</h3>
+        <div class="space-y-4 mb-6">
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">controls</h4>
+            <p>Shows play/pause button, volume, progress bar</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">autoplay</h4>
+            <p>Starts playing automatically (use carefully!)</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">loop</h4>
+            <p>Repeats the audio when it ends</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">muted</h4>
+            <p>Starts with audio muted</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">preload</h4>
+            <p>How much to preload: "none", "metadata", or "auto"</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Audio with Multiple Attributes:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;audio controls loop preload="metadata"&gt;
+  &lt;source src="background-music.mp3" type="audio/mpeg"&gt;
+  &lt;source src="background-music.ogg" type="audio/ogg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;!-- Audio with autoplay (use sparingly) --&gt;
+&lt;audio autoplay muted controls&gt;
+  &lt;source src="intro-sound.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Video Element</h2>
+        <p class="mb-4">
+          The <code>&lt;video&gt;</code> element embeds video content in documents. Like audio, it supports multiple 
+          sources for different formats and includes many useful attributes.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Basic Video Syntax</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Simple Video Element:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;video width="640" height="360" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;source src="movie.webm" type="video/webm"&gt;
+  &lt;source src="movie.ogg" type="video/ogg"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Video with Poster Image</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Video with Thumbnail:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;video width="800" height="450" controls poster="video-thumbnail.jpg"&gt;
+  &lt;source src="presentation.mp4" type="video/mp4"&gt;
+  &lt;source src="presentation.webm" type="video/webm"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+        </div>
+
+        <div class="media-demo p-4 rounded-lg mb-6">
+          <h4 class="font-bold text-blue-800 mb-2">Live Example:</h4>
+          <video width="400" height="225" controls>
+            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="text-sm text-blue-700 mt-2">Sample video with controls (if available)</p>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Video Attributes</h3>
+        <div class="space-y-4 mb-6">
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">width & height</h4>
+            <p>Set video dimensions in pixels</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">controls</h4>
+            <p>Shows video player controls</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">poster</h4>
+            <p>Image shown before video plays</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">autoplay</h4>
+            <p>Starts playing automatically (often blocked by browsers)</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">loop</h4>
+            <p>Repeats the video when it ends</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">muted</h4>
+            <p>Starts with video muted</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">preload</h4>
+            <p>How much to preload: "none", "metadata", or "auto"</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Video with Multiple Attributes:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Responsive video --&gt;
+&lt;video width="100%" height="auto" controls poster="thumb.jpg" preload="metadata"&gt;
+  &lt;source src="tutorial.mp4" type="video/mp4"&gt;
+  &lt;source src="tutorial.webm" type="video/webm"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;!-- Looping background video (muted for autoplay) --&gt;
+&lt;video width="1920" height="1080" autoplay muted loop&gt;
+  &lt;source src="background-video.mp4" type="video/mp4"&gt;
+  &lt;source src="background-video.webm" type="video/webm"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+        </div>
+
+
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML SVG Element</h2>
+        <p class="mb-4">
+          SVG (Scalable Vector Graphics) allows you to create vector graphics directly in HTML. Unlike canvas,
+          SVG graphics are defined with markup and can be styled with CSS.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Basic SVG Syntax</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Simple SVG Element:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;svg width="200" height="200"&gt;
+  &lt;circle cx="100" cy="100" r="50" fill="blue" /&gt;
+&lt;/svg&gt;</code></pre>
+        </div>
+
+        <div class="media-demo p-4 rounded-lg mb-6">
+          <h4 class="font-bold text-blue-800 mb-2">Live Example:</h4>
+          <svg width="200" height="200">
+            <circle cx="100" cy="100" r="50" fill="blue" />
+          </svg>
+          <p class="text-sm text-blue-700 mt-2">Blue circle created with SVG</p>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">SVG Basic Shapes</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Common SVG Shapes:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;svg width="400" height="300"&gt;
+  &lt;!-- Rectangle --&gt;
+  &lt;rect x="10" y="10" width="100" height="60" fill="red" /&gt;
+
+  &lt;!-- Circle --&gt;
+  &lt;circle cx="200" cy="40" r="30" fill="green" /&gt;
+
+  &lt;!-- Ellipse --&gt;
+  &lt;ellipse cx="320" cy="40" rx="40" ry="25" fill="purple" /&gt;
+
+  &lt;!-- Line --&gt;
+  &lt;line x1="10" y1="100" x2="390" y2="100" stroke="black" stroke-width="2" /&gt;
+
+  &lt;!-- Polygon (triangle) --&gt;
+  &lt;polygon points="50,150 100,250 0,250" fill="orange" /&gt;
+
+  &lt;!-- Polyline --&gt;
+  &lt;polyline points="150,150 200,200 250,150 300,200 350,150"
+            fill="none" stroke="blue" stroke-width="3" /&gt;
+
+  &lt;!-- Path (complex shape) --&gt;
+  &lt;path d="M 10 280 Q 95 280 180 280" stroke="brown" stroke-width="3" fill="none" /&gt;
+&lt;/svg&gt;</code></pre>
+        </div>
+
+        <div class="media-demo p-4 rounded-lg mb-6">
+          <h4 class="font-bold text-blue-800 mb-2">Live Example:</h4>
+          <svg width="400" height="300">
+            <rect x="10" y="10" width="100" height="60" fill="red" />
+            <circle cx="200" cy="40" r="30" fill="green" />
+            <ellipse cx="320" cy="40" rx="40" ry="25" fill="purple" />
+            <line x1="10" y1="100" x2="390" y2="100" stroke="black" stroke-width="2" />
+            <polygon points="50,150 100,250 0,250" fill="orange" />
+            <polyline points="150,150 200,200 250,150 300,200 350,150" fill="none" stroke="blue" stroke-width="3" />
+            <path d="M 10 280 Q 95 280 180 280" stroke="brown" stroke-width="3" fill="none" />
+          </svg>
+          <p class="text-sm text-blue-700 mt-2">Various SVG shapes and elements</p>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">SVG Text and Groups</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">SVG Text and Grouping:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;svg width="300" height="200"&gt;
+  &lt;!-- Text element --&gt;
+  &lt;text x="50" y="30" font-family="Arial" font-size="20" fill="black"&gt;
+    Hello SVG!
+  &lt;/text&gt;
+
+  &lt;!-- Group of elements --&gt;
+  &lt;g fill="blue" stroke="black" stroke-width="2"&gt;
+    &lt;circle cx="100" cy="100" r="30" /&gt;
+    &lt;rect x="150" y="70" width="60" height="60" /&gt;
+  &lt;/g&gt;
+
+  &lt;!-- Text on a path --&gt;
+  &lt;defs&gt;
+    &lt;path id="textPath" d="M 20 150 Q 150 100 280 150" /&gt;
+  &lt;/defs&gt;
+  &lt;text font-size="14"&gt;
+    &lt;textPath href="#textPath"&gt;Text following a curved path&lt;/textPath&gt;
+  &lt;/text&gt;
+&lt;/svg&gt;</code></pre>
+        </div>
+
+        <div class="media-demo p-4 rounded-lg mb-6">
+          <h4 class="font-bold text-blue-800 mb-2">Live Example:</h4>
+          <svg width="300" height="200">
+            <text x="50" y="30" font-family="Arial" font-size="20" fill="black">Hello SVG!</text>
+            <g fill="blue" stroke="black" stroke-width="2">
+              <circle cx="100" cy="100" r="30" />
+              <rect x="150" y="70" width="60" height="60" />
+            </g>
+            <defs>
+              <path id="textPath" d="M 20 150 Q 150 100 280 150" />
+            </defs>
+            <text font-size="14">
+              <textPath href="#textPath">Text following a curved path</textPath>
+            </text>
+          </svg>
+          <p class="text-sm text-blue-700 mt-2">SVG text and grouped elements</p>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">SVG Attributes</h3>
+        <div class="space-y-4 mb-6">
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">width & height</h4>
+            <p>SVG canvas dimensions</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">viewBox</h4>
+            <p>Defines the coordinate system and aspect ratio</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">fill</h4>
+            <p>Interior color of shapes</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">stroke</h4>
+            <p>Outline color of shapes</p>
+          </div>
+          <div class="border-l-4 border-orange-500 pl-4">
+            <h4 class="font-bold">stroke-width</h4>
+            <p>Thickness of the outline</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Media File Formats</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="border border-blue-200 rounded-lg p-4 bg-blue-50">
+            <h3 class="font-bold text-blue-800 mb-3">🎵 Audio Formats</h3>
+            <ul class="text-blue-700 space-y-1 text-sm">
+              <li><strong>MP3:</strong> Most widely supported</li>
+              <li><strong>OGG:</strong> Open source, good quality</li>
+              <li><strong>WAV:</strong> Uncompressed, large files</li>
+              <li><strong>AAC:</strong> Good compression, Apple devices</li>
+              <li><strong>FLAC:</strong> Lossless compression</li>
+            </ul>
+          </div>
+          <div class="border border-purple-200 rounded-lg p-4 bg-purple-50">
+            <h3 class="font-bold text-purple-800 mb-3">🎬 Video Formats</h3>
+            <ul class="text-purple-700 space-y-1 text-sm">
+              <li><strong>MP4:</strong> Most widely supported</li>
+              <li><strong>WebM:</strong> Open source, web optimized</li>
+              <li><strong>OGV:</strong> Open source alternative</li>
+              <li><strong>AVI:</strong> Older format, large files</li>
+              <li><strong>MOV:</strong> Apple QuickTime format</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">SVG Benefits</h2>
+        <div class="border border-green-200 rounded-lg p-6 bg-green-50 mb-6">
+          <h3 class="font-bold text-green-800 mb-3">📐 Why Use SVG?</h3>
+          <ul class="text-green-700 space-y-2 text-sm">
+            <li><strong>Scalable:</strong> Looks crisp at any size - perfect for responsive design</li>
+            <li><strong>Small file sizes:</strong> Vector graphics are often smaller than bitmap images</li>
+            <li><strong>Editable:</strong> Can be modified with HTML, CSS, and JavaScript</li>
+            <li><strong>Accessible:</strong> Screen readers can understand SVG content</li>
+            <li><strong>SEO friendly:</strong> Text in SVG is searchable by search engines</li>
+            <li><strong>No pixelation:</strong> Always looks sharp on high-resolution displays</li>
+            <li><strong>Interactive:</strong> Can respond to hover, click, and other events</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Best Practices</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="border border-green-200 rounded-lg p-4 bg-green-50">
+            <h3 class="font-bold text-green-800 mb-2">✅ Do</h3>
+            <ul class="text-green-700 space-y-1 text-sm">
+              <li>Provide multiple format sources for compatibility</li>
+              <li>Include fallback content for unsupported browsers</li>
+              <li>Use appropriate file formats for your content</li>
+              <li>Optimize file sizes for web delivery</li>
+              <li>Add meaningful alt text and descriptions</li>
+              <li>Test across different browsers and devices</li>
+              <li>Consider accessibility for all users</li>
+            </ul>
+          </div>
+          <div class="border border-red-200 rounded-lg p-4 bg-red-50">
+            <h3 class="font-bold text-red-800 mb-2">❌ Don't</h3>
+            <ul class="text-red-700 space-y-1 text-sm">
+              <li>Use autoplay for audio/video without user consent</li>
+              <li>Forget fallback content for older browsers</li>
+              <li>Use huge uncompressed media files</li>
+              <li>Rely solely on media for important information</li>
+              <li>Ignore accessibility considerations</li>
+              <li>Use canvas when SVG would be more appropriate</li>
+              <li>Forget to test on mobile devices</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself</h2>
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Exercise:</h3>
+          <p class="text-blue-700 mb-4">
+            Create a multimedia showcase page:
+          </p>
+          <ol class="list-decimal list-inside text-blue-700 space-y-2">
+            <li>Add an audio player with multiple format sources</li>
+            <li>Include a video with poster image and controls</li>
+            <li>Create an SVG logo or icon for your page</li>
+            <li>Design an SVG illustration or graphic</li>
+            <li>Use proper fallback content for all elements</li>
+            <li>Test in different browsers and devices</li>
+          </ol>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Complete Example</h2>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Multimedia Page Example:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Multimedia Showcase&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My Multimedia Page&lt;/h1&gt;
+
+    &lt;!-- SVG Logo --&gt;
+    &lt;svg width="100" height="50"&gt;
+      &lt;rect width="100" height="50" fill="blue" /&gt;
+      &lt;text x="50" y="30" text-anchor="middle" fill="white" font-size="16"&gt;LOGO&lt;/text&gt;
+    &lt;/svg&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Featured Video&lt;/h2&gt;
+      &lt;video width="640" height="360" controls poster="video-thumb.jpg"&gt;
+        &lt;source src="featured-video.mp4" type="video/mp4"&gt;
+        &lt;source src="featured-video.webm" type="video/webm"&gt;
+        Your browser does not support the video tag.
+      &lt;/video&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h2&gt;Background Music&lt;/h2&gt;
+      &lt;audio controls&gt;
+        &lt;source src="background.mp3" type="audio/mpeg"&gt;
+        &lt;source src="background.ogg" type="audio/ogg"&gt;
+        Your browser does not support the audio element.
+      &lt;/audio&gt;
+    &lt;/section&gt;
+
+
+
+    &lt;section&gt;
+      &lt;h2&gt;Vector Illustration&lt;/h2&gt;
+      &lt;svg width="300" height="200"&gt;
+        &lt;circle cx="150" cy="100" r="80" fill="lightblue" stroke="navy" stroke-width="3" /&gt;
+        &lt;text x="150" y="105" text-anchor="middle" font-size="18"&gt;SVG Circle&lt;/text&gt;
+      &lt;/svg&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaways</h2>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li>HTML5 provides powerful multimedia elements: audio, video, and SVG</li>
+          <li>Always include multiple source formats for better browser compatibility</li>
+          <li>Use controls attribute to give users control over media playback</li>
+          <li>SVG is perfect for scalable vector graphics like icons and logos</li>
+          <li>Audio and video elements support multiple formats for cross-browser compatibility</li>
+          <li>Provide fallback content for browsers that don't support these elements</li>
+          <li>Consider accessibility and performance when using multimedia</li>
+          <li>Choose the right format and element for your specific use case</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-8">
+      <a href="div-vs-semantic.html" class="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Previous: Div vs Semantic
+      </a>
+
+      <a href="index.html" class="flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors duration-200">
+        Back to HTML Tutorials
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">© <span id="current-year"></span> CodeByImaad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

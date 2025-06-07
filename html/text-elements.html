@@ -44,7 +44,7 @@
         <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML Text Elements</h1>
         <div class="flex items-center space-x-4 text-sm text-gray-500">
           <span>📚 Beginner Level</span>
-          <span>⏱️ 12 minutes</span>
+          <span>⏱️ 18 minutes</span>
           <span>🎯 Master text formatting</span>
         </div>
       </header>
@@ -192,11 +192,175 @@ the same paragraph.&lt;/p&gt;</code></pre>
 &lt;dfn&gt;HTML&lt;/dfn&gt; is the standard markup language.</code></pre>
         </div>
 
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Entities & Special Characters</h2>
+        <p class="mb-4">
+          HTML entities are special codes used to display characters that have special meaning in HTML or characters
+          that are not easily typed on a keyboard. They start with <code>&amp;</code> and end with <code>;</code>.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Essential HTML Entities</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">HTML Code:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Reserved HTML Characters --&gt;
+&lt;p&gt;To display &amp;lt;tags&amp;gt; in text, use entities.&lt;/p&gt;
+&lt;p&gt;The &amp;amp; symbol represents "and".&lt;/p&gt;
+&lt;p&gt;Use &amp;quot;quotes&amp;quot; inside attributes.&lt;/p&gt;
+
+&lt;!-- Spacing --&gt;
+&lt;p&gt;Multiple&amp;nbsp;&amp;nbsp;&amp;nbsp;spaces&amp;nbsp;using&amp;nbsp;non-breaking&amp;nbsp;spaces.&lt;/p&gt;
+
+&lt;!-- Copyright and symbols --&gt;
+&lt;p&gt;&amp;copy; 2024 CodeByImaad. All rights reserved.&lt;/p&gt;
+&lt;p&gt;Price: &amp;pound;25.99 or &amp;dollar;32.50 or &amp;euro;28.75&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h4 class="font-bold text-blue-800 mb-2">Result:</h4>
+          <div class="space-y-2">
+            <p>To display &lt;tags&gt; in text, use entities.</p>
+            <p>The &amp; symbol represents "and".</p>
+            <p>Use "quotes" inside attributes.</p>
+            <p>Multiple&nbsp;&nbsp;&nbsp;spaces&nbsp;using&nbsp;non-breaking&nbsp;spaces.</p>
+            <p>&copy; 2024 CodeByImaad. All rights reserved.</p>
+            <p>Price: &pound;25.99 or &dollar;32.50 or &euro;28.75</p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Common HTML Entities Reference</h3>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+            <h4 class="font-bold text-gray-800 mb-3">Reserved Characters</h4>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <code>&amp;lt;</code>
+                <span>&lt;</span>
+                <span class="text-gray-600">Less than</span>
+              </div>
+              <div class="flex justify-between">
+                <code>&amp;gt;</code>
+                <span>&gt;</span>
+                <span class="text-gray-600">Greater than</span>
+              </div>
+              <div class="flex justify-between">
+                <code>&amp;amp;</code>
+                <span>&amp;</span>
+                <span class="text-gray-600">Ampersand</span>
+              </div>
+              <div class="flex justify-between">
+                <code>&amp;quot;</code>
+                <span>"</span>
+                <span class="text-gray-600">Quote</span>
+              </div>
+              <div class="flex justify-between">
+                <code>&amp;apos;</code>
+                <span>'</span>
+                <span class="text-gray-600">Apostrophe</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+            <h4 class="font-bold text-gray-800 mb-3">Spacing & Symbols</h4>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <code>&amp;nbsp;</code>
+                <span>[ ]</span>
+                <span class="text-gray-600">Non-breaking space</span>
+              </div>
+              <div class="flex justify-between">
+                <code>&amp;copy;</code>
+                <span>&copy;</span>
+                <span class="text-gray-600">Copyright</span>
+              </div>
+              <div class="flex justify-between">
+                <code>&amp;reg;</code>
+                <span>&reg;</span>
+                <span class="text-gray-600">Registered</span>
+              </div>
+              <div class="flex justify-between">
+                <code>&amp;trade;</code>
+                <span>&trade;</span>
+                <span class="text-gray-600">Trademark</span>
+              </div>
+              <div class="flex justify-between">
+                <code>&amp;deg;</code>
+                <span>&deg;</span>
+                <span class="text-gray-600">Degree</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Currency & Mathematical Symbols</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">HTML Code:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Currency symbols --&gt;
+&lt;p&gt;Prices: &amp;dollar;19.99, &amp;euro;17.50, &amp;pound;15.25, &amp;yen;2100&lt;/p&gt;
+
+&lt;!-- Mathematical symbols --&gt;
+&lt;p&gt;Math: 5 &amp;times; 3 = 15, 20 &amp;divide; 4 = 5&lt;/p&gt;
+&lt;p&gt;Comparison: 10 &amp;gt; 5, 3 &amp;lt; 7, 5 &amp;plusmn; 2&lt;/p&gt;
+&lt;p&gt;Fractions: &amp;frac12;, &amp;frac14;, &amp;frac34;&lt;/p&gt;
+
+&lt;!-- Arrows and symbols --&gt;
+&lt;p&gt;Arrows: &amp;larr; &amp;uarr; &amp;rarr; &amp;darr; &amp;harr;&lt;/p&gt;
+&lt;p&gt;Symbols: &amp;hearts; &amp;clubs; &amp;diams; &amp;spades;&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h4 class="font-bold text-blue-800 mb-2">Result:</h4>
+          <div class="space-y-2">
+            <p>Prices: $19.99, €17.50, £15.25, ¥2100</p>
+            <p>Math: 5 × 3 = 15, 20 ÷ 4 = 5</p>
+            <p>Comparison: 10 > 5, 3 < 7, 5 ± 2</p>
+            <p>Fractions: ½, ¼, ¾</p>
+            <p>Arrows: ← ↑ → ↓ ↔</p>
+            <p>Symbols: ♥ ♣ ♦ ♠</p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Unicode Characters</h3>
+        <p class="mb-4">
+          You can also use Unicode characters directly or with numeric entities:
+        </p>
+
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">HTML Code:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Unicode numeric entities --&gt;
+&lt;p&gt;Emoji: &amp;#128512; &amp;#128525; &amp;#128151; &amp;#9733;&lt;/p&gt;
+&lt;p&gt;Arrows: &amp;#8594; &amp;#8592; &amp;#8593; &amp;#8595;&lt;/p&gt;
+
+&lt;!-- Direct Unicode (requires UTF-8 encoding) --&gt;
+&lt;p&gt;Direct: 😀 😍 💗 ★&lt;/p&gt;
+&lt;p&gt;Languages: Español, Français, Deutsch, 中文, العربية&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h4 class="font-bold text-blue-800 mb-2">Result:</h4>
+          <div class="space-y-2">
+            <p>Emoji: 😀 😍 💗 ★</p>
+            <p>Arrows: → ← ↑ ↓</p>
+            <p>Direct: 😀 😍 💗 ★</p>
+            <p>Languages: Español, Français, Deutsch, 中文, العربية</p>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+          <h4 class="font-bold text-yellow-800 mb-2">💡 When to Use HTML Entities:</h4>
+          <ul class="list-disc list-inside text-yellow-700 space-y-1">
+            <li><strong>Always use</strong> for reserved HTML characters (&lt;, &gt;, &amp;)</li>
+            <li><strong>Use for consistency</strong> when mixing with entities</li>
+            <li><strong>Use for compatibility</strong> with older systems</li>
+            <li><strong>Direct Unicode is fine</strong> for modern websites with UTF-8</li>
+            <li><strong>Non-breaking spaces</strong> (&amp;nbsp;) prevent unwanted line breaks</li>
+          </ul>
+        </div>
+
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself</h2>
         <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
           <h3 class="font-bold text-blue-800 mb-2">Exercise:</h3>
           <p class="text-blue-700 mb-4">
-            Create a simple article using various text elements:
+            Create a comprehensive article using various text elements and entities:
           </p>
           <ol class="list-decimal list-inside text-blue-700 space-y-2">
             <li>Create an article with an h1 main heading</li>
@@ -205,28 +369,38 @@ the same paragraph.&lt;/p&gt;</code></pre>
             <li>Use both semantic and visual elements</li>
             <li>Add a blockquote and some inline code</li>
             <li>Include an abbreviation with a title attribute</li>
+            <li>Use HTML entities for special characters (&lt;, &gt;, &amp;)</li>
+            <li>Add copyright symbol and currency symbols</li>
+            <li>Include mathematical symbols or fractions</li>
+            <li>Practice with non-breaking spaces for proper spacing</li>
           </ol>
         </div>
 
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Complete Example</h2>
         <div class="bg-gray-100 p-4 rounded-lg mb-6">
-          <h3 class="font-bold mb-2">HTML Article Example:</h3>
+          <h3 class="font-bold mb-2">HTML Article Example with Entities:</h3>
           <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;article&gt;
   &lt;h1&gt;Introduction to Web Development&lt;/h1&gt;
-  
+
   &lt;h2&gt;What is Web Development?&lt;/h2&gt;
-  &lt;p&gt;Web development is the process of creating websites and web applications. 
+  &lt;p&gt;Web development is the process of creating websites and web applications.
   It involves both &lt;strong&gt;front-end&lt;/strong&gt; and &lt;em&gt;back-end&lt;/em&gt; development.&lt;/p&gt;
-  
+
   &lt;h2&gt;Key Technologies&lt;/h2&gt;
   &lt;p&gt;The foundation of web development includes:&lt;/p&gt;
   &lt;p&gt;&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; for structure,&lt;br&gt;
   &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; for styling,&lt;br&gt;
   and &lt;code&gt;JavaScript&lt;/code&gt; for interactivity.&lt;/p&gt;
-  
+
+  &lt;p&gt;To display &amp;lt;HTML&amp;gt; tags in text, use entities like &amp;amp;lt; and &amp;amp;gt;.&lt;/p&gt;
+
+  &lt;p&gt;Learning costs: &amp;dollar;0 &amp;ndash; &amp;dollar;500+ depending on resources.&lt;/p&gt;
+
   &lt;blockquote&gt;
-    "The best way to learn web development is by building projects."
+    &amp;ldquo;The best way to learn web development is by building projects.&amp;rdquo;
   &lt;/blockquote&gt;
+
+  &lt;p&gt;&amp;copy; 2024 CodeByImaad.&amp;nbsp;All rights reserved.&lt;/p&gt;
 &lt;/article&gt;</code></pre>
         </div>
 
@@ -238,6 +412,10 @@ the same paragraph.&lt;/p&gt;</code></pre>
           <li>&lt;strong&gt; and &lt;em&gt; convey meaning, not just appearance</li>
           <li>Use &lt;code&gt; for inline code and &lt;pre&gt; for code blocks</li>
           <li>Blockquotes are for longer quotations, &lt;q&gt; for inline quotes</li>
+          <li>HTML entities display special characters safely (&amp;lt;, &amp;gt;, &amp;amp;)</li>
+          <li>Use &amp;nbsp; for non-breaking spaces and proper text spacing</li>
+          <li>Currency and symbol entities improve content readability</li>
+          <li>Unicode characters work directly with UTF-8 encoding</li>
         </ul>
       </div>
     </article>

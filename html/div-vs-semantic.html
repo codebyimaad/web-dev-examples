@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Div vs Semantic Elements - CodeByImaad</title>
+  <meta name="description" content="Learn when to use div elements vs semantic HTML5 elements. Master the differences and make better decisions for modern web development.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .code-block { background: #1e293b; color: #e2e8f0; }
+    .comparison-demo { border: 2px solid #e5e7eb; border-radius: 8px; }
+    .semantic-highlight { border: 2px solid #10b981; background: #f0fdf4; }
+    .div-highlight { border: 2px solid #f59e0b; background: #fffbeb; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">8</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">Div vs Semantic Elements</h1>
+            <p class="text-sm text-gray-500">Lesson 8 of HTML Tutorial Series</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            ← Back to HTML Tutorials
+          </a>
+          <a href="semantic-elements.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            Previous: Semantic Elements
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Lesson Content -->
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Div vs Semantic Elements</h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+          <span>📚 Advanced Level</span>
+          <span>⏱️ 18 minutes</span>
+          <span>🎯 When to Use What</span>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">The Great HTML Debate</h2>
+        <p class="mb-6">
+          One of the most common questions in modern web development is: "When should I use a <code>&lt;div&gt;</code> 
+          and when should I use semantic elements?" This tutorial will give you clear guidelines and practical 
+          examples to make the right choice every time.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Understanding the Difference</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="div-highlight p-6 rounded-lg">
+            <h3 class="font-bold text-amber-800 mb-3">🟡 &lt;div&gt; Element</h3>
+            <ul class="text-amber-700 space-y-2 text-sm">
+              <li><strong>Purpose:</strong> Generic container</li>
+              <li><strong>Meaning:</strong> No semantic meaning</li>
+              <li><strong>Use for:</strong> Styling and layout</li>
+              <li><strong>Accessibility:</strong> Neutral</li>
+              <li><strong>SEO Impact:</strong> None</li>
+            </ul>
+          </div>
+          
+          <div class="semantic-highlight p-6 rounded-lg">
+            <h3 class="font-bold text-green-800 mb-3">🟢 Semantic Elements</h3>
+            <ul class="text-green-700 space-y-2 text-sm">
+              <li><strong>Purpose:</strong> Meaningful containers</li>
+              <li><strong>Meaning:</strong> Clear semantic purpose</li>
+              <li><strong>Use for:</strong> Content structure</li>
+              <li><strong>Accessibility:</strong> Screen reader friendly</li>
+              <li><strong>SEO Impact:</strong> Positive</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">When to Use &lt;div&gt;</h2>
+        <p class="mb-4">
+          The <code>&lt;div&gt;</code> element is still valuable and necessary in modern HTML. Here's when to use it:
+        </p>
+
+        <div class="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-amber-800 mb-3">✅ Use &lt;div&gt; for:</h3>
+          <ul class="text-amber-700 space-y-2">
+            <li><strong>Styling purposes:</strong> When you need a container purely for CSS styling</li>
+            <li><strong>Layout structure:</strong> Grid containers, flexbox wrappers</li>
+            <li><strong>JavaScript hooks:</strong> Elements that need JavaScript interaction</li>
+            <li><strong>Generic grouping:</strong> When no semantic element fits</li>
+            <li><strong>Component wrappers:</strong> In frameworks like React/Vue</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Good &lt;div&gt; Usage Examples:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Layout container --&gt;
+&lt;div class="container"&gt;
+  &lt;header&gt;...&lt;/header&gt;
+  &lt;main&gt;...&lt;/main&gt;
+&lt;/div&gt;
+
+&lt;!-- CSS Grid wrapper --&gt;
+&lt;div class="grid grid-cols-3 gap-4"&gt;
+  &lt;div class="card"&gt;Card 1&lt;/div&gt;
+  &lt;div class="card"&gt;Card 2&lt;/div&gt;
+  &lt;div class="card"&gt;Card 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- JavaScript interaction --&gt;
+&lt;div id="modal-overlay" class="hidden"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;p&gt;Modal content here&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Styling wrapper --&gt;
+&lt;div class="button-group"&gt;
+  &lt;button&gt;Save&lt;/button&gt;
+  &lt;button&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">When to Use Semantic Elements</h2>
+        <p class="mb-4">
+          Choose semantic elements when the content has clear meaning and purpose:
+        </p>
+
+        <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-green-800 mb-3">✅ Use Semantic Elements for:</h3>
+          <ul class="text-green-700 space-y-2">
+            <li><strong>Content structure:</strong> When content has clear meaning</li>
+            <li><strong>Document outline:</strong> Creating logical page structure</li>
+            <li><strong>Accessibility:</strong> Helping screen readers navigate</li>
+            <li><strong>SEO benefits:</strong> Helping search engines understand content</li>
+            <li><strong>Code readability:</strong> Making code self-documenting</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Good Semantic Usage Examples:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!-- Page structure --&gt;
+&lt;header&gt;
+  &lt;h1&gt;Site Title&lt;/h1&gt;
+  &lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;h2&gt;About Us&lt;/h2&gt;
+    &lt;p&gt;Company information...&lt;/p&gt;
+  &lt;/section&gt;
+  
+  &lt;section&gt;
+    &lt;h2&gt;Our Services&lt;/h2&gt;
+    &lt;article&gt;
+      &lt;h3&gt;Web Design&lt;/h3&gt;
+      &lt;p&gt;Service description...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;aside&gt;
+  &lt;h2&gt;Related Links&lt;/h2&gt;
+  &lt;ul&gt;...&lt;/ul&gt;
+&lt;/aside&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&copy; 2024 Company Name&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Side-by-Side Comparison</h2>
+        <p class="mb-4">Let's see the same webpage built both ways:</p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="div-highlight p-4 rounded-lg">
+            <h3 class="font-bold text-amber-800 mb-3">❌ All Divs (Old Way)</h3>
+            <pre class="text-xs text-amber-700 overflow-x-auto"><code>&lt;div id="page"&gt;
+  &lt;div id="header"&gt;
+    &lt;div id="logo"&gt;Site Name&lt;/div&gt;
+    &lt;div id="nav"&gt;
+      &lt;div class="nav-item"&gt;Home&lt;/div&gt;
+      &lt;div class="nav-item"&gt;About&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div id="content"&gt;
+    &lt;div class="post"&gt;
+      &lt;div class="post-title"&gt;Blog Post&lt;/div&gt;
+      &lt;div class="post-content"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div id="sidebar"&gt;
+    &lt;div class="widget"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div id="footer"&gt;
+    &lt;div class="copyright"&gt;© 2024&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          
+          <div class="semantic-highlight p-4 rounded-lg">
+            <h3 class="font-bold text-green-800 mb-3">✅ Semantic + Divs (Modern Way)</h3>
+            <pre class="text-xs text-green-700 overflow-x-auto"><code>&lt;div class="page-container"&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Site Name&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Blog Post&lt;/h2&gt;
+      &lt;p&gt;Post content...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+  
+  &lt;aside&gt;
+    &lt;div class="widget"&gt;...&lt;/div&gt;
+  &lt;/aside&gt;
+  
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2024 Site Name&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Decision Tree: Which Element to Choose?</h2>
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-4">🤔 Ask Yourself These Questions:</h3>
+          <div class="space-y-4 text-blue-700">
+            <div class="border-l-4 border-blue-400 pl-4">
+              <p><strong>1. Does this content have semantic meaning?</strong></p>
+              <p class="text-sm">If YES → Use semantic element (header, nav, main, etc.)</p>
+              <p class="text-sm">If NO → Consider using div</p>
+            </div>
+            <div class="border-l-4 border-blue-400 pl-4">
+              <p><strong>2. Is this purely for styling/layout?</strong></p>
+              <p class="text-sm">If YES → Use div</p>
+              <p class="text-sm">If NO → Look for appropriate semantic element</p>
+            </div>
+            <div class="border-l-4 border-blue-400 pl-4">
+              <p><strong>3. Would a screen reader benefit from knowing what this is?</strong></p>
+              <p class="text-sm">If YES → Use semantic element</p>
+              <p class="text-sm">If NO → Div is probably fine</p>
+            </div>
+            <div class="border-l-4 border-blue-400 pl-4">
+              <p><strong>4. Is this content standalone and reusable?</strong></p>
+              <p class="text-sm">If YES → Consider &lt;article&gt;</p>
+              <p class="text-sm">If NO → Look at other options</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Common Scenarios</h2>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Scenario 1: Blog Layout</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">The Right Mix:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;div class="blog-layout"&gt;  &lt;!-- Layout container --&gt;
+  &lt;header&gt;  &lt;!-- Semantic: page header --&gt;
+    &lt;h1&gt;My Blog&lt;/h1&gt;
+    &lt;nav&gt;  &lt;!-- Semantic: navigation --&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;div class="content-wrapper"&gt;  &lt;!-- Layout wrapper --&gt;
+    &lt;main&gt;  &lt;!-- Semantic: main content --&gt;
+      &lt;article&gt;  &lt;!-- Semantic: blog post --&gt;
+        &lt;header&gt;  &lt;!-- Semantic: article header --&gt;
+          &lt;h2&gt;Post Title&lt;/h2&gt;
+          &lt;div class="meta"&gt;  &lt;!-- Styling wrapper --&gt;
+            &lt;time datetime="2024-01-15"&gt;Jan 15, 2024&lt;/time&gt;
+            &lt;span class="author"&gt;By CodeByImaad&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/header&gt;
+        &lt;p&gt;Article content...&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/main&gt;
+
+    &lt;aside&gt;  &lt;!-- Semantic: sidebar --&gt;
+      &lt;div class="widget"&gt;  &lt;!-- Styling wrapper --&gt;
+        &lt;h3&gt;Popular Posts&lt;/h3&gt;
+        &lt;ul&gt;...&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/aside&gt;
+  &lt;/div&gt;
+
+  &lt;footer&gt;  &lt;!-- Semantic: page footer --&gt;
+    &lt;p&gt;&copy; 2024 My Blog&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Scenario 2: E-commerce Product Grid</h3>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Layout-Heavy with Semantic Touches:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;section&gt;  &lt;!-- Semantic: products section --&gt;
+  &lt;h2&gt;Featured Products&lt;/h2&gt;
+
+  &lt;div class="product-grid"&gt;  &lt;!-- Layout: CSS Grid container --&gt;
+    &lt;article class="product-card"&gt;  &lt;!-- Semantic: individual product --&gt;
+      &lt;div class="product-image"&gt;  &lt;!-- Styling wrapper --&gt;
+        &lt;img src="product1.jpg" alt="Product 1"&gt;
+      &lt;/div&gt;
+      &lt;div class="product-info"&gt;  &lt;!-- Styling wrapper --&gt;
+        &lt;h3&gt;Product Name&lt;/h3&gt;
+        &lt;p class="price"&gt;$29.99&lt;/p&gt;
+        &lt;div class="button-group"&gt;  &lt;!-- Styling wrapper --&gt;
+          &lt;button&gt;Add to Cart&lt;/button&gt;
+          &lt;button&gt;View Details&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;!-- More product cards... --&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Best Practices Summary</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="border border-green-200 rounded-lg p-4 bg-green-50">
+            <h3 class="font-bold text-green-800 mb-2">✅ Do</h3>
+            <ul class="text-green-700 space-y-1 text-sm">
+              <li>Use semantic elements for content structure</li>
+              <li>Use divs for layout and styling purposes</li>
+              <li>Combine both approaches thoughtfully</li>
+              <li>Think about accessibility first</li>
+              <li>Consider SEO implications</li>
+              <li>Make your HTML self-documenting</li>
+              <li>Test with screen readers</li>
+            </ul>
+          </div>
+          <div class="border border-red-200 rounded-lg p-4 bg-red-50">
+            <h3 class="font-bold text-red-800 mb-2">❌ Don't</h3>
+            <ul class="text-red-700 space-y-1 text-sm">
+              <li>Use only divs for everything</li>
+              <li>Use semantic elements just for styling</li>
+              <li>Overthink every single element</li>
+              <li>Ignore the purpose of content</li>
+              <li>Forget about accessibility</li>
+              <li>Use semantic elements incorrectly</li>
+              <li>Be afraid to use divs when appropriate</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Quick Reference Guide</h2>
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-bold text-gray-800 mb-3">🟢 Use Semantic Elements For:</h3>
+              <ul class="text-gray-700 space-y-1 text-sm">
+                <li>Page headers and footers</li>
+                <li>Navigation menus</li>
+                <li>Main content areas</li>
+                <li>Article/blog post content</li>
+                <li>Sidebar content</li>
+                <li>Content sections with headings</li>
+                <li>Standalone content pieces</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800 mb-3">🟡 Use Divs For:</h3>
+              <ul class="text-gray-700 space-y-1 text-sm">
+                <li>CSS Grid/Flexbox containers</li>
+                <li>Styling wrappers</li>
+                <li>JavaScript interaction targets</li>
+                <li>Layout positioning</li>
+                <li>Component boundaries</li>
+                <li>Generic grouping for styling</li>
+                <li>When no semantic element fits</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself</h2>
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Exercise:</h3>
+          <p class="text-blue-700 mb-4">
+            Refactor a div-heavy layout to use semantic elements:
+          </p>
+          <ol class="list-decimal list-inside text-blue-700 space-y-2">
+            <li>Take an existing webpage with lots of divs</li>
+            <li>Identify content that has semantic meaning</li>
+            <li>Replace appropriate divs with semantic elements</li>
+            <li>Keep divs for layout and styling purposes</li>
+            <li>Test accessibility with a screen reader</li>
+            <li>Validate your HTML structure</li>
+          </ol>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Real-World Example</h2>
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Modern Website Structure:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Modern Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="page-wrapper"&gt;  &lt;!-- Layout container --&gt;
+
+    &lt;header class="site-header"&gt;  &lt;!-- Semantic + styling --&gt;
+      &lt;div class="header-content"&gt;  &lt;!-- Layout wrapper --&gt;
+        &lt;h1&gt;Company Name&lt;/h1&gt;
+        &lt;nav aria-label="Main navigation"&gt;  &lt;!-- Semantic --&gt;
+          &lt;ul class="nav-list"&gt;  &lt;!-- Styling class --&gt;
+            &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class="main-content"&gt;  &lt;!-- Semantic + styling --&gt;
+      &lt;section class="hero-section"&gt;  &lt;!-- Semantic + styling --&gt;
+        &lt;div class="hero-content"&gt;  &lt;!-- Layout wrapper --&gt;
+          &lt;h2&gt;Welcome to Our Website&lt;/h2&gt;
+          &lt;p&gt;We provide amazing services...&lt;/p&gt;
+          &lt;div class="cta-buttons"&gt;  &lt;!-- Styling wrapper --&gt;
+            &lt;button class="btn-primary"&gt;Get Started&lt;/button&gt;
+            &lt;button class="btn-secondary"&gt;Learn More&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class="services-section"&gt;  &lt;!-- Semantic + styling --&gt;
+        &lt;div class="container"&gt;  &lt;!-- Layout wrapper --&gt;
+          &lt;h2&gt;Our Services&lt;/h2&gt;
+          &lt;div class="services-grid"&gt;  &lt;!-- Layout: CSS Grid --&gt;
+            &lt;article class="service-card"&gt;  &lt;!-- Semantic + styling --&gt;
+              &lt;h3&gt;Web Design&lt;/h3&gt;
+              &lt;p&gt;Beautiful, responsive designs...&lt;/p&gt;
+            &lt;/article&gt;
+            &lt;article class="service-card"&gt;
+              &lt;h3&gt;Development&lt;/h3&gt;
+              &lt;p&gt;Custom web applications...&lt;/p&gt;
+            &lt;/article&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;aside class="sidebar"&gt;  &lt;!-- Semantic + styling --&gt;
+      &lt;div class="widget"&gt;  &lt;!-- Styling wrapper --&gt;
+        &lt;h3&gt;Latest News&lt;/h3&gt;
+        &lt;ul&gt;...&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/aside&gt;
+
+    &lt;footer class="site-footer"&gt;  &lt;!-- Semantic + styling --&gt;
+      &lt;div class="footer-content"&gt;  &lt;!-- Layout wrapper --&gt;
+        &lt;div class="footer-section"&gt;  &lt;!-- Layout section --&gt;
+          &lt;h3&gt;Contact Info&lt;/h3&gt;
+          &lt;p&gt;Email: info@company.com&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="footer-section"&gt;
+          &lt;h3&gt;Follow Us&lt;/h3&gt;
+          &lt;div class="social-links"&gt;  &lt;!-- Styling wrapper --&gt;
+            &lt;a href="#"&gt;Twitter&lt;/a&gt;
+            &lt;a href="#"&gt;Facebook&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="footer-bottom"&gt;  &lt;!-- Layout section --&gt;
+        &lt;p&gt;&copy; 2024 Company Name. All rights reserved.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/footer&gt;
+
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaways</h2>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li>Both divs and semantic elements have their place in modern HTML</li>
+          <li>Use semantic elements for content structure and meaning</li>
+          <li>Use divs for layout, styling, and JavaScript interactions</li>
+          <li>The best approach combines both thoughtfully</li>
+          <li>Always consider accessibility and SEO implications</li>
+          <li>Ask yourself: "Does this content have semantic meaning?"</li>
+          <li>Don't overthink it - use what makes sense for your content</li>
+          <li>Test your decisions with screen readers and validation tools</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-8">
+      <a href="semantic-elements.html" class="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Previous: Semantic Elements
+      </a>
+
+      <a href="index.html" class="flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors duration-200">
+        Back to HTML Tutorials
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">© <span id="current-year"></span> CodeByImaad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

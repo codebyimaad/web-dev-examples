@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Advanced Elements - CodeByImaad</title>
+  <meta name="description" content="Master HTML metadata for SEO, Open Graph, Twitter Cards, and accessibility features for inclusive web design.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .code-block { background: #1e293b; color: #e2e8f0; }
+    .meta-demo { border: 2px dashed #3b82f6; background: #eff6ff; }
+    .accessibility-demo { border: 2px dashed #10b981; background: #f0fdf4; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">9</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">HTML Advanced Elements</h1>
+            <p class="text-sm text-gray-500">Lesson 9 of HTML Tutorial Series</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            ← Back to HTML Tutorials
+          </a>
+          <a href="media-multimedia.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            Previous: Media & Multimedia
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Lesson Content -->
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML Advanced Elements</h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+          <span>📚 Advanced Level</span>
+          <span>⏱️ 42 minutes</span>
+          <span>🎯 Metadata, Accessibility & Global Attributes</span>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <!-- Table of Contents -->
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+          <h2 class="text-xl font-bold text-blue-800 mb-4">📋 What You'll Learn</h2>
+          <div class="grid md:grid-cols-3 gap-6 text-blue-700">
+            <div>
+              <h3 class="font-bold mb-2">Part 1: HTML Metadata</h3>
+              <ul class="text-sm space-y-1">
+                <li>• Essential meta tags for SEO</li>
+                <li>• Open Graph for social media</li>
+                <li>• Twitter Cards optimization</li>
+                <li>• Viewport and mobile optimization</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">Part 2: HTML Accessibility</h3>
+              <ul class="text-sm space-y-1">
+                <li>• ARIA labels and roles</li>
+                <li>• Screen reader support</li>
+                <li>• Keyboard navigation</li>
+                <li>• Inclusive design practices</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">Part 3: Global Attributes</h3>
+              <ul class="text-sm space-y-1">
+                <li>• Core attributes: id, class, style, title</li>
+                <li>• Data attributes for custom data</li>
+                <li>• Interactive attributes</li>
+                <li>• Accessibility and language attributes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Part 1: HTML Metadata -->
+        <section id="html-metadata">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Part 1: HTML Metadata</h2>
+          
+          <p class="mb-6">
+            HTML metadata provides information about your webpage to browsers, search engines, and social media platforms. 
+            Proper metadata is essential for SEO, social sharing, and user experience.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Essential Meta Tags</h3>
+
+          <div class="meta-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-blue-800 mb-3">Basic SEO Meta Tags</h4>
+            <p class="text-blue-700 mb-4">These meta tags are fundamental for search engine optimization and should be on every page.</p>
+            
+            <div class="bg-white p-4 rounded border">
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;!-- Character encoding --&gt;
+  &lt;meta charset="UTF-8"&gt;
+  
+  &lt;!-- Viewport for responsive design --&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  
+  &lt;!-- Page title (appears in browser tab and search results) --&gt;
+  &lt;title&gt;Learn HTML - Complete Tutorial Guide | CodeByImaad&lt;/title&gt;
+  
+  &lt;!-- Meta description (appears in search results) --&gt;
+  &lt;meta name="description" content="Master HTML with our comprehensive tutorial guide. Learn semantic elements, forms, multimedia, and best practices for modern web development."&gt;
+  
+  &lt;!-- Keywords (less important now, but still used) --&gt;
+  &lt;meta name="keywords" content="HTML, tutorial, web development, semantic elements, forms"&gt;
+  
+  &lt;!-- Author information --&gt;
+  &lt;meta name="author" content="CodeByImaad"&gt;
+  
+  &lt;!-- Robots directive for search engines --&gt;
+  &lt;meta name="robots" content="index, follow"&gt;
+&lt;/head&gt;</code></pre>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
+              <h5 class="font-bold text-blue-800 mb-2">Live Example - How This Page Appears:</h5>
+              <div class="text-blue-700 text-sm space-y-2">
+                <p><strong>Browser Tab:</strong> "HTML Advanced Elements - CodeByImaad"</p>
+                <p><strong>Search Result Title:</strong> HTML Advanced Elements - CodeByImaad</p>
+                <p><strong>Search Description:</strong> Master HTML metadata for SEO, Open Graph, Twitter Cards, and accessibility features for inclusive web design.</p>
+                <p><strong>Mobile Viewport:</strong> Responsive design enabled ✓</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Open Graph Meta Tags</h3>
+
+          <div class="meta-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-blue-800 mb-3">Social Media Optimization</h4>
+            <p class="text-blue-700 mb-4">Open Graph tags control how your content appears when shared on Facebook, LinkedIn, and other social platforms.</p>
+            
+            <div class="bg-white p-4 rounded border">
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Open Graph meta tags --&gt;
+&lt;meta property="og:title" content="Learn HTML - Complete Tutorial Guide"&gt;
+&lt;meta property="og:description" content="Master HTML with our comprehensive tutorial guide. Learn semantic elements, forms, multimedia, and best practices."&gt;
+&lt;meta property="og:image" content="https://example.com/images/html-tutorial-preview.jpg"&gt;
+&lt;meta property="og:url" content="https://example.com/html-tutorial"&gt;
+&lt;meta property="og:type" content="article"&gt;
+&lt;meta property="og:site_name" content="CodeByImaad"&gt;
+&lt;meta property="og:locale" content="en_US"&gt;
+
+&lt;!-- Optional: Article-specific Open Graph tags --&gt;
+&lt;meta property="article:author" content="CodeByImaad"&gt;
+&lt;meta property="article:published_time" content="2024-01-15T10:00:00Z"&gt;
+&lt;meta property="article:modified_time" content="2024-01-20T15:30:00Z"&gt;
+&lt;meta property="article:section" content="Web Development"&gt;
+&lt;meta property="article:tag" content="HTML"&gt;
+&lt;meta property="article:tag" content="Tutorial"&gt;</code></pre>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
+              <h5 class="font-bold text-blue-800 mb-2">Live Example - Social Media Preview:</h5>
+              <div class="bg-white border rounded-lg p-4 max-w-md">
+                <div class="w-full h-32 bg-gradient-to-r from-orange-400 to-red-500 rounded mb-3 flex items-center justify-center text-white font-bold">
+                  HTML Tutorial Preview Image
+                </div>
+                <h6 class="font-bold text-gray-800 mb-1">Learn HTML - Complete Tutorial Guide</h6>
+                <p class="text-gray-600 text-sm mb-2">Master HTML with our comprehensive tutorial guide. Learn semantic elements, forms, multimedia, and best practices.</p>
+                <p class="text-gray-500 text-xs">codebyi maad.com</p>
+              </div>
+              <p class="text-blue-700 text-sm mt-2">This is how your content would appear when shared on Facebook, LinkedIn, etc.</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Twitter Card Meta Tags</h3>
+
+          <div class="meta-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-blue-800 mb-3">Twitter Optimization</h4>
+            <p class="text-blue-700 mb-4">Twitter Cards enhance how your content appears when shared on Twitter.</p>
+            
+            <div class="bg-white p-4 rounded border">
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Twitter Card meta tags --&gt;
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:site" content="@codewithimaad"&gt;
+&lt;meta name="twitter:creator" content="@codewithimaad"&gt;
+&lt;meta name="twitter:title" content="Learn HTML - Complete Tutorial Guide"&gt;
+&lt;meta name="twitter:description" content="Master HTML with our comprehensive tutorial guide. Learn semantic elements, forms, multimedia, and best practices."&gt;
+&lt;meta name="twitter:image" content="https://example.com/images/html-tutorial-twitter.jpg"&gt;
+&lt;meta name="twitter:image:alt" content="HTML Tutorial Guide Preview"&gt;
+
+&lt;!-- Alternative Twitter card types --&gt;
+&lt;!-- For summary card: --&gt;
+&lt;!-- &lt;meta name="twitter:card" content="summary"&gt; --&gt;
+
+&lt;!-- For app card: --&gt;
+&lt;!-- &lt;meta name="twitter:card" content="app"&gt; --&gt;
+&lt;!-- &lt;meta name="twitter:app:name:iphone" content="Your App Name"&gt; --&gt;</code></pre>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
+              <h5 class="font-bold text-blue-800 mb-2">Live Example - Twitter Card Preview:</h5>
+              <div class="bg-white border rounded-lg p-3 max-w-sm">
+                <div class="w-full h-24 bg-gradient-to-r from-blue-400 to-purple-500 rounded mb-2 flex items-center justify-center text-white text-sm font-bold">
+                  Twitter Card Image
+                </div>
+                <h6 class="font-bold text-gray-800 text-sm mb-1">Learn HTML - Complete Tutorial Guide</h6>
+                <p class="text-gray-600 text-xs mb-2">Master HTML with our comprehensive tutorial guide...</p>
+                <p class="text-gray-500 text-xs flex items-center">
+                  <span class="w-4 h-4 bg-blue-400 rounded-full mr-2"></span>
+                  @codewithimaad
+                </p>
+              </div>
+              <p class="text-blue-700 text-sm mt-2">This is how your content would appear when shared on Twitter.</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Additional Important Meta Tags</h3>
+
+          <div class="meta-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-blue-800 mb-3">Performance & Security</h4>
+            
+            <div class="bg-white p-4 rounded border">
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Favicon --&gt;
+&lt;link rel="icon" type="image/x-icon" href="/favicon.ico"&gt;
+&lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"&gt;
+&lt;link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"&gt;
+
+&lt;!-- Theme color for mobile browsers --&gt;
+&lt;meta name="theme-color" content="#ff6b35"&gt;
+
+&lt;!-- Prevent automatic phone number detection --&gt;
+&lt;meta name="format-detection" content="telephone=no"&gt;
+
+&lt;!-- Cache control --&gt;
+&lt;meta http-equiv="cache-control" content="no-cache"&gt;
+&lt;meta http-equiv="expires" content="0"&gt;
+&lt;meta http-equiv="pragma" content="no-cache"&gt;
+
+&lt;!-- Content Security Policy --&gt;
+&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self'"&gt;
+
+&lt;!-- Canonical URL (prevents duplicate content issues) --&gt;
+&lt;link rel="canonical" href="https://example.com/html-tutorial"&gt;</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- Part 2: HTML Accessibility -->
+        <section id="html-accessibility">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Part 2: HTML Accessibility</h2>
+
+          <p class="mb-6">
+            Web accessibility ensures that websites are usable by people with disabilities. HTML provides many built-in
+            accessibility features, and ARIA (Accessible Rich Internet Applications) attributes enhance these capabilities.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">HTML Code Examples with Output</h3>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">Basic HTML Elements</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-3 rounded text-sm overflow-x-auto"><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph with &lt;strong&gt;bold text&lt;/strong&gt; and &lt;em&gt;italic text&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Here's a &lt;a href="#"&gt;link example&lt;/a&gt; and some &lt;code&gt;inline code&lt;/code&gt;.&lt;/p&gt;</code></pre>
+            </div>
+
+            <div class="bg-white border-2 border-dashed border-green-400 p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-green-800">Output:</h5>
+              <h1 class="text-3xl font-bold mb-2">Main Heading</h1>
+              <h2 class="text-2xl font-bold mb-3">Subheading</h2>
+              <p class="mb-3">This is a paragraph with <strong>bold text</strong> and <em>italic text</em>.</p>
+              <p>Here's a <a href="#" class="text-blue-600 underline">link example</a> and some <code class="bg-gray-200 px-1 rounded">inline code</code>.</p>
+            </div>
+          </div>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">HTML Lists</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-3 rounded text-sm overflow-x-auto"><code>&lt;h3&gt;Unordered List&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+  &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Ordered List&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Step one&lt;/li&gt;
+  &lt;li&gt;Step two&lt;/li&gt;
+  &lt;li&gt;Step three&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </div>
+
+            <div class="bg-white border-2 border-dashed border-green-400 p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-green-800">Output:</h5>
+              <h3 class="text-lg font-bold mb-2">Unordered List</h3>
+              <ul class="list-disc list-inside mb-4">
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+              </ul>
+
+              <h3 class="text-lg font-bold mb-2">Ordered List</h3>
+              <ol class="list-decimal list-inside">
+                <li>Step one</li>
+                <li>Step two</li>
+                <li>Step three</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">HTML Table</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-3 rounded text-sm overflow-x-auto"><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+      &lt;th&gt;City&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;John Doe&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;New York&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Jane Smith&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;London&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+
+            <div class="bg-white border-2 border-dashed border-green-400 p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-green-800">Output:</h5>
+              <table class="w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-300 px-4 py-2 text-left font-bold">Name</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left font-bold">Age</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left font-bold">City</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2">John Doe</td>
+                    <td class="border border-gray-300 px-4 py-2">25</td>
+                    <td class="border border-gray-300 px-4 py-2">New York</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 px-4 py-2">Jane Smith</td>
+                    <td class="border border-gray-300 px-4 py-2">30</td>
+                    <td class="border border-gray-300 px-4 py-2">London</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">HTML Semantic Structure</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-3 rounded text-sm overflow-x-auto"><code>&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Welcome Section&lt;/h2&gt;
+    &lt;p&gt;Welcome to our website!&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;article&gt;
+    &lt;header&gt;
+      &lt;h2&gt;Blog Post Title&lt;/h2&gt;
+      &lt;time datetime="2024-01-15"&gt;January 15, 2024&lt;/time&gt;
+    &lt;/header&gt;
+    &lt;p&gt;This is the content of our blog post...&lt;/p&gt;
+    &lt;footer&gt;
+      &lt;p&gt;Tags: HTML, Tutorial&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;aside&gt;
+  &lt;h2&gt;Sidebar&lt;/h2&gt;
+  &lt;p&gt;Related content goes here.&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&copy; 2024 My Website. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+            </div>
+
+            <div class="bg-white border-2 border-dashed border-green-400 p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-green-800">Output:</h5>
+
+              <header class="bg-blue-100 p-4 rounded mb-4">
+                <h1 class="text-2xl font-bold mb-2">My Website</h1>
+                <nav>
+                  <ul class="flex space-x-4">
+                    <li><a href="#home" class="text-blue-600 hover:underline">Home</a></li>
+                    <li><a href="#about" class="text-blue-600 hover:underline">About</a></li>
+                    <li><a href="#contact" class="text-blue-600 hover:underline">Contact</a></li>
+                  </ul>
+                </nav>
+              </header>
+
+              <main class="mb-4">
+                <section class="bg-green-100 p-4 rounded mb-4">
+                  <h2 class="text-xl font-bold mb-2">Welcome Section</h2>
+                  <p>Welcome to our website!</p>
+                </section>
+
+                <article class="bg-yellow-100 p-4 rounded">
+                  <header class="mb-3">
+                    <h2 class="text-xl font-bold">Blog Post Title</h2>
+                    <time datetime="2024-01-15" class="text-gray-600 text-sm">January 15, 2024</time>
+                  </header>
+                  <p class="mb-3">This is the content of our blog post...</p>
+                  <footer class="text-sm text-gray-600">
+                    <p>Tags: HTML, Tutorial</p>
+                  </footer>
+                </article>
+              </main>
+
+              <aside class="bg-purple-100 p-4 rounded mb-4">
+                <h2 class="text-lg font-bold mb-2">Sidebar</h2>
+                <p>Related content goes here.</p>
+              </aside>
+
+              <footer class="bg-gray-100 p-4 rounded text-center">
+                <p>&copy; 2024 My Website. All rights reserved.</p>
+              </footer>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Semantic HTML for Accessibility</h3>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">Foundation of Accessible Web Design</h4>
+            <p class="text-green-700 mb-4">Using semantic HTML elements provides built-in accessibility features that screen readers understand.</p>
+
+            <div class="bg-white p-4 rounded border">
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Good: Semantic HTML provides context --&gt;
+&lt;header&gt;
+  &lt;h1&gt;Website Title&lt;/h1&gt;
+  &lt;nav aria-label="Main navigation"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Article Title&lt;/h2&gt;
+    &lt;p&gt;Article content that screen readers can navigate easily.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;!-- Bad: Non-semantic HTML lacks context --&gt;
+&lt;div class="header"&gt;
+  &lt;div class="title"&gt;Website Title&lt;/div&gt;
+  &lt;div class="nav"&gt;
+    &lt;div&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
+              <h5 class="font-bold text-green-800 mb-2">Live Example - Semantic Structure:</h5>
+              <div class="bg-white border rounded-lg p-4">
+                <header class="border-b pb-2 mb-3">
+                  <h6 class="text-lg font-bold">Website Title</h6>
+                  <nav class="mt-2">
+                    <ul class="flex space-x-4 text-blue-600">
+                      <li><a href="#" class="hover:underline">Home</a></li>
+                      <li><a href="#" class="hover:underline">About</a></li>
+                      <li><a href="#" class="hover:underline">Contact</a></li>
+                    </ul>
+                  </nav>
+                </header>
+                <main>
+                  <article>
+                    <h6 class="font-bold mb-2">Article Title</h6>
+                    <p class="text-gray-700 text-sm">Article content that screen readers can navigate easily using semantic structure.</p>
+                  </article>
+                </main>
+              </div>
+              <p class="text-green-700 text-sm mt-2">Screen readers can navigate this structure using landmarks and headings.</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">ARIA Labels and Roles</h3>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">Enhancing Accessibility with ARIA</h4>
+            <p class="text-green-700 mb-4">ARIA attributes provide additional context for assistive technologies when semantic HTML isn't enough.</p>
+
+            <div class="bg-white p-4 rounded border mb-4">
+              <h5 class="font-bold mb-2">ARIA Labels:</h5>
+              <pre class="code-block p-3 rounded text-sm overflow-x-auto"><code>&lt;!-- aria-label provides accessible name --&gt;
+&lt;button aria-label="Close dialog"&gt;×&lt;/button&gt;
+&lt;input type="search" aria-label="Search products"&gt;
+
+&lt;!-- aria-labelledby references another element --&gt;
+&lt;h2 id="billing"&gt;Billing Address&lt;/h2&gt;
+&lt;fieldset aria-labelledby="billing"&gt;
+  &lt;input type="text" placeholder="Street Address"&gt;
+  &lt;input type="text" placeholder="City"&gt;
+&lt;/fieldset&gt;
+
+&lt;!-- aria-describedby provides additional description --&gt;
+&lt;input type="password" aria-describedby="pwd-help"&gt;
+&lt;div id="pwd-help"&gt;Password must be at least 8 characters&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
+              <h5 class="font-bold text-green-800 mb-2">Live Example - ARIA Labels:</h5>
+              <div class="bg-white border rounded-lg p-4 space-y-3">
+                <div class="flex items-center space-x-2">
+                  <button aria-label="Close dialog" class="w-8 h-8 bg-red-500 text-white rounded hover:bg-red-600">×</button>
+                  <span class="text-sm text-gray-600">Button with aria-label (screen reader reads "Close dialog")</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <input type="search" aria-label="Search products" placeholder="Search..." class="border rounded px-2 py-1">
+                  <span class="text-sm text-gray-600">Search input with aria-label</span>
+                </div>
+                <div>
+                  <h6 id="billing-demo" class="font-bold mb-2">Billing Address</h6>
+                  <fieldset aria-labelledby="billing-demo" class="border rounded p-2 space-y-2">
+                    <input type="text" placeholder="Street Address" class="border rounded px-2 py-1 w-full">
+                    <input type="text" placeholder="City" class="border rounded px-2 py-1 w-full">
+                  </fieldset>
+                  <span class="text-sm text-gray-600">Fieldset labeled by heading above</span>
+                </div>
+              </div>
+              <p class="text-green-700 text-sm mt-2">Screen readers announce these labels to provide context for users.</p>
+            </div>
+
+            <div class="bg-white p-4 rounded border mb-4">
+              <h5 class="font-bold mb-2">ARIA Roles:</h5>
+              <pre class="code-block p-3 rounded text-sm overflow-x-auto"><code>&lt;!-- Define the purpose of elements --&gt;
+&lt;div role="banner"&gt;Site header content&lt;/div&gt;
+&lt;div role="navigation"&gt;Navigation menu&lt;/div&gt;
+&lt;div role="main"&gt;Main content area&lt;/div&gt;
+&lt;div role="complementary"&gt;Sidebar content&lt;/div&gt;
+&lt;div role="contentinfo"&gt;Footer content&lt;/div&gt;
+
+&lt;!-- Interactive roles --&gt;
+&lt;div role="button" tabindex="0"&gt;Custom button&lt;/div&gt;
+&lt;div role="tab" aria-selected="true"&gt;Active tab&lt;/div&gt;
+&lt;div role="tabpanel"&gt;Tab content&lt;/div&gt;
+
+&lt;!-- Alert roles --&gt;
+&lt;div role="alert"&gt;Error: Please fill in all required fields&lt;/div&gt;
+&lt;div role="status"&gt;Form saved successfully&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="bg-white p-4 rounded border">
+              <h5 class="font-bold mb-2">ARIA States and Properties:</h5>
+              <pre class="code-block p-3 rounded text-sm overflow-x-auto"><code>&lt;!-- aria-expanded for collapsible content --&gt;
+&lt;button aria-expanded="false" aria-controls="menu"&gt;Menu&lt;/button&gt;
+&lt;ul id="menu" aria-hidden="true"&gt;
+  &lt;li&gt;&lt;a href="/home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- aria-checked for custom checkboxes --&gt;
+&lt;div role="checkbox" aria-checked="false" tabindex="0"&gt;
+  Custom checkbox
+&lt;/div&gt;
+
+&lt;!-- aria-disabled for disabled elements --&gt;
+&lt;button aria-disabled="true"&gt;Submit&lt;/button&gt;
+
+&lt;!-- aria-live for dynamic content --&gt;
+&lt;div aria-live="polite" id="status"&gt;&lt;/div&gt;
+&lt;div aria-live="assertive" id="errors"&gt;&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">HTML Form Elements</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-3 rounded text-sm overflow-x-auto"><code>&lt;form&gt;
+  &lt;label for="username"&gt;Username:&lt;/label&gt;
+  &lt;input type="text" id="username" name="username" placeholder="Enter username"&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" placeholder="Enter email"&gt;
+
+  &lt;label for="password"&gt;Password:&lt;/label&gt;
+  &lt;input type="password" id="password" name="password"&gt;
+
+  &lt;label for="country"&gt;Country:&lt;/label&gt;
+  &lt;select id="country" name="country"&gt;
+    &lt;option value=""&gt;Select a country&lt;/option&gt;
+    &lt;option value="us"&gt;United States&lt;/option&gt;
+    &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+    &lt;option value="ca"&gt;Canada&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;label for="message"&gt;Message:&lt;/label&gt;
+  &lt;textarea id="message" name="message" rows="3" placeholder="Enter your message"&gt;&lt;/textarea&gt;
+
+  &lt;input type="checkbox" id="newsletter" name="newsletter"&gt;
+  &lt;label for="newsletter"&gt;Subscribe to newsletter&lt;/label&gt;
+
+  &lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+
+            <div class="bg-white border-2 border-dashed border-green-400 p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-green-800">Output:</h5>
+              <form class="space-y-4">
+                <div>
+                  <label for="demo-username" class="block font-medium mb-1">Username:</label>
+                  <input type="text" id="demo-username" name="username" placeholder="Enter username"
+                         class="border border-gray-300 rounded px-3 py-2 w-full">
+                </div>
+
+                <div>
+                  <label for="demo-email-field" class="block font-medium mb-1">Email:</label>
+                  <input type="email" id="demo-email-field" name="email" placeholder="Enter email"
+                         class="border border-gray-300 rounded px-3 py-2 w-full">
+                </div>
+
+                <div>
+                  <label for="demo-password" class="block font-medium mb-1">Password:</label>
+                  <input type="password" id="demo-password" name="password"
+                         class="border border-gray-300 rounded px-3 py-2 w-full">
+                </div>
+
+                <div>
+                  <label for="demo-country" class="block font-medium mb-1">Country:</label>
+                  <select id="demo-country" name="country" class="border border-gray-300 rounded px-3 py-2 w-full">
+                    <option value="">Select a country</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="demo-message" class="block font-medium mb-1">Message:</label>
+                  <textarea id="demo-message" name="message" rows="3" placeholder="Enter your message"
+                            class="border border-gray-300 rounded px-3 py-2 w-full"></textarea>
+                </div>
+
+                <div class="flex items-center">
+                  <input type="checkbox" id="demo-newsletter" name="newsletter" class="mr-2">
+                  <label for="demo-newsletter">Subscribe to newsletter</label>
+                </div>
+
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                  Submit Form
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Form Accessibility</h3>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">Accessible Forms</h4>
+            <p class="text-green-700 mb-4">Forms require special attention to ensure they're usable by everyone.</p>
+
+            <div class="bg-white p-4 rounded border">
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;form&gt;
+  &lt;!-- Always associate labels with inputs --&gt;
+  &lt;label for="name"&gt;Full Name *&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" required aria-describedby="name-help"&gt;
+  &lt;div id="name-help"&gt;Enter your first and last name&lt;/div&gt;
+
+  &lt;!-- Fieldset for grouping related inputs --&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Contact Preference&lt;/legend&gt;
+    &lt;input type="radio" id="email" name="contact" value="email"&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+
+    &lt;input type="radio" id="phone" name="contact" value="phone"&gt;
+    &lt;label for="phone"&gt;Phone&lt;/label&gt;
+  &lt;/fieldset&gt;
+
+  &lt;!-- Error handling --&gt;
+  &lt;label for="email-input"&gt;Email Address *&lt;/label&gt;
+  &lt;input type="email" id="email-input" name="email"
+         aria-invalid="true" aria-describedby="email-error"&gt;
+  &lt;div id="email-error" role="alert"&gt;
+    Please enter a valid email address
+  &lt;/div&gt;
+
+  &lt;!-- Submit button with clear purpose --&gt;
+  &lt;button type="submit"&gt;Submit Contact Form&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
+              <h5 class="font-bold text-green-800 mb-2">Live Example - Accessible Form:</h5>
+              <div class="bg-white border rounded-lg p-4">
+                <form class="space-y-4">
+                  <div>
+                    <label for="demo-name" class="block font-bold mb-1">Full Name *</label>
+                    <input type="text" id="demo-name" name="name" required aria-describedby="demo-name-help"
+                           class="border rounded px-3 py-2 w-full">
+                    <div id="demo-name-help" class="text-sm text-gray-600 mt-1">Enter your first and last name</div>
+                  </div>
+
+                  <fieldset class="border rounded p-3">
+                    <legend class="font-bold px-2">Contact Preference</legend>
+                    <div class="space-y-2">
+                      <div>
+                        <input type="radio" id="demo-email" name="contact" value="email" class="mr-2">
+                        <label for="demo-email">Email</label>
+                      </div>
+                      <div>
+                        <input type="radio" id="demo-phone" name="contact" value="phone" class="mr-2">
+                        <label for="demo-phone">Phone</label>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <div>
+                    <label for="demo-email-input" class="block font-bold mb-1">Email Address *</label>
+                    <input type="email" id="demo-email-input" name="email"
+                           aria-invalid="true" aria-describedby="demo-email-error"
+                           class="border border-red-300 rounded px-3 py-2 w-full">
+                    <div id="demo-email-error" role="alert" class="text-red-600 text-sm mt-1">
+                      Please enter a valid email address
+                    </div>
+                  </div>
+
+                  <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                    Submit Contact Form
+                  </button>
+                </form>
+              </div>
+              <p class="text-green-700 text-sm mt-2">This form is fully accessible with proper labels, fieldsets, and error handling.</p>
+            </div>
+          </div>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">HTML Multimedia Elements</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-3 rounded text-sm overflow-x-auto"><code>&lt;!-- Image with alt text --&gt;
+&lt;img src="placeholder.jpg" alt="A beautiful sunset over mountains" width="300" height="200"&gt;
+
+&lt;!-- Figure with caption --&gt;
+&lt;figure&gt;
+  &lt;img src="chart.jpg" alt="Sales data chart" width="400" height="300"&gt;
+  &lt;figcaption&gt;Monthly sales data for 2024&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- SVG inline graphics --&gt;
+&lt;svg width="200" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="30" fill="blue" /&gt;
+  &lt;rect x="100" y="20" width="60" height="60" fill="red" /&gt;
+  &lt;text x="10" y="90" font-size="14"&gt;SVG Graphics&lt;/text&gt;
+&lt;/svg&gt;
+
+&lt;!-- Audio element --&gt;
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;!-- Video element --&gt;
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+            </div>
+
+            <div class="bg-white border-2 border-dashed border-green-400 p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-green-800">Output:</h5>
+
+              <!-- Image placeholder -->
+              <div class="w-72 h-48 bg-gradient-to-r from-orange-400 to-pink-500 rounded mb-4 flex items-center justify-center text-white font-bold">
+                Image: A beautiful sunset over mountains
+              </div>
+
+              <!-- Figure with caption -->
+              <figure class="mb-4">
+                <div class="w-96 h-64 bg-gradient-to-r from-blue-400 to-purple-500 rounded flex items-center justify-center text-white font-bold">
+                  Chart: Sales data chart
+                </div>
+                <figcaption class="text-gray-600 text-center mt-2 italic">Monthly sales data for 2024</figcaption>
+              </figure>
+
+              <!-- SVG inline graphics -->
+              <svg width="200" height="100" class="mb-4">
+                <circle cx="50" cy="50" r="30" fill="blue" />
+                <rect x="100" y="20" width="60" height="60" fill="red" />
+                <text x="10" y="90" font-size="14" fill="black">SVG Graphics</text>
+              </svg>
+
+              <!-- Audio placeholder -->
+              <div class="bg-gray-200 border rounded p-4 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-green-500 rounded-full mr-3 flex items-center justify-center text-white text-xs">♪</div>
+                <span class="text-gray-700">Audio Player (controls would appear here)</span>
+              </div>
+
+              <!-- Video placeholder -->
+              <div class="w-80 h-60 bg-gray-800 rounded flex items-center justify-center text-white">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <div class="w-0 h-0 border-l-8 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"></div>
+                  </div>
+                  <p>Video Player (320x240)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Image Accessibility</h3>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">Alt Text and Image Descriptions</h4>
+            <p class="text-green-700 mb-4">Proper image descriptions are crucial for screen reader users.</p>
+
+            <div class="bg-white p-4 rounded border">
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Descriptive alt text --&gt;
+&lt;img src="chart.png" alt="Sales increased 25% from January to March 2024"&gt;
+
+&lt;!-- Decorative images --&gt;
+&lt;img src="decoration.png" alt="" role="presentation"&gt;
+
+&lt;!-- Complex images with detailed description --&gt;
+&lt;img src="complex-chart.png" alt="Quarterly sales data" aria-describedby="chart-desc"&gt;
+&lt;div id="chart-desc"&gt;
+  Detailed description: Q1 sales were $50k, Q2 increased to $75k,
+  Q3 reached $90k, and Q4 peaked at $120k.
+&lt;/div&gt;
+
+&lt;!-- Images as links --&gt;
+&lt;a href="/home"&gt;
+  &lt;img src="logo.png" alt="CodeByImaad - Go to homepage"&gt;
+&lt;/a&gt;
+
+&lt;!-- Figure with caption --&gt;
+&lt;figure&gt;
+  &lt;img src="website-mockup.png" alt="Mobile-responsive website design"&gt;
+  &lt;figcaption&gt;Our new responsive design works on all devices&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+            </div>
+
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
+              <h5 class="font-bold text-green-800 mb-2">Live Example - Image Accessibility:</h5>
+              <div class="bg-white border rounded-lg p-4 space-y-4">
+                <div>
+                  <h6 class="font-bold mb-2">Descriptive Alt Text:</h6>
+                  <div class="w-full h-24 bg-gradient-to-r from-green-400 to-blue-500 rounded flex items-center justify-center text-white font-bold mb-2">
+                    Sales Chart Placeholder
+                  </div>
+                  <p class="text-sm text-gray-600">Alt text: "Sales increased 25% from January to March 2024"</p>
+                </div>
+
+                <div>
+                  <h6 class="font-bold mb-2">Decorative Image:</h6>
+                  <div class="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mx-auto mb-2"></div>
+                  <p class="text-sm text-gray-600">Alt text: "" (empty for decorative images)</p>
+                </div>
+
+                <figure>
+                  <div class="w-full h-32 bg-gradient-to-r from-orange-400 to-red-500 rounded flex items-center justify-center text-white font-bold mb-2">
+                    Website Mockup
+                  </div>
+                  <figcaption class="text-sm text-gray-600 text-center">Our new responsive design works on all devices</figcaption>
+                </figure>
+              </div>
+              <p class="text-green-700 text-sm mt-2">Screen readers announce alt text to describe images to visually impaired users.</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Keyboard Navigation</h3>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">Keyboard Accessibility</h4>
+            <p class="text-green-700 mb-4">Ensure all interactive elements are accessible via keyboard navigation.</p>
+
+            <div class="bg-white p-4 rounded border">
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Skip navigation link --&gt;
+&lt;a href="#main-content" class="skip-link"&gt;Skip to main content&lt;/a&gt;
+
+&lt;!-- Make custom interactive elements focusable --&gt;
+&lt;div role="button" tabindex="0"
+     onkeydown="if(event.key==='Enter'||event.key===' ') handleClick()"&gt;
+  Custom Button
+&lt;/div&gt;
+
+&lt;!-- Proper tab order --&gt;
+&lt;input type="text" tabindex="1" placeholder="First field"&gt;
+&lt;input type="text" tabindex="2" placeholder="Second field"&gt;
+&lt;button tabindex="3"&gt;Submit&lt;/button&gt;
+
+&lt;!-- Remove from tab order when appropriate --&gt;
+&lt;div tabindex="-1"&gt;Not focusable by keyboard&lt;/div&gt;
+
+&lt;!-- Focus management for modals --&gt;
+&lt;div role="dialog" aria-modal="true" aria-labelledby="dialog-title"&gt;
+  &lt;h2 id="dialog-title"&gt;Confirm Action&lt;/h2&gt;
+  &lt;p&gt;Are you sure you want to delete this item?&lt;/p&gt;
+  &lt;button&gt;Cancel&lt;/button&gt;
+  &lt;button&gt;Delete&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
+              <h5 class="font-bold text-green-800 mb-2">Live Example - Keyboard Navigation:</h5>
+              <div class="bg-white border rounded-lg p-4 space-y-4">
+                <div>
+                  <a href="#main-content" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Skip to main content
+                  </a>
+                  <p class="text-sm text-gray-600 mt-1">Skip link (try pressing Tab to see focus)</p>
+                </div>
+
+                <div class="space-y-2">
+                  <h6 class="font-bold">Tab Order Example:</h6>
+                  <input type="text" placeholder="First field (Tab 1)" tabindex="1"
+                         class="border rounded px-2 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <input type="text" placeholder="Second field (Tab 2)" tabindex="2"
+                         class="border rounded px-2 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <button tabindex="3"
+                          class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    Submit (Tab 3)
+                  </button>
+                </div>
+
+                <div>
+                  <div role="button" tabindex="0"
+                       class="bg-purple-600 text-white px-4 py-2 rounded cursor-pointer hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 inline-block"
+                       onkeydown="if(event.key==='Enter'||event.key===' ') alert('Custom button activated!')">
+                    Custom Button (Enter/Space to activate)
+                  </div>
+                  <p class="text-sm text-gray-600 mt-1">Custom button accessible via keyboard</p>
+                </div>
+              </div>
+              <p class="text-green-700 text-sm mt-2">Try using Tab, Enter, and Space keys to navigate and interact with these elements.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Best Practices and Summary -->
+        <section id="best-practices">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Best Practices Summary</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="border border-blue-200 rounded-lg p-4 bg-blue-50">
+              <h3 class="font-bold text-blue-800 mb-3">🔍 SEO & Metadata</h3>
+              <ul class="text-blue-700 space-y-1 text-sm">
+                <li>• Include essential meta tags on every page</li>
+                <li>• Write unique, descriptive titles and descriptions</li>
+                <li>• Use Open Graph for social media optimization</li>
+                <li>• Add Twitter Cards for better Twitter sharing</li>
+                <li>• Include proper favicon and theme colors</li>
+                <li>• Use canonical URLs to prevent duplicate content</li>
+                <li>• Test social media previews before publishing</li>
+              </ul>
+            </div>
+
+            <div class="border border-green-200 rounded-lg p-4 bg-green-50">
+              <h3 class="font-bold text-green-800 mb-3">♿ Accessibility</h3>
+              <ul class="text-green-700 space-y-1 text-sm">
+                <li>• Start with semantic HTML elements</li>
+                <li>• Add ARIA labels when semantic HTML isn't enough</li>
+                <li>• Ensure all interactive elements are keyboard accessible</li>
+                <li>• Provide meaningful alt text for images</li>
+                <li>• Use proper heading hierarchy (h1, h2, h3...)</li>
+                <li>• Test with screen readers and keyboard navigation</li>
+                <li>• Include skip navigation links</li>
+              </ul>
+            </div>
+          </div>
+
+        <!-- Part 3: HTML Global Attributes -->
+        <section id="html-global-attributes">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Part 3: HTML Global Attributes</h2>
+
+          <p class="mb-6">
+            HTML global attributes can be used on any HTML element. They provide essential functionality for
+            styling, identification, accessibility, and interactivity. Understanding these attributes is crucial
+            for modern web development.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Essential Global Attributes</h3>
+
+          <h4 class="text-xl font-bold text-green-800 mb-4">The id Attribute: Unique Identifier</h4>
+
+          <div class="bg-white border border-green-200 rounded-lg p-6 mb-6">
+            <p class="text-green-700 mb-4">
+              The <code>id</code> attribute provides a unique identifier for an HTML element. Each id must be unique within the entire HTML document.
+            </p>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Each id must be unique on the page --&gt;
+&lt;header id="main-header"&gt;
+  &lt;h1 id="site-title"&gt;My Website&lt;/h1&gt;
+  &lt;nav id="primary-navigation"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#home-section"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#about-section"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#contact-section"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section id="home-section"&gt;
+    &lt;h2&gt;Welcome Home&lt;/h2&gt;
+    &lt;p id="welcome-message"&gt;Welcome to our website!&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section id="about-section"&gt;
+    &lt;h2&gt;About Us&lt;/h2&gt;
+    &lt;p id="company-description"&gt;We are a web development company.&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+            </div>
+
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h5 class="font-bold text-green-800 mb-2">Uses of id Attribute:</h5>
+              <ul class="text-green-700 space-y-1 text-sm">
+                <li>• <strong>CSS Targeting:</strong> <code>#main-header { background: blue; }</code></li>
+                <li>• <strong>JavaScript Selection:</strong> <code>document.getElementById('site-title')</code></li>
+                <li>• <strong>Anchor Links:</strong> <code>&lt;a href="#about-section"&gt;Go to About&lt;/a&gt;</code></li>
+                <li>• <strong>Form Labels:</strong> <code>&lt;label for="username"&gt;</code> connects to <code>&lt;input id="username"&gt;</code></li>
+                <li>• <strong>Fragment URLs:</strong> <code>website.com/page#contact-section</code></li>
+              </ul>
+            </div>
+          </div>
+
+          <h4 class="text-xl font-bold text-green-800 mb-4">The class Attribute: CSS Styling Hooks</h4>
+
+          <div class="bg-white border border-green-200 rounded-lg p-6 mb-6">
+            <p class="text-green-700 mb-4">
+              The <code>class</code> attribute assigns one or more class names to an element. Unlike ids, classes can be reused multiple times and elements can have multiple classes.
+            </p>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Single class --&gt;
+&lt;p class="highlight"&gt;This paragraph is highlighted.&lt;/p&gt;
+
+&lt;!-- Multiple classes (space-separated) --&gt;
+&lt;div class="container card shadow-lg"&gt;
+  &lt;h3 class="card-title text-center"&gt;Product Card&lt;/h3&gt;
+  &lt;p class="card-description text-muted"&gt;Product description here.&lt;/p&gt;
+  &lt;button class="btn btn-primary btn-large"&gt;Buy Now&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Reusing classes --&gt;
+&lt;div class="card"&gt;
+  &lt;h3 class="card-title"&gt;Another Card&lt;/h3&gt;
+  &lt;p class="card-description"&gt;Different content, same styling.&lt;/p&gt;
+  &lt;button class="btn btn-secondary"&gt;Learn More&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Utility classes --&gt;
+&lt;p class="text-center text-large text-bold color-primary"&gt;
+  Styled with utility classes
+&lt;/p&gt;</code></pre>
+            </div>
+
+            <div class="bg-white border-2 border-dashed border-green-400 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2 text-green-800">Live Output:</h5>
+              <div class="space-y-4">
+                <p class="bg-yellow-200 p-2 rounded">This paragraph is highlighted.</p>
+
+                <div class="border border-gray-300 rounded-lg p-4 shadow-lg bg-white">
+                  <h3 class="text-center font-bold text-lg mb-2">Product Card</h3>
+                  <p class="text-gray-600 mb-4">Product description here.</p>
+                  <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-full">Buy Now</button>
+                </div>
+
+                <div class="border border-gray-300 rounded-lg p-4 bg-white">
+                  <h3 class="font-bold text-lg mb-2">Another Card</h3>
+                  <p class="text-gray-600 mb-4">Different content, same styling.</p>
+                  <button class="bg-gray-600 text-white px-6 py-2 rounded hover:bg-gray-700">Learn More</button>
+                </div>
+
+                <p class="text-center text-xl font-bold text-blue-600">
+                  Styled with utility classes
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h5 class="font-bold text-green-800 mb-2">Benefits of class Attribute:</h5>
+              <ul class="text-green-700 space-y-1 text-sm">
+                <li>• <strong>Reusability:</strong> Same styles applied to multiple elements</li>
+                <li>• <strong>Maintainability:</strong> Change styles in one place (CSS file)</li>
+                <li>• <strong>Modularity:</strong> Combine multiple classes for complex styling</li>
+                <li>• <strong>JavaScript Selection:</strong> <code>document.getElementsByClassName('btn')</code></li>
+                <li>• <strong>CSS Frameworks:</strong> Bootstrap, Tailwind CSS use class-based systems</li>
+              </ul>
+            </div>
+          </div>
+
+          <h4 class="text-xl font-bold text-green-800 mb-4">The style Attribute: Inline CSS (Use Sparingly)</h4>
+
+          <div class="bg-white border border-green-200 rounded-lg p-6 mb-6">
+            <p class="text-green-700 mb-4">
+              The <code>style</code> attribute allows you to apply CSS styles directly to an HTML element. While powerful, it should be used sparingly in favor of external CSS files.
+            </p>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Basic inline styling --&gt;
+&lt;p style="color: red; font-size: 18px;"&gt;Red text, 18px size&lt;/p&gt;
+
+&lt;!-- Multiple CSS properties --&gt;
+&lt;div style="background-color: #f0f0f0; padding: 20px; border: 2px solid #333; border-radius: 10px; margin: 15px 0;"&gt;
+  &lt;h3 style="color: #2c3e50; margin-top: 0;"&gt;Styled Container&lt;/h3&gt;
+  &lt;p style="line-height: 1.6; color: #555;"&gt;Content with inline styles.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Positioning and layout --&gt;
+&lt;div style="position: relative; width: 200px; height: 100px; background: linear-gradient(45deg, #ff6b6b, #4ecdc4);"&gt;
+  &lt;span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: bold;"&gt;
+    Centered Text
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Responsive inline styles (not recommended) --&gt;
+&lt;img src="image.jpg" alt="Example" style="width: 100%; max-width: 300px; height: auto; border-radius: 8px;"&gt;</code></pre>
+            </div>
+
+            <div class="bg-white border-2 border-dashed border-green-400 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2 text-green-800">Live Output:</h5>
+              <div class="space-y-4">
+                <p style="color: red; font-size: 18px;">Red text, 18px size</p>
+
+                <div style="background-color: #f0f0f0; padding: 20px; border: 2px solid #333; border-radius: 10px; margin: 15px 0;">
+                  <h3 style="color: #2c3e50; margin-top: 0;">Styled Container</h3>
+                  <p style="line-height: 1.6; color: #555;">Content with inline styles.</p>
+                </div>
+
+                <div style="position: relative; width: 200px; height: 100px; background: linear-gradient(45deg, #ff6b6b, #4ecdc4);">
+                  <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: bold;">
+                    Centered Text
+                  </span>
+                </div>
+
+                <div class="w-full max-w-xs h-24 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center text-white font-bold">
+                  Responsive Image Placeholder
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
+              <h5 class="font-bold text-yellow-800 mb-2">⚠️ When to Use style Attribute:</h5>
+              <div class="grid md:grid-cols-2 gap-4 text-yellow-700 text-sm">
+                <div>
+                  <h6 class="font-bold mb-1">✅ Good Use Cases:</h6>
+                  <ul class="space-y-1">
+                    <li>• Quick prototyping and testing</li>
+                    <li>• Dynamic styles from JavaScript</li>
+                    <li>• Email HTML (limited CSS support)</li>
+                    <li>• One-off styling exceptions</li>
+                  </ul>
+                </div>
+                <div>
+                  <h6 class="font-bold mb-1">❌ Avoid For:</h6>
+                  <ul class="space-y-1">
+                    <li>• Repeated styling patterns</li>
+                    <li>• Complex responsive designs</li>
+                    <li>• Maintainable production code</li>
+                    <li>• Team collaboration projects</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+              <h5 class="font-bold text-red-800 mb-2">🚫 Problems with Inline Styles:</h5>
+              <ul class="text-red-700 space-y-1 text-sm">
+                <li>• <strong>Hard to maintain:</strong> Styles scattered throughout HTML</li>
+                <li>• <strong>No reusability:</strong> Same styles repeated multiple times</li>
+                <li>• <strong>Higher specificity:</strong> Overrides external CSS, making changes difficult</li>
+                <li>• <strong>Performance impact:</strong> Increases HTML file size</li>
+                <li>• <strong>No media queries:</strong> Can't create responsive designs</li>
+                <li>• <strong>No pseudo-classes:</strong> Can't use :hover, :focus, etc.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h4 class="text-xl font-bold text-green-800 mb-4">The title Attribute: Tooltip Information</h4>
+
+          <div class="bg-white border border-green-200 rounded-lg p-6 mb-6">
+            <p class="text-green-700 mb-4">
+              The <code>title</code> attribute provides additional information about an element, typically displayed as a tooltip when users hover over the element.
+            </p>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Basic tooltip --&gt;
+&lt;p title="This is additional information about the paragraph"&gt;
+  Hover over this text to see the tooltip.
+&lt;/p&gt;
+
+&lt;!-- Image with descriptive title --&gt;
+&lt;img src="sunset.jpg"
+     alt="Beautiful sunset"
+     title="Sunset over the Pacific Ocean, taken from Malibu Beach in California"&gt;
+
+&lt;!-- Links with helpful descriptions --&gt;
+&lt;a href="https://developer.mozilla.org"
+   title="Mozilla Developer Network - Web development documentation and tutorials"&gt;
+  MDN Web Docs
+&lt;/a&gt;
+
+&lt;!-- Form elements with instructions --&gt;
+&lt;label for="password"&gt;Password:&lt;/label&gt;
+&lt;input type="password"
+       id="password"
+       title="Password must be at least 8 characters long and contain uppercase, lowercase, and numbers"&gt;
+
+&lt;!-- Buttons with action descriptions --&gt;
+&lt;button title="Save your changes to the database"&gt;💾 Save&lt;/button&gt;
+&lt;button title="Delete this item permanently (cannot be undone)"&gt;🗑️ Delete&lt;/button&gt;
+
+&lt;!-- Abbreviations with full text --&gt;
+&lt;p&gt;We use &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; and
+&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; for web development.&lt;/p&gt;
+
+&lt;!-- Icons with explanations --&gt;
+&lt;span title="Required field"&gt;*&lt;/span&gt;
+&lt;span title="Information"&gt;ℹ️&lt;/span&gt;
+&lt;span title="Warning"&gt;⚠️&lt;/span&gt;
+&lt;span title="Success"&gt;✅&lt;/span&gt;</code></pre>
+            </div>
+
+            <div class="bg-white border-2 border-dashed border-green-400 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2 text-green-800">Live Output (Hover to see tooltips):</h5>
+              <div class="space-y-4">
+                <p title="This is additional information about the paragraph" class="cursor-help border-b border-dashed border-gray-400">
+                  Hover over this text to see the tooltip.
+                </p>
+
+                <div class="w-48 h-32 bg-gradient-to-r from-orange-400 to-pink-500 rounded flex items-center justify-center text-white font-bold cursor-help"
+                     title="Sunset over the Pacific Ocean, taken from Malibu Beach in California">
+                  Beautiful Sunset Image
+                </div>
+
+                <a href="#"
+                   title="Mozilla Developer Network - Web development documentation and tutorials"
+                   class="text-blue-600 hover:underline">
+                  MDN Web Docs
+                </a>
+
+                <div class="space-y-2">
+                  <label for="demo-password" class="block font-medium">Password:</label>
+                  <input type="password"
+                         id="demo-password"
+                         title="Password must be at least 8 characters long and contain uppercase, lowercase, and numbers"
+                         class="border border-gray-300 rounded px-3 py-2">
+                </div>
+
+                <div class="space-x-2">
+                  <button title="Save your changes to the database" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+                    💾 Save
+                  </button>
+                  <button title="Delete this item permanently (cannot be undone)" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+                    🗑️ Delete
+                  </button>
+                </div>
+
+                <p>We use <abbr title="HyperText Markup Language" class="cursor-help border-b border-dashed">HTML</abbr> and
+                <abbr title="Cascading Style Sheets" class="cursor-help border-b border-dashed">CSS</abbr> for web development.</p>
+
+                <div class="flex space-x-4">
+                  <span title="Required field" class="cursor-help text-red-500 font-bold">*</span>
+                  <span title="Information" class="cursor-help">ℹ️</span>
+                  <span title="Warning" class="cursor-help">⚠️</span>
+                  <span title="Success" class="cursor-help">✅</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h5 class="font-bold text-green-800 mb-2">Best Practices for title Attribute:</h5>
+              <ul class="text-green-700 space-y-1 text-sm">
+                <li>• <strong>Be descriptive:</strong> Provide useful, additional information</li>
+                <li>• <strong>Keep it concise:</strong> Tooltips should be brief but informative</li>
+                <li>• <strong>Don't repeat visible text:</strong> Add value, don't duplicate</li>
+                <li>• <strong>Use for clarification:</strong> Explain abbreviations, icons, or complex elements</li>
+                <li>• <strong>Consider accessibility:</strong> Screen readers may announce title content</li>
+                <li>• <strong>Test on mobile:</strong> Tooltips work differently on touch devices</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Data Attributes</h3>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">Custom Data Storage with data-* Attributes</h4>
+            <p class="text-green-700 mb-4">Data attributes allow you to store custom data directly in HTML elements.</p>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Product information stored in data attributes --&gt;
+&lt;div class="product-card"
+     data-product-id="12345"
+     data-product-name="Wireless Headphones"
+     data-product-price="99.99"
+     data-product-category="electronics"
+     data-in-stock="true"&gt;
+  &lt;h3&gt;Wireless Headphones&lt;/h3&gt;
+  &lt;p&gt;Price: $99.99&lt;/p&gt;
+  &lt;button data-action="add-to-cart" data-product-id="12345"&gt;Add to Cart&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- User profile with data attributes --&gt;
+&lt;div class="user-profile"
+     data-user-id="user123"
+     data-user-role="admin"
+     data-last-login="2024-01-15"
+     data-preferences='{"theme": "dark", "language": "en"}'&gt;
+  &lt;h4&gt;User Dashboard&lt;/h4&gt;
+  &lt;p&gt;Welcome back, Admin!&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Interactive elements with data attributes --&gt;
+&lt;button data-toggle="modal" data-target="#myModal" data-backdrop="static"&gt;
+  Open Modal
+&lt;/button&gt;
+
+&lt;div data-component="carousel" data-autoplay="true" data-interval="5000"&gt;
+  &lt;!-- Carousel content --&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="bg-white border-2 border-dashed border-green-400 p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-green-800">Live Output:</h5>
+              <div class="space-y-4">
+                <div class="border border-gray-300 rounded p-4 bg-white shadow-sm"
+                     data-product-id="12345"
+                     data-product-name="Wireless Headphones"
+                     data-product-price="99.99"
+                     data-product-category="electronics"
+                     data-in-stock="true">
+                  <h3 class="font-bold text-lg">Wireless Headphones</h3>
+                  <p class="text-gray-600">Price: $99.99</p>
+                  <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+                          data-action="add-to-cart" data-product-id="12345">
+                    Add to Cart
+                  </button>
+                </div>
+
+                <div class="border border-blue-300 rounded p-4 bg-blue-50"
+                     data-user-id="user123"
+                     data-user-role="admin"
+                     data-last-login="2024-01-15">
+                  <h4 class="font-bold">User Dashboard</h4>
+                  <p>Welcome back, Admin!</p>
+                </div>
+
+                <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
+                        data-toggle="modal" data-target="#myModal">
+                  Open Modal
+                </button>
+              </div>
+              <p class="text-green-700 text-sm mt-2">Data attributes are invisible but can be accessed via CSS and JavaScript.</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Interactive Global Attributes</h3>
+
+          <div class="accessibility-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-green-800 mb-3">contenteditable and draggable Attributes</h4>
+            <p class="text-green-700 mb-4">These attributes add interactivity without requiring JavaScript.</p>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- contenteditable: Makes elements editable --&gt;
+&lt;h2 contenteditable="true"&gt;Click to edit this heading&lt;/h2&gt;
+&lt;p contenteditable="true"&gt;
+  This paragraph is editable. Click and start typing to modify the content.
+&lt;/p&gt;
+
+&lt;!-- draggable: Makes elements draggable --&gt;
+&lt;div draggable="true" style="background: lightblue; padding: 20px; cursor: move;"&gt;
+  Drag me around! (This box is draggable)
+&lt;/div&gt;
+
+&lt;!-- Additional global attributes --&gt;
+&lt;p hidden&gt;This paragraph is hidden.&lt;/p&gt;
+&lt;p lang="es"&gt;Este texto está en español.&lt;/p&gt;
+&lt;input type="text" tabindex="1" placeholder="First tab stop"&gt;
+&lt;button accesskey="s"&gt;Save (Alt+S)&lt;/button&gt;</code></pre>
+            </div>
+
+            <div class="bg-white border-2 border-dashed border-green-400 p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-green-800">Live Output:</h5>
+              <div class="space-y-4">
+                <h2 contenteditable="true" class="text-xl font-bold border-2 border-dashed border-blue-300 p-2 rounded">
+                  Click to edit this heading
+                </h2>
+                <p contenteditable="true" class="border-2 border-dashed border-blue-300 p-3 rounded">
+                  This paragraph is editable. Click and start typing to modify the content.
+                </p>
+
+                <div draggable="true" class="bg-blue-200 p-5 rounded cursor-move border-2 border-blue-300">
+                  Drag me around! (This box is draggable)
+                </div>
+
+                <p class="text-gray-500 italic">(Hidden paragraph would not be visible)</p>
+                <p lang="es">Este texto está en español.</p>
+                <input type="text" tabindex="1" placeholder="First tab stop" class="border border-gray-300 rounded px-3 py-2">
+                <button accesskey="s" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Save (Alt+S)</button>
+              </div>
+              <p class="text-green-700 text-sm mt-2">Try clicking on editable elements, dragging the box, and using Alt+S!</p>
+            </div>
+          </div>
+
+          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
+            <h4 class="font-bold text-yellow-800 mb-2">💡 Global Attributes Summary:</h4>
+            <div class="grid md:grid-cols-2 gap-4 text-yellow-700 text-sm">
+              <div>
+                <h5 class="font-bold mb-1">Essential Attributes:</h5>
+                <ul class="space-y-1">
+                  <li>• <strong>id:</strong> Unique identifier</li>
+                  <li>• <strong>class:</strong> CSS styling hooks</li>
+                  <li>• <strong>style:</strong> Inline CSS (use sparingly)</li>
+                  <li>• <strong>title:</strong> Tooltip information</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-bold mb-1">Advanced Attributes:</h5>
+                <ul class="space-y-1">
+                  <li>• <strong>data-*:</strong> Custom data storage</li>
+                  <li>• <strong>contenteditable:</strong> Editable content</li>
+                  <li>• <strong>draggable:</strong> Drag and drop</li>
+                  <li>• <strong>hidden:</strong> Hide elements</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Try It Yourself -->
+        <section id="try-it-yourself">
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+            <h3 class="font-bold text-blue-800 mb-2">Exercise:</h3>
+            <p class="text-blue-700 mb-4">
+              Create a comprehensive webpage using metadata, accessibility features, and global attributes:
+            </p>
+            <ol class="list-decimal list-inside text-blue-700 space-y-2">
+              <li>Add all essential meta tags for SEO and social media</li>
+              <li>Include Open Graph and Twitter Card meta tags</li>
+              <li>Create a form with proper labels and ARIA attributes</li>
+              <li>Add images with descriptive alt text and title attributes</li>
+              <li>Use global attributes: id, class, data-*, and title</li>
+              <li>Implement contenteditable elements for user interaction</li>
+              <li>Add keyboard navigation with tabindex and accesskey</li>
+              <li>Use lang attributes for multilingual content</li>
+              <li>Test with a screen reader or accessibility tool</li>
+              <li>Validate your HTML and check social media previews</li>
+            </ol>
+          </div>
+
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaways</h2>
+          <ul class="list-disc list-inside mb-6 space-y-2">
+            <li>HTML metadata is essential for SEO and social media optimization</li>
+            <li>Open Graph and Twitter Cards control how content appears when shared</li>
+            <li>Semantic HTML provides the foundation for accessibility</li>
+            <li>ARIA attributes enhance accessibility when semantic HTML isn't sufficient</li>
+            <li>Global attributes like id, class, and data-* are fundamental for modern web development</li>
+            <li>Interactive attributes like contenteditable and draggable add functionality without JavaScript</li>
+            <li>Proper form labeling and error handling improve usability for everyone</li>
+            <li>Keyboard navigation and screen reader support are crucial for inclusive design</li>
+            <li>Data attributes provide a clean way to store custom information in HTML</li>
+            <li>Title attributes enhance user experience with helpful tooltips</li>
+            <li>Testing with real accessibility tools ensures your site works for all users</li>
+            <li>Accessibility and SEO often go hand in hand - both benefit from good HTML structure</li>
+          </ul>
+
+          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
+            <h3 class="font-bold text-yellow-800 mb-2">🎯 Congratulations!</h3>
+            <p class="text-yellow-700">
+              You've completed the HTML tutorial series! You now have a solid foundation in HTML,
+              from basic elements to advanced metadata and accessibility features. You're ready to
+              move on to CSS for styling and JavaScript for interactivity.
+            </p>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-8">
+      <a href="media-multimedia.html" class="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Previous: Media & Multimedia
+      </a>
+
+      <a href="index.html" class="flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors duration-200">
+        Back to HTML Tutorials
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">© <span id="current-year"></span> CodeByImaad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

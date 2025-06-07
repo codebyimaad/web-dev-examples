@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Interactive Elements - CodeByImaad</title>
+  <meta name="description" content="Learn HTML interactive elements that work without JavaScript - details & summary for collapsible content, progress & meter elements, and iframe for embedding content.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .code-block { background: #1e293b; color: #e2e8f0; }
+    .interactive-demo { border: 2px dashed #8b5cf6; background: #f3f4f6; }
+    .output-demo { border: 2px dashed border-purple-400; background: #faf5ff; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">9</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">HTML Interactive Elements</h1>
+            <p class="text-sm text-gray-500">Lesson 9 of HTML Tutorial Series</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            ← Back to HTML Tutorials
+          </a>
+          <a href="layout-structure.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            Previous: Layout & Structure
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Lesson Content -->
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML Interactive Elements</h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+          <span>📚 Advanced Level</span>
+          <span>⏱️ 22 minutes</span>
+          <span>🎯 Details, Progress & Iframe</span>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <!-- Table of Contents -->
+        <div class="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-8">
+          <h2 class="text-xl font-bold text-purple-800 mb-4">📋 What You'll Learn</h2>
+          <div class="grid md:grid-cols-3 gap-6 text-purple-700">
+            <div>
+              <h3 class="font-bold mb-2">Details & Summary</h3>
+              <ul class="text-sm space-y-1">
+                <li>• Collapsible content sections</li>
+                <li>• Interactive disclosure widgets</li>
+                <li>• Accordion-style layouts</li>
+                <li>• Accessibility features</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">Progress & Meter</h3>
+              <ul class="text-sm space-y-1">
+                <li>• Progress bars for loading</li>
+                <li>• Meter gauges for values</li>
+                <li>• Completion indicators</li>
+                <li>• Visual feedback elements</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">HTML Iframe</h3>
+              <ul class="text-sm space-y-1">
+                <li>• Embedding external content</li>
+                <li>• YouTube videos</li>
+                <li>• Maps and widgets</li>
+                <li>• Security considerations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+          <h3 class="font-bold text-blue-800 mb-2">💡 Pure HTML Interactivity</h3>
+          <p class="text-blue-700">
+            These HTML elements provide interactivity without requiring any JavaScript! They work natively 
+            in modern browsers and are perfect for creating engaging user experiences with pure HTML.
+          </p>
+        </div>
+
+        <!-- Part 1: HTML Details & Summary -->
+        <section id="details-summary">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">HTML Details & Summary Elements</h2>
+          
+          <p class="mb-6">
+            The <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements create collapsible content sections 
+            that users can expand and collapse by clicking. This is perfect for FAQs, accordions, and progressive disclosure.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Basic Details & Summary</h3>
+
+          <div class="interactive-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-purple-800 mb-3">Simple Collapsible Content</h4>
+            
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;details&gt;
+  &lt;summary&gt;Click to expand&lt;/summary&gt;
+  &lt;p&gt;This content is hidden by default and shows when you click the summary.&lt;/p&gt;
+  &lt;p&gt;You can put any HTML content here - text, images, lists, etc.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+            </div>
+
+            <div class="output-demo p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-purple-800">Live Output:</h5>
+              <details class="border border-gray-300 rounded p-3">
+                <summary class="cursor-pointer font-medium hover:text-purple-600">Click to expand</summary>
+                <div class="mt-3 pl-4">
+                  <p class="mb-2">This content is hidden by default and shows when you click the summary.</p>
+                  <p>You can put any HTML content here - text, images, lists, etc.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">FAQ Section Example</h3>
+
+          <div class="interactive-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-purple-800 mb-3">Frequently Asked Questions</h4>
+            
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;h2&gt;Frequently Asked Questions&lt;/h2&gt;
+
+&lt;details&gt;
+  &lt;summary&gt;What is HTML?&lt;/summary&gt;
+  &lt;p&gt;HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page using elements and tags.&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;details&gt;
+  &lt;summary&gt;How do I learn web development?&lt;/summary&gt;
+  &lt;p&gt;Start with HTML to learn structure, then CSS for styling, and JavaScript for interactivity. Practice by building projects and following tutorials.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Learn HTML fundamentals&lt;/li&gt;
+    &lt;li&gt;Master CSS styling&lt;/li&gt;
+    &lt;li&gt;Add JavaScript functionality&lt;/li&gt;
+    &lt;li&gt;Build real projects&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/details&gt;
+
+&lt;details open&gt;
+  &lt;summary&gt;What tools do I need?&lt;/summary&gt;
+  &lt;p&gt;You only need a text editor and a web browser to start. Popular editors include VS Code, Sublime Text, or even Notepad.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+            </div>
+
+            <div class="output-demo p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-purple-800">Live Output:</h5>
+              <h2 class="text-xl font-bold mb-4">Frequently Asked Questions</h2>
+
+              <div class="space-y-3">
+                <details class="border border-gray-300 rounded p-3">
+                  <summary class="cursor-pointer font-medium hover:text-purple-600">What is HTML?</summary>
+                  <div class="mt-3 pl-4">
+                    <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page using elements and tags.</p>
+                  </div>
+                </details>
+
+                <details class="border border-gray-300 rounded p-3">
+                  <summary class="cursor-pointer font-medium hover:text-purple-600">How do I learn web development?</summary>
+                  <div class="mt-3 pl-4">
+                    <p class="mb-2">Start with HTML to learn structure, then CSS for styling, and JavaScript for interactivity. Practice by building projects and following tutorials.</p>
+                    <ul class="list-disc list-inside space-y-1">
+                      <li>Learn HTML fundamentals</li>
+                      <li>Master CSS styling</li>
+                      <li>Add JavaScript functionality</li>
+                      <li>Build real projects</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <details open class="border border-gray-300 rounded p-3">
+                  <summary class="cursor-pointer font-medium hover:text-purple-600">What tools do I need?</summary>
+                  <div class="mt-3 pl-4">
+                    <p>You only need a text editor and a web browser to start. Popular editors include VS Code, Sublime Text, or even Notepad.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Details Attributes</h3>
+
+          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
+            <h4 class="font-bold text-yellow-800 mb-2">💡 Details Element Features:</h4>
+            <ul class="text-yellow-700 space-y-1 text-sm">
+              <li>• <strong>open attribute:</strong> Makes the details expanded by default</li>
+              <li>• <strong>Keyboard accessible:</strong> Users can press Enter or Space to toggle</li>
+              <li>• <strong>Screen reader friendly:</strong> Announces expanded/collapsed state</li>
+              <li>• <strong>No JavaScript required:</strong> Works with pure HTML</li>
+              <li>• <strong>Customizable:</strong> Can be styled with CSS</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Part 2: Progress & Meter Elements -->
+        <section id="progress-meter">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">HTML Progress & Meter Elements</h2>
+
+          <p class="mb-6">
+            The <code>&lt;progress&gt;</code> element shows the completion progress of a task, while
+            <code>&lt;meter&gt;</code> displays a scalar value within a known range (like disk usage or temperature).
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Progress Element</h3>
+
+          <div class="interactive-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-purple-800 mb-3">Progress Bars</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Progress with value and max --&gt;
+&lt;label for="file-progress"&gt;File upload progress:&lt;/label&gt;
+&lt;progress id="file-progress" value="70" max="100"&gt;70%&lt;/progress&gt;
+
+&lt;!-- Progress without value (indeterminate) --&gt;
+&lt;label for="loading-progress"&gt;Loading:&lt;/label&gt;
+&lt;progress id="loading-progress"&gt;Loading...&lt;/progress&gt;
+
+&lt;!-- Different progress values --&gt;
+&lt;p&gt;Download: &lt;progress value="25" max="100"&gt;25%&lt;/progress&gt; 25%&lt;/p&gt;
+&lt;p&gt;Installation: &lt;progress value="80" max="100"&gt;80%&lt;/progress&gt; 80%&lt;/p&gt;
+&lt;p&gt;Complete: &lt;progress value="100" max="100"&gt;100%&lt;/progress&gt; 100%&lt;/p&gt;</code></pre>
+            </div>
+
+            <div class="output-demo p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-purple-800">Live Output:</h5>
+              <div class="space-y-4">
+                <div>
+                  <label for="file-progress" class="block font-medium mb-1">File upload progress:</label>
+                  <progress id="file-progress" value="70" max="100" class="w-full h-4">70%</progress>
+                </div>
+
+                <div>
+                  <label for="loading-progress" class="block font-medium mb-1">Loading:</label>
+                  <progress id="loading-progress" class="w-full h-4">Loading...</progress>
+                </div>
+
+                <div class="space-y-2">
+                  <p class="flex items-center">
+                    <span class="w-24">Download:</span>
+                    <progress value="25" max="100" class="flex-1 mx-2 h-3">25%</progress>
+                    <span class="w-12 text-sm">25%</span>
+                  </p>
+                  <p class="flex items-center">
+                    <span class="w-24">Installation:</span>
+                    <progress value="80" max="100" class="flex-1 mx-2 h-3">80%</progress>
+                    <span class="w-12 text-sm">80%</span>
+                  </p>
+                  <p class="flex items-center">
+                    <span class="w-24">Complete:</span>
+                    <progress value="100" max="100" class="flex-1 mx-2 h-3">100%</progress>
+                    <span class="w-12 text-sm">100%</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Meter Element</h3>
+
+          <div class="interactive-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-purple-800 mb-3">Gauges and Measurements</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Basic meter --&gt;
+&lt;label for="disk-usage"&gt;Disk usage:&lt;/label&gt;
+&lt;meter id="disk-usage" value="6" min="0" max="10"&gt;6 out of 10&lt;/meter&gt;
+
+&lt;!-- Meter with optimum value --&gt;
+&lt;label for="battery"&gt;Battery level:&lt;/label&gt;
+&lt;meter id="battery" value="85" min="0" max="100" optimum="80"&gt;85%&lt;/meter&gt;
+
+&lt;!-- Meter with low/high thresholds --&gt;
+&lt;label for="temperature"&gt;Temperature:&lt;/label&gt;
+&lt;meter id="temperature" value="75" min="0" max="100" low="20" high="80" optimum="70"&gt;75°F&lt;/meter&gt;
+
+&lt;!-- Different meter examples --&gt;
+&lt;p&gt;CPU Usage: &lt;meter value="45" max="100"&gt;45%&lt;/meter&gt; 45%&lt;/p&gt;
+&lt;p&gt;Memory: &lt;meter value="8" min="0" max="16" high="12"&gt;8 GB&lt;/meter&gt; 8/16 GB&lt;/p&gt;
+&lt;p&gt;Score: &lt;meter value="8.5" min="0" max="10" optimum="10"&gt;8.5&lt;/meter&gt; 8.5/10&lt;/p&gt;</code></pre>
+            </div>
+
+            <div class="output-demo p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-purple-800">Live Output:</h5>
+              <div class="space-y-4">
+                <div>
+                  <label for="disk-usage" class="block font-medium mb-1">Disk usage:</label>
+                  <meter id="disk-usage" value="6" min="0" max="10" class="w-full h-4">6 out of 10</meter>
+                </div>
+
+                <div>
+                  <label for="battery" class="block font-medium mb-1">Battery level:</label>
+                  <meter id="battery" value="85" min="0" max="100" optimum="80" class="w-full h-4">85%</meter>
+                </div>
+
+                <div>
+                  <label for="temperature" class="block font-medium mb-1">Temperature:</label>
+                  <meter id="temperature" value="75" min="0" max="100" low="20" high="80" optimum="70" class="w-full h-4">75°F</meter>
+                </div>
+
+                <div class="space-y-2">
+                  <p class="flex items-center">
+                    <span class="w-24">CPU Usage:</span>
+                    <meter value="45" max="100" class="flex-1 mx-2 h-3">45%</meter>
+                    <span class="w-12 text-sm">45%</span>
+                  </p>
+                  <p class="flex items-center">
+                    <span class="w-24">Memory:</span>
+                    <meter value="8" min="0" max="16" high="12" class="flex-1 mx-2 h-3">8 GB</meter>
+                    <span class="w-16 text-sm">8/16 GB</span>
+                  </p>
+                  <p class="flex items-center">
+                    <span class="w-24">Score:</span>
+                    <meter value="8.5" min="0" max="10" optimum="10" class="flex-1 mx-2 h-3">8.5</meter>
+                    <span class="w-12 text-sm">8.5/10</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
+            <h4 class="font-bold text-yellow-800 mb-2">💡 Progress vs Meter:</h4>
+            <div class="grid md:grid-cols-2 gap-4 text-yellow-700 text-sm">
+              <div>
+                <h5 class="font-bold mb-1">Use Progress for:</h5>
+                <ul class="space-y-1">
+                  <li>• File uploads/downloads</li>
+                  <li>• Loading indicators</li>
+                  <li>• Task completion</li>
+                  <li>• Installation progress</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-bold mb-1">Use Meter for:</h5>
+                <ul class="space-y-1">
+                  <li>• Disk usage</li>
+                  <li>• Battery levels</li>
+                  <li>• Temperature readings</li>
+                  <li>• Scores and ratings</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Part 3: HTML Iframe -->
+        <section id="html-iframe">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">HTML Iframe Element</h2>
+
+          <p class="mb-6">
+            The <code>&lt;iframe&gt;</code> element embeds another HTML document within the current document.
+            It's commonly used for embedding videos, maps, social media content, and other external resources.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Basic Iframe Usage</h3>
+
+          <div class="interactive-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-purple-800 mb-3">Embedding External Content</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Basic iframe --&gt;
+&lt;iframe src="https://example.com" width="600" height="400"&gt;
+  Your browser does not support iframes.
+&lt;/iframe&gt;
+
+&lt;!-- Iframe with title for accessibility --&gt;
+&lt;iframe src="https://example.com"
+        width="600"
+        height="400"
+        title="Example website"&gt;
+  Your browser does not support iframes.
+&lt;/iframe&gt;
+
+&lt;!-- Responsive iframe --&gt;
+&lt;iframe src="https://example.com"
+        width="100%"
+        height="300"
+        title="Responsive iframe"&gt;
+  Your browser does not support iframes.
+&lt;/iframe&gt;</code></pre>
+            </div>
+
+            <div class="output-demo p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-purple-800">Live Output:</h5>
+              <div class="space-y-4">
+                <div class="border-2 border-dashed border-gray-400 p-8 text-center bg-gray-100 rounded">
+                  <p class="text-gray-600 mb-2">📄 Iframe Content Area</p>
+                  <p class="text-sm text-gray-500">600x400 pixels</p>
+                  <p class="text-xs text-gray-400 mt-2">External website would load here</p>
+                </div>
+
+                <div class="border-2 border-dashed border-gray-400 p-8 text-center bg-gray-100 rounded">
+                  <p class="text-gray-600 mb-2">📄 Responsive Iframe</p>
+                  <p class="text-sm text-gray-500">100% width x 300px height</p>
+                  <p class="text-xs text-gray-400 mt-2">Adapts to container width</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">YouTube Video Embedding</h3>
+
+          <div class="interactive-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-purple-800 mb-3">Embedding YouTube Videos</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- YouTube video embed --&gt;
+&lt;iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;!-- Responsive YouTube embed --&gt;
+&lt;div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;"&gt;
+  &lt;iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          title="YouTube video player"
+          frameborder="0"
+          allowfullscreen&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="output-demo p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-purple-800">Live Output:</h5>
+              <div class="space-y-4">
+                <div class="bg-black rounded flex items-center justify-center" style="width: 560px; height: 315px; max-width: 100%;">
+                  <div class="text-center text-white">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <div class="w-0 h-0 border-l-8 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"></div>
+                    </div>
+                    <p class="text-sm">YouTube Video Player</p>
+                    <p class="text-xs text-gray-300">560x315 pixels</p>
+                  </div>
+                </div>
+
+                <div class="bg-black rounded flex items-center justify-center w-full" style="height: 200px;">
+                  <div class="text-center text-white">
+                    <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <div class="w-0 h-0 border-l-6 border-l-white border-t-3 border-t-transparent border-b-3 border-b-transparent ml-1"></div>
+                    </div>
+                    <p class="text-sm">Responsive YouTube Player</p>
+                    <p class="text-xs text-gray-300">Adapts to container size</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Iframe Attributes & Security</h3>
+
+          <div class="interactive-demo p-6 rounded-lg mb-6">
+            <h4 class="text-xl font-bold text-purple-800 mb-3">Important Iframe Attributes</h4>
+
+            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+              <h5 class="font-bold mb-2">HTML Code:</h5>
+              <pre class="code-block p-4 rounded overflow-x-auto"><code>&lt;!-- Iframe with security attributes --&gt;
+&lt;iframe src="https://example.com"
+        width="600"
+        height="400"
+        title="Example website"
+        frameborder="0"
+        sandbox="allow-scripts allow-same-origin"
+        loading="lazy"
+        referrerpolicy="no-referrer"&gt;
+  Your browser does not support iframes.
+&lt;/iframe&gt;
+
+&lt;!-- Google Maps embed --&gt;
+&lt;iframe src="https://www.google.com/maps/embed?pb=..."
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Google Maps"&gt;
+&lt;/iframe&gt;</code></pre>
+            </div>
+
+            <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
+              <h5 class="font-bold text-red-800 mb-2">🔒 Security Considerations:</h5>
+              <ul class="text-red-700 space-y-1 text-sm">
+                <li>• <strong>sandbox:</strong> Restricts iframe capabilities for security</li>
+                <li>• <strong>referrerpolicy:</strong> Controls referrer information sent</li>
+                <li>• <strong>loading="lazy":</strong> Improves page performance</li>
+                <li>• <strong>title:</strong> Required for accessibility</li>
+                <li>• Only embed trusted content</li>
+              </ul>
+            </div>
+
+            <div class="output-demo p-4 rounded-lg">
+              <h5 class="font-bold mb-2 text-purple-800">Live Output:</h5>
+              <div class="space-y-4">
+                <div class="border-2 border-dashed border-blue-400 p-8 text-center bg-blue-50 rounded">
+                  <p class="text-blue-600 mb-2">🔒 Secure Iframe</p>
+                  <p class="text-sm text-blue-500">600x400 with sandbox restrictions</p>
+                  <p class="text-xs text-blue-400 mt-2">Enhanced security settings applied</p>
+                </div>
+
+                <div class="border-2 border-dashed border-green-400 p-8 text-center bg-green-50 rounded">
+                  <p class="text-green-600 mb-2">🗺️ Google Maps Iframe</p>
+                  <p class="text-sm text-green-500">600x450 with lazy loading</p>
+                  <p class="text-xs text-green-400 mt-2">Interactive map would load here</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Best Practices and Summary -->
+        <section id="best-practices">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Best Practices Summary</h2>
+
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="border border-purple-200 rounded-lg p-4 bg-purple-50">
+              <h3 class="font-bold text-purple-800 mb-3">📋 Details & Summary</h3>
+              <ul class="text-purple-700 space-y-1 text-sm">
+                <li>• Use for FAQs and collapsible content</li>
+                <li>• Include meaningful summary text</li>
+                <li>• Consider using 'open' attribute for important content</li>
+                <li>• Test keyboard navigation</li>
+                <li>• Style with CSS for better appearance</li>
+              </ul>
+            </div>
+
+            <div class="border border-blue-200 rounded-lg p-4 bg-blue-50">
+              <h3 class="font-bold text-blue-800 mb-3">📊 Progress & Meter</h3>
+              <ul class="text-blue-700 space-y-1 text-sm">
+                <li>• Use progress for ongoing tasks</li>
+                <li>• Use meter for measurements</li>
+                <li>• Always include fallback text</li>
+                <li>• Label elements properly</li>
+                <li>• Update values with JavaScript when needed</li>
+              </ul>
+            </div>
+
+            <div class="border border-green-200 rounded-lg p-4 bg-green-50">
+              <h3 class="font-bold text-green-800 mb-3">🖼️ Iframe</h3>
+              <ul class="text-green-700 space-y-1 text-sm">
+                <li>• Always include title attribute</li>
+                <li>• Use sandbox for security</li>
+                <li>• Consider lazy loading</li>
+                <li>• Only embed trusted content</li>
+                <li>• Make responsive when possible</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself</h2>
+          <div class="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-6">
+            <h3 class="font-bold text-purple-800 mb-2">Exercise:</h3>
+            <p class="text-purple-700 mb-4">
+              Create an interactive webpage using these elements:
+            </p>
+            <ol class="list-decimal list-inside text-purple-700 space-y-2">
+              <li>Build an FAQ section using details and summary elements</li>
+              <li>Add a progress bar showing your learning progress</li>
+              <li>Include a meter showing your skill level</li>
+              <li>Embed a YouTube video about web development</li>
+              <li>Add proper accessibility attributes to all elements</li>
+              <li>Test keyboard navigation and screen reader compatibility</li>
+            </ol>
+          </div>
+
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaways</h2>
+          <ul class="list-disc list-inside mb-6 space-y-2">
+            <li>HTML provides interactive elements that work without JavaScript</li>
+            <li>Details and summary create accessible collapsible content</li>
+            <li>Progress elements show task completion, meter elements show measurements</li>
+            <li>Iframes embed external content but require security considerations</li>
+            <li>Always include proper accessibility attributes and fallback content</li>
+            <li>These elements enhance user experience with minimal code</li>
+            <li>Test interactive elements across different browsers and devices</li>
+            <li>Consider performance implications when embedding external content</li>
+          </ul>
+
+          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
+            <h3 class="font-bold text-yellow-800 mb-2">🎯 What's Next?</h3>
+            <p class="text-yellow-700">
+              You've now learned about HTML's interactive capabilities! These elements provide great
+              functionality with pure HTML. Next, you can enhance them further with CSS for styling
+              and JavaScript for dynamic behavior.
+            </p>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-8">
+      <a href="layout-structure.html" class="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Previous: Layout & Structure
+      </a>
+
+      <a href="media-multimedia.html" class="flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors duration-200">
+        Next: Media & Multimedia
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">© <span id="current-year"></span> CodeByImaad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

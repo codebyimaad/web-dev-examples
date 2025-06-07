@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Semantic Elements - CodeByImaad</title>
+  <meta name="description" content="Learn HTML5 semantic elements for better structure, accessibility, and SEO. Master header, nav, main, section, article, aside, and footer.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .code-block { background: #1e293b; color: #e2e8f0; }
+    .semantic-demo { border: 2px dashed #f97316; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">7</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">HTML Semantic Elements</h1>
+            <p class="text-sm text-gray-500">Lesson 7 of HTML Tutorial Series</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            ← Back to HTML Tutorials
+          </a>
+          <a href="forms.html" class="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium">
+            Previous: Forms
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Lesson Content -->
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML5 Semantic Elements</h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+          <span>📚 Advanced Level</span>
+          <span>⏱️ 22 minutes</span>
+          <span>🎯 Modern HTML Structure</span>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">What are Semantic Elements?</h2>
+        <p class="mb-6">
+          Semantic elements are HTML5 tags that clearly describe their meaning and purpose to both browsers and developers. 
+          Unlike generic <code>&lt;div&gt;</code> elements, semantic elements provide meaningful structure that improves 
+          accessibility, SEO, and code readability.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Why Use Semantic Elements?</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="border border-green-200 rounded-lg p-4 bg-green-50">
+            <h3 class="font-bold text-green-800 mb-2">✅ Benefits</h3>
+            <ul class="text-green-700 space-y-1 text-sm">
+              <li>Better SEO rankings</li>
+              <li>Improved accessibility for screen readers</li>
+              <li>Cleaner, more readable code</li>
+              <li>Better browser understanding</li>
+              <li>Easier maintenance</li>
+              <li>Future-proof structure</li>
+            </ul>
+          </div>
+          <div class="border border-orange-200 rounded-lg p-4 bg-orange-50">
+            <h3 class="font-bold text-orange-800 mb-2">🔄 Before vs After</h3>
+            <div class="text-orange-700 text-sm space-y-2">
+              <p><strong>Old way:</strong> <code>&lt;div id="header"&gt;</code></p>
+              <p><strong>New way:</strong> <code>&lt;header&gt;</code></p>
+              <p><strong>Old way:</strong> <code>&lt;div class="nav"&gt;</code></p>
+              <p><strong>New way:</strong> <code>&lt;nav&gt;</code></p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Main Semantic Elements</h2>
+        
+        <h3 class="text-xl font-bold text-gray-800 mb-3">1. &lt;header&gt; Element</h3>
+        <p class="mb-4">
+          Represents introductory content, typically containing navigation, logos, headings, or search forms.
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">HTML Code:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h4 class="font-bold text-blue-800 mb-2">Live Example:</h4>
+          <header class="semantic-demo p-4 rounded bg-white">
+            <h2 class="text-xl font-bold mb-2">My Website</h2>
+            <nav>
+              <ul class="flex space-x-4 text-blue-600">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline">About</a></li>
+                <li><a href="#" class="hover:underline">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">2. &lt;nav&gt; Element</h3>
+        <p class="mb-4">
+          Defines a section of navigation links. Use for major navigation blocks, not every group of links.
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">HTML Code:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;nav aria-label="Main navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/products"&gt;Products&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Breadcrumb navigation --&gt;
+&lt;nav aria-label="Breadcrumb"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/products"&gt;Products&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Laptops&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">3. &lt;main&gt; Element</h3>
+        <p class="mb-4">
+          Represents the main content of the document. There should be only one <code>&lt;main&gt;</code> element per page.
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">HTML Code:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;main&gt;
+  &lt;h1&gt;Welcome to Our Blog&lt;/h1&gt;
+  &lt;p&gt;This is the main content area of the page.&lt;/p&gt;
+  
+  &lt;article&gt;
+    &lt;h2&gt;Latest Blog Post&lt;/h2&gt;
+    &lt;p&gt;Content of the blog post...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">4. &lt;section&gt; Element</h3>
+        <p class="mb-4">
+          Represents a thematic grouping of content, typically with a heading. Use when content has a clear theme or purpose.
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">HTML Code:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;section&gt;
+  &lt;h2&gt;Our Services&lt;/h2&gt;
+  &lt;p&gt;We offer a wide range of professional services...&lt;/p&gt;
+  
+  &lt;div class="service-grid"&gt;
+    &lt;div&gt;Web Design&lt;/div&gt;
+    &lt;div&gt;Development&lt;/div&gt;
+    &lt;div&gt;SEO&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;About Us&lt;/h2&gt;
+  &lt;p&gt;Learn more about our company history...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">5. &lt;article&gt; Element</h3>
+        <p class="mb-4">
+          Represents a self-contained piece of content that could be distributed independently (blog posts, news articles, comments).
+        </p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">HTML Code:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;article&gt;
+  &lt;header&gt;
+    &lt;h2&gt;How to Learn HTML in 2024&lt;/h2&gt;
+    &lt;p&gt;Published on &lt;time datetime="2024-01-15"&gt;January 15, 2024&lt;/time&gt;&lt;/p&gt;
+    &lt;p&gt;By &lt;span class="author"&gt;CodeByImaad&lt;/span&gt;&lt;/p&gt;
+  &lt;/header&gt;
+  
+  &lt;p&gt;Learning HTML is the first step in web development...&lt;/p&gt;
+  
+  &lt;footer&gt;
+    &lt;p&gt;Tags: &lt;a href="#html"&gt;HTML&lt;/a&gt;, &lt;a href="#tutorial"&gt;Tutorial&lt;/a&gt;&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">6. &lt;aside&gt; Element</h3>
+        <p class="mb-4">
+          Represents content that is tangentially related to the main content (sidebars, pull quotes, advertisements).
+        </p>
+
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">HTML Code:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;aside&gt;
+  &lt;h3&gt;Related Articles&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;CSS Basics for Beginners&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;JavaScript Fundamentals&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Responsive Web Design&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;
+
+&lt;aside&gt;
+  &lt;h3&gt;Quick Tip&lt;/h3&gt;
+  &lt;p&gt;Always validate your HTML code to ensure it's error-free!&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+        </div>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-3">7. &lt;footer&gt; Element</h3>
+        <p class="mb-4">
+          Contains footer information for its nearest sectioning content or sectioning root element.
+        </p>
+
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">HTML Code:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;footer&gt;
+  &lt;div class="footer-content"&gt;
+    &lt;div class="footer-section"&gt;
+      &lt;h3&gt;Contact Info&lt;/h3&gt;
+      &lt;p&gt;Email: info@example.com&lt;/p&gt;
+      &lt;p&gt;Phone: (555) 123-4567&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="footer-section"&gt;
+      &lt;h3&gt;Follow Us&lt;/h3&gt;
+      &lt;a href="#"&gt;Twitter&lt;/a&gt;
+      &lt;a href="#"&gt;Facebook&lt;/a&gt;
+      &lt;a href="#"&gt;LinkedIn&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;p&gt;&copy; 2024 CodeByImaad. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Semantic vs Non-Semantic Comparison</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="border border-red-200 rounded-lg p-4 bg-red-50">
+            <h3 class="font-bold text-red-800 mb-2">❌ Non-Semantic (Old Way)</h3>
+            <pre class="text-xs text-red-700 overflow-x-auto"><code>&lt;div id="header"&gt;
+  &lt;div id="nav"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="main"&gt;
+  &lt;div class="post"&gt;...&lt;/div&gt;
+  &lt;div class="post"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="sidebar"&gt;...&lt;/div&gt;
+&lt;div id="footer"&gt;...&lt;/div&gt;</code></pre>
+          </div>
+          <div class="border border-green-200 rounded-lg p-4 bg-green-50">
+            <h3 class="font-bold text-green-800 mb-2">✅ Semantic (Modern Way)</h3>
+            <pre class="text-xs text-green-700 overflow-x-auto"><code>&lt;header&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;...&lt;/article&gt;
+  &lt;article&gt;...&lt;/article&gt;
+&lt;/main&gt;
+&lt;aside&gt;...&lt;/aside&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Complete Page Structure</h2>
+        <p class="mb-4">Here's how all semantic elements work together in a complete webpage:</p>
+
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+          <h4 class="font-bold mb-2">Complete Semantic HTML Structure:</h4>
+          <pre class="code-block p-4 rounded-lg overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Semantic HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My Blog&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Latest Posts&lt;/h2&gt;
+
+      &lt;article&gt;
+        &lt;header&gt;
+          &lt;h3&gt;Understanding Semantic HTML&lt;/h3&gt;
+          &lt;time datetime="2024-01-15"&gt;January 15, 2024&lt;/time&gt;
+        &lt;/header&gt;
+        &lt;p&gt;Semantic HTML provides meaning to web content...&lt;/p&gt;
+        &lt;footer&gt;
+          &lt;p&gt;Tags: HTML, Web Development&lt;/p&gt;
+        &lt;/footer&gt;
+      &lt;/article&gt;
+
+      &lt;article&gt;
+        &lt;header&gt;
+          &lt;h3&gt;CSS Grid vs Flexbox&lt;/h3&gt;
+          &lt;time datetime="2024-01-10"&gt;January 10, 2024&lt;/time&gt;
+        &lt;/header&gt;
+        &lt;p&gt;Learn when to use CSS Grid and when to use Flexbox...&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;aside&gt;
+    &lt;h2&gt;About the Author&lt;/h2&gt;
+    &lt;p&gt;CodeByImaad is a web developer passionate about teaching...&lt;/p&gt;
+
+    &lt;h2&gt;Popular Posts&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;HTML Basics&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;CSS Fundamentals&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/aside&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2024 My Blog. All rights reserved.&lt;/p&gt;
+    &lt;nav&gt;
+      &lt;a href="#privacy"&gt;Privacy Policy&lt;/a&gt;
+      &lt;a href="#terms"&gt;Terms of Service&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Visual Structure Diagram</h2>
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h4 class="font-bold text-blue-800 mb-4">Page Layout Structure:</h4>
+          <div class="space-y-2 text-sm">
+            <div class="bg-red-100 border border-red-300 p-2 rounded">
+              <strong>&lt;header&gt;</strong> - Site logo, main navigation
+            </div>
+            <div class="bg-green-100 border border-green-300 p-2 rounded ml-4">
+              <strong>&lt;nav&gt;</strong> - Navigation menu
+            </div>
+            <div class="bg-blue-100 border border-blue-300 p-2 rounded">
+              <strong>&lt;main&gt;</strong> - Primary content area
+              <div class="mt-2 ml-4 space-y-1">
+                <div class="bg-yellow-100 border border-yellow-300 p-1 rounded">
+                  <strong>&lt;section&gt;</strong> - Content sections
+                </div>
+                <div class="bg-purple-100 border border-purple-300 p-1 rounded ml-4">
+                  <strong>&lt;article&gt;</strong> - Individual posts/articles
+                </div>
+              </div>
+            </div>
+            <div class="bg-orange-100 border border-orange-300 p-2 rounded">
+              <strong>&lt;aside&gt;</strong> - Sidebar content
+            </div>
+            <div class="bg-gray-100 border border-gray-300 p-2 rounded">
+              <strong>&lt;footer&gt;</strong> - Site footer, copyright, links
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Best Practices</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="border border-green-200 rounded-lg p-4 bg-green-50">
+            <h3 class="font-bold text-green-800 mb-2">✅ Do</h3>
+            <ul class="text-green-700 space-y-1 text-sm">
+              <li>Use semantic elements for their intended purpose</li>
+              <li>Include only one &lt;main&gt; element per page</li>
+              <li>Use &lt;article&gt; for standalone content</li>
+              <li>Use &lt;section&gt; for thematic content groups</li>
+              <li>Add ARIA labels when needed</li>
+              <li>Test with screen readers</li>
+            </ul>
+          </div>
+          <div class="border border-red-200 rounded-lg p-4 bg-red-50">
+            <h3 class="font-bold text-red-800 mb-2">❌ Don't</h3>
+            <ul class="text-red-700 space-y-1 text-sm">
+              <li>Use semantic elements just for styling</li>
+              <li>Nest &lt;main&gt; elements</li>
+              <li>Use &lt;section&gt; without a heading</li>
+              <li>Replace all &lt;div&gt; elements unnecessarily</li>
+              <li>Use &lt;article&gt; for non-standalone content</li>
+              <li>Ignore accessibility guidelines</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself</h2>
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h3 class="font-bold text-blue-800 mb-2">Exercise:</h3>
+          <p class="text-blue-700 mb-4">
+            Create a semantic blog homepage:
+          </p>
+          <ol class="list-decimal list-inside text-blue-700 space-y-2">
+            <li>Create a header with site title and navigation</li>
+            <li>Add a main content area with a welcome section</li>
+            <li>Include 2-3 blog post articles with proper structure</li>
+            <li>Add a sidebar with author info and popular posts</li>
+            <li>Create a footer with contact info and social links</li>
+            <li>Validate your HTML and test accessibility</li>
+          </ol>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaways</h2>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li>Semantic elements provide meaning and structure to HTML</li>
+          <li>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, and &lt;footer&gt; are the main semantic elements</li>
+          <li>Semantic HTML improves SEO, accessibility, and code maintainability</li>
+          <li>Use semantic elements based on content meaning, not appearance</li>
+          <li>Only one &lt;main&gt; element should exist per page</li>
+          <li>Semantic structure helps screen readers and search engines understand content</li>
+          <li>Modern web development prioritizes semantic HTML over generic &lt;div&gt; elements</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-8">
+      <a href="forms.html" class="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Previous: HTML Forms
+      </a>
+
+      <a href="index.html" class="flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors duration-200">
+        Back to HTML Tutorials
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">© <span id="current-year"></span> CodeByImaad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

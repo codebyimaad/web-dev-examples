@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Projects - CodeByImaad</title>
+  <meta name="description" content="Hands-on HTML projects to practice and apply your HTML skills. Build real websites using only HTML.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .code-block { background: #1e293b; color: #e2e8f0; }
+    .project-card { transition: transform 0.2s ease-in-out; }
+    .project-card:hover { transform: translateY(-4px); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">🚀</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">HTML Projects</h1>
+            <p class="text-sm text-gray-500">Build Real Websites with HTML</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="text-gray-600 hover:text-purple-600 transition-colors duration-200 font-medium">
+            ← Back to HTML Tutorials
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <!-- Header -->
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML Projects</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Apply your HTML knowledge by building real projects. Each project includes step-by-step guidance, 
+        requirements, and examples to help you create professional websites using only HTML.
+      </p>
+    </header>
+
+    <!-- Project Difficulty Levels -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+          <span class="text-white font-bold">1</span>
+        </div>
+        <h3 class="font-bold text-green-800 mb-2">Beginner Projects</h3>
+        <p class="text-green-700 text-sm">Basic HTML structure, text elements, and simple layouts</p>
+      </div>
+      
+      <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 text-center">
+        <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-3">
+          <span class="text-white font-bold">2</span>
+        </div>
+        <h3 class="font-bold text-yellow-800 mb-2">Intermediate Projects</h3>
+        <p class="text-yellow-700 text-sm">Forms, tables, multimedia, and semantic structure</p>
+      </div>
+      
+      <div class="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+        <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+          <span class="text-white font-bold">3</span>
+        </div>
+        <h3 class="font-bold text-red-800 mb-2">Advanced Projects</h3>
+        <p class="text-red-700 text-sm">Complex layouts, accessibility, metadata, and global attributes</p>
+      </div>
+    </div>
+
+    <!-- Beginner Projects -->
+    <section id="beginner-projects" class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">🌱 Beginner Projects</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project 1: Personal Introduction Page -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-green-400 to-blue-500 h-32 flex items-center justify-center">
+            <h3 class="text-white text-2xl font-bold">👋 Personal Introduction</h3>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Beginner</span>
+              <span class="text-gray-500 text-sm">⏱️ 30-45 min</span>
+            </div>
+            
+            <p class="text-gray-600 mb-4">
+              Create a personal introduction webpage about yourself using basic HTML elements.
+            </p>
+            
+            <div class="mb-4">
+              <h4 class="font-bold text-gray-800 mb-2">What You'll Practice:</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• HTML document structure</li>
+                <li>• Headings and paragraphs</li>
+                <li>• Text formatting elements</li>
+                <li>• Basic semantic HTML</li>
+              </ul>
+            </div>
+            
+            <a href="#project-1-details" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium">
+              Start Project
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Recipe Collection -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-orange-400 to-red-500 h-32 flex items-center justify-center">
+            <h3 class="text-white text-2xl font-bold">🍳 Recipe Collection</h3>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Beginner</span>
+              <span class="text-gray-500 text-sm">⏱️ 45-60 min</span>
+            </div>
+            
+            <p class="text-gray-600 mb-4">
+              Build a recipe collection website with multiple recipes, ingredients, and instructions.
+            </p>
+            
+            <div class="mb-4">
+              <h4 class="font-bold text-gray-800 mb-2">What You'll Practice:</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Lists (ordered and unordered)</li>
+                <li>• Links and navigation</li>
+                <li>• Images with alt text</li>
+                <li>• HTML entities and special characters</li>
+              </ul>
+            </div>
+            
+            <a href="#project-2-details" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors duration-200 font-medium">
+              Start Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intermediate Projects -->
+    <section id="intermediate-projects" class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">🚀 Intermediate Projects</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project 3: Business Website -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-blue-400 to-purple-500 h-32 flex items-center justify-center">
+            <h3 class="text-white text-2xl font-bold">🏢 Business Website</h3>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Intermediate</span>
+              <span class="text-gray-500 text-sm">⏱️ 60-90 min</span>
+            </div>
+            
+            <p class="text-gray-600 mb-4">
+              Create a complete business website with contact forms, service tables, and multimedia content.
+            </p>
+            
+            <div class="mb-4">
+              <h4 class="font-bold text-gray-800 mb-2">What You'll Practice:</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• HTML forms and input types</li>
+                <li>• Tables for data presentation</li>
+                <li>• Semantic HTML structure</li>
+                <li>• Audio and video elements</li>
+              </ul>
+            </div>
+            
+            <a href="#project-3-details" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+              Start Project
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: Educational Course Page -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-purple-400 to-pink-500 h-32 flex items-center justify-center">
+            <h3 class="text-white text-2xl font-bold">📚 Course Page</h3>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Intermediate</span>
+              <span class="text-gray-500 text-sm">⏱️ 75-90 min</span>
+            </div>
+            
+            <p class="text-gray-600 mb-4">
+              Build an educational course page with interactive elements, progress tracking, and embedded content.
+            </p>
+            
+            <div class="mb-4">
+              <h4 class="font-bold text-gray-800 mb-2">What You'll Practice:</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Interactive elements (details/summary)</li>
+                <li>• Progress and meter elements</li>
+                <li>• Iframe for embedded content</li>
+                <li>• HTML templates</li>
+              </ul>
+            </div>
+            
+            <a href="#project-4-details" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-200 font-medium">
+              Start Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advanced Projects -->
+    <section id="advanced-projects" class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">⚡ Advanced Projects</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project 5: Portfolio Website -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-indigo-400 to-cyan-500 h-32 flex items-center justify-center">
+            <h3 class="text-white text-2xl font-bold">💼 Portfolio Website</h3>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Advanced</span>
+              <span class="text-gray-500 text-sm">⏱️ 90-120 min</span>
+            </div>
+            
+            <p class="text-gray-600 mb-4">
+              Create a professional portfolio website with SEO optimization, accessibility features, and global attributes.
+            </p>
+            
+            <div class="mb-4">
+              <h4 class="font-bold text-gray-800 mb-2">What You'll Practice:</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• HTML metadata and SEO</li>
+                <li>• Accessibility and ARIA attributes</li>
+                <li>• Global attributes (id, class, data-*)</li>
+                <li>• Professional documentation</li>
+              </ul>
+            </div>
+            
+            <a href="#project-5-details" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-200 font-medium">
+              Start Project
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 6: Multi-page Website -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-pink-400 to-red-500 h-32 flex items-center justify-center">
+            <h3 class="text-white text-2xl font-bold">🌐 Multi-page Site</h3>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Advanced</span>
+              <span class="text-gray-500 text-sm">⏱️ 120-150 min</span>
+            </div>
+            
+            <p class="text-gray-600 mb-4">
+              Build a complete multi-page website with consistent navigation, forms, and all HTML features combined.
+            </p>
+            
+            <div class="mb-4">
+              <h4 class="font-bold text-gray-800 mb-2">What You'll Practice:</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Multi-page navigation</li>
+                <li>• All HTML elements combined</li>
+                <li>• Consistent structure and documentation</li>
+                <li>• Real-world website architecture</li>
+              </ul>
+            </div>
+            
+            <a href="#project-6-details" class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors duration-200 font-medium">
+              Start Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details -->
+    <section id="project-details" class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">📋 Project Instructions</h2>
+
+      <!-- Project 1: Personal Introduction Page -->
+      <div id="project-1-details" class="bg-white rounded-xl shadow-lg p-8 mb-8">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+            <span class="text-white font-bold">1</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-800">👋 Personal Introduction Page</h3>
+            <p class="text-gray-600">Create a webpage that introduces yourself to the world</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="text-xl font-bold text-gray-800 mb-4">📝 Project Requirements</h4>
+            <div class="space-y-4">
+              <div class="border-l-4 border-green-500 pl-4">
+                <h5 class="font-bold text-green-700">Page Structure</h5>
+                <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                  <li>• Proper HTML5 document structure</li>
+                  <li>• Meaningful page title</li>
+                  <li>• Meta tags for charset and viewport</li>
+                  <li>• Semantic HTML elements</li>
+                </ul>
+              </div>
+
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h5 class="font-bold text-blue-700">Content Requirements</h5>
+                <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                  <li>• Main heading with your name</li>
+                  <li>• Introduction paragraph about yourself</li>
+                  <li>• Your hobbies or interests (use a list)</li>
+                  <li>• Contact information section</li>
+                  <li>• Fun fact about yourself</li>
+                </ul>
+              </div>
+
+              <div class="border-l-4 border-purple-500 pl-4">
+                <h5 class="font-bold text-purple-700">HTML Elements to Use</h5>
+                <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                  <li>• h1, h2, h3 for headings</li>
+                  <li>• p for paragraphs</li>
+                  <li>• strong, em for emphasis</li>
+                  <li>• ul or ol for lists</li>
+                  <li>• HTML comments for documentation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold text-gray-800 mb-4">🎯 Step-by-Step Guide</h4>
+            <div class="space-y-3">
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 1: Set up HTML structure</h5>
+                <p class="text-xs text-gray-600 mt-1">Create the basic HTML5 document with DOCTYPE, html, head, and body tags</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 2: Add meta information</h5>
+                <p class="text-xs text-gray-600 mt-1">Include title, charset, and viewport meta tags in the head section</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 3: Create main heading</h5>
+                <p class="text-xs text-gray-600 mt-1">Add an h1 tag with your name as the main page heading</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 4: Write introduction</h5>
+                <p class="text-xs text-gray-600 mt-1">Add 2-3 paragraphs introducing yourself, your background, and goals</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 5: Add interests section</h5>
+                <p class="text-xs text-gray-600 mt-1">Create an h2 heading and list your hobbies using ul and li tags</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 6: Include contact info</h5>
+                <p class="text-xs text-gray-600 mt-1">Add another section with your contact information (email, social media)</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 7: Add documentation</h5>
+                <p class="text-xs text-gray-600 mt-1">Include HTML comments to document different sections of your page</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-green-50 border border-green-200 rounded-lg">
+          <h4 class="font-bold text-green-800 mb-3">💡 Example Structure</h4>
+          <pre class="code-block p-4 rounded text-sm overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Your Name - Personal Introduction&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Main header section --&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Hello, I'm [Your Name]!&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;!-- Main content --&gt;
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;About Me&lt;/h2&gt;
+            &lt;p&gt;Write your introduction here...&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;My Interests&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Interest 1&lt;/li&gt;
+                &lt;li&gt;Interest 2&lt;/li&gt;
+                &lt;li&gt;Interest 3&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="mt-6 flex items-center justify-between">
+          <div class="text-sm text-gray-600">
+            <strong>Estimated Time:</strong> 30-45 minutes
+          </div>
+          <div class="space-x-2">
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">HTML Structure</span>
+            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Text Elements</span>
+            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Semantic HTML</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Recipe Collection -->
+      <div id="project-2-details" class="bg-white rounded-xl shadow-lg p-8 mb-8">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mr-4">
+            <span class="text-white font-bold">2</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-800">🍳 Recipe Collection Website</h3>
+            <p class="text-gray-600">Build a recipe collection with multiple recipes and navigation</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="text-xl font-bold text-gray-800 mb-4">📝 Project Requirements</h4>
+            <div class="space-y-4">
+              <div class="border-l-4 border-orange-500 pl-4">
+                <h5 class="font-bold text-orange-700">Website Structure</h5>
+                <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                  <li>• Homepage with recipe list</li>
+                  <li>• At least 3 different recipes</li>
+                  <li>• Navigation between recipes</li>
+                  <li>• Consistent page structure</li>
+                </ul>
+              </div>
+
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h5 class="font-bold text-blue-700">Recipe Content</h5>
+                <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                  <li>• Recipe title and description</li>
+                  <li>• Ingredients list (unordered)</li>
+                  <li>• Step-by-step instructions (ordered)</li>
+                  <li>• Cooking time and servings</li>
+                  <li>• Recipe image placeholder</li>
+                </ul>
+              </div>
+
+              <div class="border-l-4 border-purple-500 pl-4">
+                <h5 class="font-bold text-purple-700">HTML Features to Use</h5>
+                <ul class="text-sm text-gray-600 mt-1 space-y-1">
+                  <li>• Navigation with anchor links</li>
+                  <li>• Ordered and unordered lists</li>
+                  <li>• Images with alt text</li>
+                  <li>• HTML entities for special characters</li>
+                  <li>• Semantic HTML structure</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold text-gray-800 mb-4">🎯 Step-by-Step Guide</h4>
+            <div class="space-y-3">
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 1: Create homepage</h5>
+                <p class="text-xs text-gray-600 mt-1">Build index.html with site title and navigation to recipes</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 2: Plan your recipes</h5>
+                <p class="text-xs text-gray-600 mt-1">Choose 3 recipes and gather ingredients and instructions</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 3: Create recipe template</h5>
+                <p class="text-xs text-gray-600 mt-1">Design the structure for recipe pages with all sections</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 4: Add ingredients lists</h5>
+                <p class="text-xs text-gray-600 mt-1">Use unordered lists for ingredients with proper formatting</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 5: Add instructions</h5>
+                <p class="text-xs text-gray-600 mt-1">Use ordered lists for step-by-step cooking instructions</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 6: Link everything</h5>
+                <p class="text-xs text-gray-600 mt-1">Create navigation links between all pages</p>
+              </div>
+
+              <div class="bg-gray-50 p-3 rounded-lg">
+                <h5 class="font-bold text-gray-700 text-sm">Step 7: Add special characters</h5>
+                <p class="text-xs text-gray-600 mt-1">Use HTML entities for fractions, degrees, and symbols</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-orange-50 border border-orange-200 rounded-lg">
+          <h4 class="font-bold text-orange-800 mb-3">💡 Example Recipe Structure</h4>
+          <pre class="code-block p-4 rounded text-sm overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Chocolate Chip Cookies - My Recipe Collection&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;My Recipe Collection&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="cookies.html"&gt;Cookies&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="pasta.html"&gt;Pasta&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="salad.html"&gt;Salad&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Chocolate Chip Cookies&lt;/h2&gt;
+            &lt;p&gt;&lt;strong&gt;Prep Time:&lt;/strong&gt; 15 minutes&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Cook Time:&lt;/strong&gt; 12 minutes&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Servings:&lt;/strong&gt; 24 cookies&lt;/p&gt;
+
+            &lt;h3&gt;Ingredients&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;2&amp;frac14; cups all-purpose flour&lt;/li&gt;
+                &lt;li&gt;1 cup butter, softened&lt;/li&gt;
+                &lt;li&gt;&amp;frac34; cup brown sugar&lt;/li&gt;
+                &lt;li&gt;2 large eggs&lt;/li&gt;
+                &lt;li&gt;2 cups chocolate chips&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;h3&gt;Instructions&lt;/h3&gt;
+            &lt;ol&gt;
+                &lt;li&gt;Preheat oven to 375&amp;deg;F.&lt;/li&gt;
+                &lt;li&gt;Mix butter and sugars until creamy.&lt;/li&gt;
+                &lt;li&gt;Add eggs and vanilla; mix well.&lt;/li&gt;
+                &lt;li&gt;Gradually add flour mixture.&lt;/li&gt;
+                &lt;li&gt;Stir in chocolate chips.&lt;/li&gt;
+                &lt;li&gt;Bake for 9-11 minutes until golden.&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/article&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="mt-6 flex items-center justify-between">
+          <div class="text-sm text-gray-600">
+            <strong>Estimated Time:</strong> 45-60 minutes
+          </div>
+          <div class="space-x-2">
+            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">Lists</span>
+            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Navigation</span>
+            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">HTML Entities</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Business Website -->
+      <div id="project-3-details" class="bg-white rounded-xl shadow-lg p-8 mb-8">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+            <span class="text-white font-bold">3</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-800">🏢 Business Website</h3>
+            <p class="text-gray-600">Create a complete business website with forms and tables</p>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h4 class="font-bold text-blue-800 mb-3">🎯 Project Overview</h4>
+          <p class="text-blue-700 mb-4">
+            Build a professional business website for a fictional company. This intermediate project
+            will help you practice forms, tables, semantic HTML, and multimedia elements.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h5 class="font-bold text-blue-800 mb-2">Required Pages:</h5>
+              <ul class="text-blue-700 text-sm space-y-1">
+                <li>• Homepage with company info</li>
+                <li>• Services page with pricing table</li>
+                <li>• About page with team info</li>
+                <li>• Contact page with form</li>
+              </ul>
+            </div>
+            <div>
+              <h5 class="font-bold text-blue-800 mb-2">Key Features:</h5>
+              <ul class="text-blue-700 text-sm space-y-1">
+                <li>• Contact form with validation</li>
+                <li>• Pricing table</li>
+                <li>• Embedded video/audio</li>
+                <li>• Semantic HTML structure</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 flex items-center justify-between">
+          <div class="text-sm text-gray-600">
+            <strong>Estimated Time:</strong> 60-90 minutes
+          </div>
+          <div class="space-x-2">
+            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Forms</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Tables</span>
+            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Multimedia</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">© <span id="current-year"></span> CodeByImaad. All rights reserved.</p>
+      <p class="text-gray-500 text-sm mt-2">Build amazing projects with HTML!</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
